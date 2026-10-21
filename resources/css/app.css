@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/livewire/src/Features/SupportPagination/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Sora', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* GG-TECH brand palette (see the blueprint's design system). */
+    --color-royal: #1d2b8f;
+    --color-royal-700: #16226f;
+    --color-royal-50: #eef0fb;
+    --color-navy: #0a1033;
+    --color-navy-800: #121a47;
+    --color-navy-700: #1b2560;
+    --color-signal: #d7102b;
+    --color-signal-dark: #a80c21;
+    --color-pearl: #f5f6fa;
+    --color-silver: #c9ced8;
+    --color-ink: #1f2433;
+    --color-muted: #5b6275;
+    --color-instock: #137a3f;
+    --color-whatsapp: #1fa855;
+    --color-whatsapp-dark: #178a45;
+
+    --radius-card: 0.75rem;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-white font-sans text-ink antialiased;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply font-display tracking-tight text-navy;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition
+        focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+    .container-page {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.14em] text-royal;
+    }
+
+    .btn-red {
+        @apply btn bg-signal text-white shadow-sm hover:bg-signal-dark focus-visible:outline-signal;
+    }
+
+    .btn-blue {
+        @apply btn bg-royal text-white shadow-sm hover:bg-royal-700 focus-visible:outline-royal;
+    }
+
+    .btn-outline {
+        @apply btn border border-royal/25 bg-white text-royal hover:border-royal hover:bg-royal-50 focus-visible:outline-royal;
+    }
+
+    .btn-white {
+        @apply btn bg-white text-navy shadow-sm hover:bg-pearl focus-visible:outline-white;
+    }
+
+    .btn-ghost-light {
+        @apply btn border border-white/30 text-white hover:border-white hover:bg-white/10 focus-visible:outline-white;
+    }
+
+    .btn-whatsapp {
+        @apply btn bg-whatsapp text-white shadow-sm hover:bg-whatsapp-dark focus-visible:outline-whatsapp;
+    }
+
+    .field-label {
+        @apply mb-1.5 block text-sm font-medium text-ink;
+    }
+
+    .field-input {
+        @apply block w-full rounded-xl border border-silver bg-white px-4 py-3 text-sm text-ink shadow-xs
+            placeholder:text-muted/70 focus:border-royal focus:outline-none focus:ring-4 focus:ring-royal/10;
+    }
+
+    .field-error {
+        @apply mt-1.5 text-sm text-signal;
+    }
+
+    .card {
+        @apply rounded-card border border-silver/60 bg-white;
+    }
+}

@@ -1,0 +1,5728 @@
+[
+  {
+    "refs": [
+      1,
+      32
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "26A",
+    "category": "toners",
+    "name": {
+      "en": "HP 26A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 26A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M402 series; MFP M426 series.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 45000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-26a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      2,
+      35
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "151A",
+    "category": "toners",
+    "name": {
+      "en": "HP 151A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 151A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro 4003 series; MFP 4103 series in supported regions.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 60000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 23000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-151a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      3
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "85A",
+    "category": "toners",
+    "name": {
+      "en": "HP 85A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 85A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro P1102/P1102w; M1132/M1212/M1217 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-85a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      4
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "83A",
+    "category": "toners",
+    "name": {
+      "en": "HP 83A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 83A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M125/M127/M201/M225 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-83a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      5,
+      28
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "05A",
+    "category": "toners",
+    "name": {
+      "en": "HP 05A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 05A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet P2035/P2055 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-05a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      6,
+      29
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "80A",
+    "category": "toners",
+    "name": {
+      "en": "HP 80A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 80A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro 400 M401/M425 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-80a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      7,
+      22
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "150A",
+    "category": "toners",
+    "name": {
+      "en": "HP 150A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 150A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro MFP M141/M142 family in certain regional variants; verify exact reference.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 50000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 23000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-150a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      8,
+      25
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "135A",
+    "category": "toners",
+    "name": {
+      "en": "HP 135A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 135A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Laser MFP 135 series; exact cartridge number varies by region.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 50000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 23000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-135a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      9,
+      26
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "136A",
+    "category": "toners",
+    "name": {
+      "en": "HP 136A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 136A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Laser MFP 136 series; exact cartridge number varies by region.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 50000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 23000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-136a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      10,
+      23
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "106A",
+    "category": "toners",
+    "name": {
+      "en": "HP 106A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 106A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Laser 107a/107w and Laser MFP 135/136 family in EMEA; regional variants differ.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 15000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-106a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      11,
+      24
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "107A",
+    "category": "toners",
+    "name": {
+      "en": "HP 107A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 107A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Laser 107a/107w and Laser MFP 135/136 family in some regions; regional variants differ.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 15000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-107a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      12
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "17A",
+    "category": "toners",
+    "name": {
+      "en": "HP 17A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 17A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M102a/M102w; MFP M130a/M130fn/M130fw.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-17a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      13,
+      36
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "59A",
+    "category": "toners",
+    "name": {
+      "en": "HP 59A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 59A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M404/M428 family; verify regional cartridge variant.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 60000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-59a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      14
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "79A",
+    "category": "toners",
+    "name": {
+      "en": "HP 79A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 79A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M12/M26 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-79a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      15,
+      37
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "44A",
+    "category": "toners",
+    "name": {
+      "en": "HP 44A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 44A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M15/M16/M17 and M28/M29 family in EMEA markets (regional cartridge differences exist).",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-44a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      16,
+      34
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "87A",
+    "category": "toners",
+    "name": {
+      "en": "HP 87A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 87A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Enterprise M506 series; MFP M527 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 65000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-87a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      17,
+      33
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "30A",
+    "category": "toners",
+    "name": {
+      "en": "HP 30A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 30A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro M203 series; MFP M227 series.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 40000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-30a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      18,
+      38
+    ],
+    "page": 2,
+    "brand": "HP",
+    "model": "55A",
+    "category": "toners",
+    "name": {
+      "en": "HP 55A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 55A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Enterprise P3015 series; MFP M521/M525 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Original",
+          "fr": "Original"
+        },
+        "price_xof": 75000
+      },
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 20000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-55a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      19
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "12A",
+    "category": "toners",
+    "name": {
+      "en": "HP 12A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 12A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet 1010, 1012, 1015, 1018, 1020, 1022; 3015/3020/3030/3050/3052/3055; M1005 MFP (verify",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-12a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      20
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "110A",
+    "category": "toners",
+    "name": {
+      "en": "HP 110A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 110A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Laser 103a/107a/107w family in China/India market variants; verify regional model.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-110a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      21
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "149A",
+    "category": "toners",
+    "name": {
+      "en": "HP 149A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 149A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Printer-model compatibility not yet verified; confirm exact printer model before publication.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-149a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      27
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "78A",
+    "category": "toners",
+    "name": {
+      "en": "HP 78A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 78A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro P1566/P1606dn; M1536dnf.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-78a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      30
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "53A",
+    "category": "toners",
+    "name": {
+      "en": "HP 53A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 53A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Model mapping not yet verified from an authoritative source.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-53a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      31
+    ],
+    "page": 3,
+    "brand": "HP",
+    "model": "49A",
+    "category": "toners",
+    "name": {
+      "en": "HP 49A Black Toner Cartridge",
+      "fr": "Cartouche de toner HP 49A noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Model mapping not yet verified from an authoritative source.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-49a-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      39
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "131A",
+    "category": "toners",
+    "name": {
+      "en": "HP 131A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 131A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Model mapping needs confirmation; likely reference/region-specific—verify before publishing.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-131a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      40
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "126A",
+    "category": "toners",
+    "name": {
+      "en": "HP 126A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 126A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP LaserJet Pro CP1025/CP1025nw.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-126a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      41
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "130A",
+    "category": "toners",
+    "name": {
+      "en": "HP 130A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 130A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro MFP M176n/M177fw family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-130a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      42
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "205A",
+    "category": "toners",
+    "name": {
+      "en": "HP 205A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 205A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro CP1215/CP1217; MFP M176/M177 regional family (confirm exact region).",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-205a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      43
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "203A",
+    "category": "toners",
+    "name": {
+      "en": "HP 203A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 203A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M254; MFP M280/M281 family in EMEA.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-203a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      44
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "201A",
+    "category": "toners",
+    "name": {
+      "en": "HP 201A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 201A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M252/M277 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-201a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      45
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "410A",
+    "category": "toners",
+    "name": {
+      "en": "HP 410A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 410A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M452; MFP M377/M477 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-410a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      46
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "207A",
+    "category": "toners",
+    "name": {
+      "en": "HP 207A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 207A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M255; MFP M282/M283 family in EMEA.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-207a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      47
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "216A",
+    "category": "toners",
+    "name": {
+      "en": "HP 216A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 216A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M155/M182/M183 family in EMEA.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-216a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      48
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "415A",
+    "category": "toners",
+    "name": {
+      "en": "HP 415A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 415A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro M454; MFP M479 family.",
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 28000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-415a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      49
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "222A",
+    "category": "toners",
+    "name": {
+      "en": "HP 222A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 222A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "HP Color LaserJet Pro 3200/3300 family in some regional variants; verify exact model.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-222a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      50
+    ],
+    "page": 4,
+    "brand": "HP",
+    "model": "230A",
+    "category": "toners",
+    "name": {
+      "en": "HP 230A Colour Toner Cartridge",
+      "fr": "Cartouche de toner HP 230A couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Model mapping not yet verified from an authoritative source.",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-230a-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      51
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "052",
+    "category": "toners",
+    "name": {
+      "en": "Canon 052 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon 052 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 20000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-052-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      52
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "057",
+    "category": "toners",
+    "name": {
+      "en": "Canon 057 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon 057 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-057-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      53
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "070",
+    "category": "toners",
+    "name": {
+      "en": "Canon 070 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon 070 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 45000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-070-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      54
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "725",
+    "category": "toners",
+    "name": {
+      "en": "Canon 725 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon 725 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 12000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-725-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      55
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 42",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 42 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 42 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-42-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      56
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 40",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 40 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 40 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 20000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-40-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      57
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 33",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 33 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 33 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-33-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      58
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 60",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 60 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 60 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-60-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      59
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 14",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 14 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 14 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-14-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      60
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 59",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 59 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 59 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-59-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      61
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 62",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 62 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 62 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-62-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      62
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 63",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 63 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 63 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-63-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      63
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 67",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 67 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 67 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-67-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      64
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 53",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 53 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 53 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-53-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      65
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 50",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 50 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 50 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 20000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-50-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      66
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 43",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 43 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 43 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 15000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-43-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      67
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 36",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 36 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 36 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 35000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-36-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      68
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 37",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 37 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 37 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-37-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      69
+    ],
+    "page": 5,
+    "brand": "Canon",
+    "model": "C-EXV 39",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 39 Black Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 39 noir"
+    },
+    "short_description": {
+      "en": "Black laser toner, available as original or premium compatible.",
+      "fr": "Toner laser noir, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-39-black-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      70
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 48",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 48 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 48 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-48-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      71
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 49",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 49 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 49 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-49-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      72
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 29",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 29 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 29 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-29-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      73
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 28",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 28 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 28 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-28-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      74
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 55",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 55 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 55 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-55-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      75
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 54",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 54 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 54 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-54-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      76
+    ],
+    "page": 6,
+    "brand": "Canon",
+    "model": "C-EXV 47",
+    "category": "toners",
+    "name": {
+      "en": "Canon C-EXV 47 Colour Toner Cartridge",
+      "fr": "Cartouche de toner Canon C-EXV 47 couleur"
+    },
+    "short_description": {
+      "en": "Colour laser toner, available as original or premium compatible.",
+      "fr": "Toner laser couleur, disponible en original ou compatible premium."
+    },
+    "description": null,
+    "compatibility": "Exact Canon copier/printer models need verification against the full C-EXV reference and machine region",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "Premium compatible",
+          "fr": "Compatible premium"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "photos": [],
+    "slug": "canon-c-exv-47-colour-toner-cartridge",
+    "featured": false
+  },
+  {
+    "refs": [
+      84
+    ],
+    "page": 15,
+    "model": null,
+    "name": {
+      "en": "Wireless HDMI Extender",
+      "fr": "Extendeur HDMI sans fil"
+    },
+    "short_description": {
+      "en": "Wireless audio/video transmission without a long HDMI cable.",
+      "fr": "Transmission audio/vidéo sans câble HDMI."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page015_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "wireless-hdmi-extender",
+    "featured": false
+  },
+  {
+    "refs": [
+      85
+    ],
+    "page": 15,
+    "model": null,
+    "name": {
+      "en": "Wireless HDMI Extender — selectable range",
+      "fr": "Extendeur HDMI sans fil — portée au choix"
+    },
+    "short_description": {
+      "en": "Choose the transmission range according to the model supplied.",
+      "fr": "Choisir la portée selon le modèle disponible."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "50 m",
+          "fr": "50 m"
+        },
+        "price_xof": 35000
+      },
+      {
+        "label": {
+          "en": "100 m",
+          "fr": "100 m"
+        },
+        "price_xof": 45000
+      },
+      {
+        "label": {
+          "en": "150 m",
+          "fr": "150 m"
+        },
+        "price_xof": 55000
+      },
+      {
+        "label": {
+          "en": "200 m",
+          "fr": "200 m"
+        },
+        "price_xof": 65000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page015_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "wireless-hdmi-extender-selectable-range",
+    "featured": false
+  },
+  {
+    "refs": [
+      86
+    ],
+    "page": 15,
+    "model": null,
+    "name": {
+      "en": "Flexible Desktop Microphone",
+      "fr": "Microphone de bureau flexible"
+    },
+    "short_description": {
+      "en": "Omnidirectional microphone with flexible gooseneck.",
+      "fr": "Microphone omnidirectionnel avec col flexible."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 9000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page015_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "flexible-desktop-microphone",
+    "featured": false
+  },
+  {
+    "refs": [
+      87
+    ],
+    "page": 16,
+    "model": null,
+    "name": {
+      "en": "Network Rack Cabinets",
+      "fr": "Baies réseau murales / armoires réseau"
+    },
+    "short_description": {
+      "en": "Available sizes: 4U, 6U, 9U, 12U, 14U, 19U and 22U.",
+      "fr": "Tailles disponibles : 4U, 6U, 9U, 12U, 14U, 19U et 22U."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": {
+          "en": "4U",
+          "fr": "4U"
+        },
+        "price_xof": 50000
+      },
+      {
+        "label": {
+          "en": "6U",
+          "fr": "6U"
+        },
+        "price_xof": 60000
+      },
+      {
+        "label": {
+          "en": "9U",
+          "fr": "9U"
+        },
+        "price_xof": 70000
+      },
+      {
+        "label": {
+          "en": "12U",
+          "fr": "12U"
+        },
+        "price_xof": 90000
+      },
+      {
+        "label": {
+          "en": "14U",
+          "fr": "14U"
+        },
+        "price_xof": 110000
+      },
+      {
+        "label": {
+          "en": "19U",
+          "fr": "19U"
+        },
+        "price_xof": 120000
+      },
+      {
+        "label": {
+          "en": "22U",
+          "fr": "22U"
+        },
+        "price_xof": 140000
+      }
+    ],
+    "brand": null,
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page016_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "network-rack-cabinets",
+    "featured": false
+  },
+  {
+    "refs": [
+      88
+    ],
+    "page": 16,
+    "model": null,
+    "name": {
+      "en": "Canon imageRUNNER 2425 Copier",
+      "fr": "Photocopieur Canon imageRUNNER 2425"
+    },
+    "short_description": {
+      "en": "Professional office copier.",
+      "fr": "Photocopieur professionnel pour bureau."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 1250000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page016_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "canon-imagerunner-2425-copier"
+  },
+  {
+    "refs": [
+      89
+    ],
+    "page": 16,
+    "model": null,
+    "name": {
+      "en": "HP LaserJet Pro MFP 4103fdw",
+      "fr": "Imprimante multifonction HP LaserJet Pro MFP 4103fdw"
+    },
+    "short_description": {
+      "en": "Monochrome laser printing, copying, scanning and fax.",
+      "fr": "Impression laser monochrome, copie, numérisation et fax."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 350000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page016_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-laserjet-pro-mfp-4103fdw",
+    "featured": false
+  },
+  {
+    "refs": [
+      90
+    ],
+    "page": 17,
+    "model": null,
+    "name": {
+      "en": "HP Color LaserJet Pro MFP 3303fdw",
+      "fr": "HP Color LaserJet Pro MFP 3303fdw"
+    },
+    "short_description": {
+      "en": "Colour laser multifunction printer.",
+      "fr": "Imprimante laser couleur multifonction."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 340000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page017_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-color-laserjet-pro-mfp-3303fdw",
+    "featured": false
+  },
+  {
+    "refs": [
+      91
+    ],
+    "page": 17,
+    "model": null,
+    "name": {
+      "en": "Canon i-SENSYS MF655Cdw",
+      "fr": "Canon i-SENSYS MF655Cdw"
+    },
+    "short_description": {
+      "en": "Colour laser multifunction printer.",
+      "fr": "Imprimante laser couleur multifonction."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 400000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page017_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "canon-i-sensys-mf655cdw"
+  },
+  {
+    "refs": [
+      92
+    ],
+    "page": 17,
+    "model": null,
+    "name": {
+      "en": "HP DeskJet / Smart Tank Printers",
+      "fr": "Imprimantes HP DeskJet / Smart Tank"
+    },
+    "short_description": {
+      "en": "Inkjet and ink-tank printer models, subject to stock availability.",
+      "fr": "Modèles d’imprimantes à jet d’encre et à réservoir selon disponibilité."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 50000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page017_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-deskjet-smart-tank-printers",
+    "featured": false
+  },
+  {
+    "refs": [
+      93
+    ],
+    "page": 17,
+    "model": null,
+    "name": {
+      "en": "KW-triO 50LA Heavy-Duty Stapler",
+      "fr": "Agrafeuse professionnelle KW-triO 50LA"
+    },
+    "short_description": {
+      "en": "Heavy-duty stapler for high-volume documents.",
+      "fr": "Agrafeuse robuste pour gros volumes de documents."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 12000
+      }
+    ],
+    "brand": "KW-triO",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page017_Photo04.jpg"
+    ],
+    "compatibility": null,
+    "slug": "kw-trio-50la-heavy-duty-stapler",
+    "featured": false
+  },
+  {
+    "refs": [
+      104
+    ],
+    "page": 28,
+    "model": null,
+    "name": {
+      "en": "HP DeskJet 2975 Ink Advantage",
+      "fr": "HP DeskJet 2975 Ink Advantage"
+    },
+    "short_description": {
+      "en": "Home printing / Impression à domicile; HP 65 ink family shown on box / famille d’encre HP 65 indiquée sur la boîte.",
+      "fr": "Home printing / Impression à domicile; HP 65 ink family shown on box / famille d’encre HP 65 indiquée sur la boîte."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 60000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page028_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-deskjet-2975-ink-advantage",
+    "featured": false
+  },
+  {
+    "refs": [
+      105
+    ],
+    "page": 28,
+    "model": null,
+    "name": {
+      "en": "HP OfficeJet Pro 7720 Wide Format",
+      "fr": "HP OfficeJet Pro 7720 Wide Format"
+    },
+    "short_description": {
+      "en": "Print, copy, scan, fax; A3 support; automatic two-sided printing; 35-page ADF",
+      "fr": "impression,"
+    },
+    "description": {
+      "en": "copie, scan, fax; A3, recto verso automatique et ADF 35 pages.",
+      "fr": "copie, scan, fax; A3, recto verso automatique et ADF 35 pages."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 200000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page028_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-officejet-pro-7720-wide-format",
+    "featured": false
+  },
+  {
+    "refs": [
+      106
+    ],
+    "page": 28,
+    "model": null,
+    "name": {
+      "en": "HP LaserJet M211dw",
+      "fr": "HP LaserJet M211dw"
+    },
+    "short_description": {
+      "en": "Wireless printing model",
+      "fr": "Modèle avec impression sans fil."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page028_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-laserjet-m211dw",
+    "featured": false
+  },
+  {
+    "refs": [
+      107
+    ],
+    "page": 29,
+    "model": null,
+    "name": {
+      "en": "HP Laser MFP 137fnw",
+      "fr": "HP Laser MFP 137fnw"
+    },
+    "short_description": {
+      "en": "Print, copy, scan, fax",
+      "fr": "Impression, copie, scan, fax."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 240000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page029_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-laser-mfp-137fnw",
+    "featured": false
+  },
+  {
+    "refs": [
+      108
+    ],
+    "page": 29,
+    "model": null,
+    "name": {
+      "en": "Canon MAXIFY GX3040",
+      "fr": "Canon MAXIFY GX3040"
+    },
+    "short_description": {
+      "en": "Print, copy, scan; wireless",
+      "fr": "Impression, copie, scan; sans fil."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 380000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page029_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "canon-maxify-gx3040"
+  },
+  {
+    "refs": [
+      109
+    ],
+    "page": 29,
+    "model": null,
+    "name": {
+      "en": "Canon PIXMA G3410",
+      "fr": "Canon PIXMA G3410"
+    },
+    "short_description": {
+      "en": "Wireless all-in-one; GI-490 ink bottles shown",
+      "fr": "Multifonction sans fil; bouteilles d’encre GI-490 indiquées."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page029_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "canon-pixma-g3410",
+    "featured": false
+  },
+  {
+    "refs": [
+      110
+    ],
+    "page": 30,
+    "model": null,
+    "name": {
+      "en": "HP Color LaserJet Pro MFP 4303fdw",
+      "fr": "HP Color LaserJet Pro MFP 4303fdw"
+    },
+    "short_description": {
+      "en": "Print, copy, scan, fax; 230A toner family shown",
+      "fr": "Impression, copie, scan, fax; famille de toner 230A indiquée."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 350000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page030_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-color-laserjet-pro-mfp-4303fdw",
+    "featured": false
+  },
+  {
+    "refs": [
+      111
+    ],
+    "page": 30,
+    "model": null,
+    "name": {
+      "en": "Canon PIXMA G2420 MegaTank",
+      "fr": "Canon PIXMA G2420 MegaTank"
+    },
+    "short_description": {
+      "en": "Print, copy, scan; GI-41 ink bottles shown",
+      "fr": "Impression, copie, scan; bouteilles d’encre GI-41 indiquées."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 160000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page030_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "canon-pixma-g2420-megatank",
+    "featured": false
+  },
+  {
+    "refs": [
+      112
+    ],
+    "page": 30,
+    "model": null,
+    "name": {
+      "en": "HP LaserJet Pro P1102w",
+      "fr": "HP LaserJet Pro P1102w"
+    },
+    "short_description": {
+      "en": "Wireless monochrome laser printer; confirm condition if used",
+      "fr": "Imprimante laser monochrome"
+    },
+    "description": {
+      "en": "sans fil; vérifier l’état si d’occasion.",
+      "fr": "sans fil; vérifier l’état si d’occasion."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 140000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page030_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-laserjet-pro-p1102w",
+    "featured": false
+  },
+  {
+    "refs": [
+      113
+    ],
+    "page": 31,
+    "model": null,
+    "name": {
+      "en": "Epson EcoTank L3250",
+      "fr": "Epson EcoTank L3250"
+    },
+    "short_description": {
+      "en": "Print, copy and scan; Wi-Fi and mobile printing are shown on the packaging.",
+      "fr": "Impression, copie"
+    },
+    "description": {
+      "en": "et numérisation ; Wi-Fi et impression mobile indiqués sur l’emballage.",
+      "fr": "et numérisation ; Wi-Fi et impression mobile indiqués sur l’emballage."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 160000
+      }
+    ],
+    "brand": "Epson",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page031_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-ecotank-l3250",
+    "featured": false
+  },
+  {
+    "refs": [
+      114
+    ],
+    "page": 31,
+    "model": null,
+    "name": {
+      "en": "CALUS H5-A Portable Projector",
+      "fr": "CALUS H5-A Portable Projector"
+    },
+    "short_description": {
+      "en": "Portable projector",
+      "fr": "Vidéoprojecteur portable"
+    },
+    "description": {
+      "en": "Packaging advertises 1080p Full HD, Wi-Fi 6, Bluetooth 5.0 and screen mirroring. Verify native resolution and brightness with supplier.",
+      "fr": "L’emballage annonce Full HD 1080p, Wi-Fi 6, Bluetooth 5.0 et duplication d’écran. Vérifier la résolution native et la luminosité."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": "CALUS",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page031_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "calus-h5-a-portable-projector",
+    "featured": false
+  },
+  {
+    "refs": [
+      115
+    ],
+    "page": 31,
+    "model": null,
+    "name": {
+      "en": "A3 Paper Cutter — No. 882-2",
+      "fr": "A3 Paper Cutter — No. 882-2"
+    },
+    "short_description": {
+      "en": "Manual paper trimmer",
+      "fr": "Massicot manuel"
+    },
+    "description": {
+      "en": "A3 cutting size 380 × 460 mm; approximate capacity 12 sheets of 70 GSM paper, as shown on the box.",
+      "fr": "Format de coupe A3 de 380 × 460 mm ; capacité approximative de 12 feuilles de papier 70 g/m², selon la boîte."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 15000
+      }
+    ],
+    "brand": null,
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page031_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "a3-paper-cutter-no-882-2",
+    "featured": false
+  },
+  {
+    "refs": [
+      116
+    ],
+    "page": 32,
+    "model": null,
+    "name": {
+      "en": "SenoToner Manual Office Tool — model to confirm",
+      "fr": "SenoToner Manual Office Tool — model to confirm"
+    },
+    "short_description": {
+      "en": "Office finishing tool",
+      "fr": "Outil de finition de bureau"
+    },
+    "description": {
+      "en": "Exact product function and model are not readable from the photo; confirm with supplier before final technical description.",
+      "fr": "La fonction exacte et le modèle ne sont pas lisibles sur la photo ; à confirmer auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 40000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page032_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "senotoner-manual-office-tool-model-to-confirm",
+    "featured": false
+  },
+  {
+    "refs": [
+      117
+    ],
+    "page": 32,
+    "model": null,
+    "name": {
+      "en": "Hippoint 80 mm Thermal Receipt Printer",
+      "fr": "Hippoint 80 mm Thermal Receipt Printer"
+    },
+    "short_description": {
+      "en": "POS receipt printer",
+      "fr": "Imprimante thermique de reçus pour point de vente"
+    },
+    "description": {
+      "en": "Auto cutter, easy paper loading, high-speed printing and paper-out alarm are listed on the packaging. Confirm interface and speed.",
+      "fr": "Coupe automatique, chargement facile, impression rapide et alerte de fin de papier indiqués sur la boîte. Confirmer l’interface et la vitesse."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 60000
+      }
+    ],
+    "brand": "Hippoint",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page032_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hippoint-80-mm-thermal-receipt-printer",
+    "featured": false
+  },
+  {
+    "refs": [
+      118
+    ],
+    "page": 32,
+    "model": null,
+    "name": {
+      "en": "MXQ Pro 5G Android TV Box",
+      "fr": "MXQ Pro 5G Android TV Box"
+    },
+    "short_description": {
+      "en": "Android TV media box",
+      "fr": "Boîtier multimédia Android TV"
+    },
+    "description": {
+      "en": "Promotional image claims 4K support and Android 11.1; verify RAM, storage and licensed app availability.",
+      "fr": "L’image promotionnelle annonce la prise en charge 4K et Android 11.1 ; vérifier la RAM, le stockage et les applications sous licence."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": "MXQ",
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page032_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "mxq-pro-5g-android-tv-box",
+    "featured": false
+  },
+  {
+    "refs": [
+      119
+    ],
+    "page": 33,
+    "model": null,
+    "name": {
+      "en": "LB-Link BL-RE300 Wi-Fi Range Extender",
+      "fr": "LB-Link BL-RE300 Wi-Fi Range Extender"
+    },
+    "short_description": {
+      "en": "Promotional image lists 300 Mbps on 2.4 GHz and multi-mode operation.",
+      "fr": "L’image"
+    },
+    "description": {
+      "en": "promotionnelle indique 300 Mbit/s en 2,4 GHz et plusieurs modes de fonctionnement.",
+      "fr": "promotionnelle indique 300 Mbit/s en 2,4 GHz et plusieurs modes de fonctionnement."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 10000
+      }
+    ],
+    "brand": "LB-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page033_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "lb-link-bl-re300-wi-fi-range-extender",
+    "featured": false
+  },
+  {
+    "refs": [
+      120
+    ],
+    "page": 33,
+    "model": null,
+    "name": {
+      "en": "OLAX MF985 4G+ LTE Mobile Wi-Fi",
+      "fr": "OLAX MF985 4G+ LTE Mobile Wi-Fi"
+    },
+    "short_description": {
+      "en": "Portable 4G mobile hotspot",
+      "fr": "Point d’accès mobile 4G"
+    },
+    "description": {
+      "en": "Promotional image claims Wi-Fi 6, 3000 mAh battery and support for up to 14 users; confirm network-band compatibility.",
+      "fr": "L’image promotionnelle annonce Wi-Fi 6, une batterie de 3 000 mAh et jusqu’à 14 utilisateurs ; vérifier la compatibilité des bandes réseau."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": "OLAX",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page033_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "olax-mf985-4g-lte-mobile-wi-fi",
+    "featured": false
+  },
+  {
+    "refs": [
+      121
+    ],
+    "page": 33,
+    "model": null,
+    "name": {
+      "en": "USB External Sound Adapter — HT",
+      "fr": "USB External Sound Adapter — HT"
+    },
+    "short_description": {
+      "en": "USB audio adapter",
+      "fr": "Adaptateur audio USB"
+    },
+    "description": {
+      "en": "Compact USB audio adapter shown; exact input/output functions and operating-system support are not indicated.",
+      "fr": "Adaptateur audio USB compact ; les fonctions d’entrée/sortie et la compatibilité système ne sont pas précisées."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page033_Photo03.jpg"
+    ],
+    "compatibility": null,
+    "slug": "usb-external-sound-adapter-ht",
+    "featured": false
+  },
+  {
+    "refs": [
+      122
+    ],
+    "page": 34,
+    "model": null,
+    "name": {
+      "en": "Shirley Ya Type 320 Laminating Machine",
+      "fr": "Shirley Ya Type 320 Laminating Machine"
+    },
+    "short_description": {
+      "en": "Laminator",
+      "fr": "Plastifieuse"
+    },
+    "description": {
+      "en": "Box describes a laminating film machine, type 320. Confirm maximum laminating width, warm-up time and supported pouch thickness.",
+      "fr": "La boîte indique une plastifieuse type 320. Confirmer la largeur maximale, le temps de chauffe et l’épaisseur des pochettes compatibles."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 40000
+      }
+    ],
+    "brand": "Shirley Ya",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page034_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "shirley-ya-type-320-laminating-machine",
+    "featured": false
+  },
+  {
+    "refs": [
+      123
+    ],
+    "page": 35,
+    "model": null,
+    "name": {
+      "en": "HP V22 FHD Monitor",
+      "fr": "HP V22 FHD Monitor"
+    },
+    "short_description": {
+      "en": "21.5-inch Full HD monitor",
+      "fr": "Écran Full HD de 21,5 pouces"
+    },
+    "description": {
+      "en": "1920 × 1080 Full HD; 16:9; 250 nits; 5 ms typical response; anti-glare and low-blue-light mode; HDMI and VGA shown on packaging.",
+      "fr": "Full HD 1920 × 1080 ; format 16:9 ; 250 nits ; réponse typique de 5 ms ; antireflet et mode faible lumière bleue ; HDMI et VGA indiqués sur l’emballage."
+    },
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page035_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-v22-fhd-monitor",
+    "featured": false
+  },
+  {
+    "refs": [
+      124
+    ],
+    "page": 35,
+    "model": null,
+    "name": {
+      "en": "HP M27fw FHD Monitor",
+      "fr": "HP M27fw FHD Monitor"
+    },
+    "short_description": {
+      "en": "27-inch Full HD monitor",
+      "fr": "Écran Full HD de 27 pouces"
+    },
+    "description": {
+      "en": "1920 × 1080 Full HD; 16:9; 300 nits; 5 ms GtG with overdrive; anti-glare, low-blue-light mode and AMD FreeSync.",
+      "fr": "Full HD 1920 × 1080 ; format 16:9 ; 300 nits ; 5 ms GtG avec overdrive ; antireflet, mode faible lumière bleue et AMD FreeSync."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 90000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page035_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-m27fw-fhd-monitor",
+    "featured": false
+  },
+  {
+    "refs": [
+      125
+    ],
+    "page": 36,
+    "model": null,
+    "name": {
+      "en": "HP Pro Tower 290 G9 Desktop Bundle",
+      "fr": "HP Pro Tower 290 G9 Desktop Bundle"
+    },
+    "short_description": {
+      "en": "Desktop PC with HP monitor, keyboard and mouse",
+      "fr": "Ordinateur de bureau avec écran HP, clavier et souris"
+    },
+    "description": {
+      "en": "The promotional image indicates an Intel Core i5 system and a 22-inch HP monitor with keyboard and mouse. Exact processor generation, RAM, storage and operating system depend on the supplied configuration; confirm before publication.",
+      "fr": "L’image promotionnelle indique un système Intel Core i5 avec écran HP de 22 pouces, clavier et souris. La génération exacte du processeur, la RAM, le stockage et le système d’exploitation dépendent de la configuration fournie ; à confirmer."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 400000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page036_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "hp-pro-tower-290-g9-desktop-bundle"
+  },
+  {
+    "refs": [
+      126
+    ],
+    "page": 36,
+    "model": null,
+    "name": {
+      "en": "HP Pro Tower 290 G9 Desktop Bundle · Core i3 13th Gen",
+      "fr": "HP Pro Tower 290 G9 Desktop Bundle · Core i3 13th Gen"
+    },
+    "short_description": {
+      "en": "Desktop PC bundle",
+      "fr": "Ensemble ordinateur de bureau"
+    },
+    "description": {
+      "en": "Intel Core i3 13th Generation desktop configuration. Monitor, keyboard, mouse, RAM, storage and operating system should be confirmed against the supplied unit.",
+      "fr": "Configuration de bureau Intel Core i3 de 13e génération. Vérifier l·écran, le clavier, la souris, la RAM, le stockage et le système d·exploitation selon l·unité fournie."
+    },
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page036_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-pro-tower-290-g9-desktop-bundle-core-i3-13th-gen",
+    "featured": false
+  },
+  {
+    "refs": [
+      127
+    ],
+    "page": 37,
+    "model": null,
+    "name": {
+      "en": "Epson EB-E01 Projector",
+      "fr": "Epson EB-E01 Projector"
+    },
+    "short_description": {
+      "en": "3LCD business projector",
+      "fr": "Vidéoprojecteur professionnel 3LCD"
+    },
+    "description": {
+      "en": "XGA 1024 × 768; 4:3; 3,300 lumens white and colour light output; 15,000:1 contrast; HDMI and VGA inputs. Manufacturer lists this model as discontinued in some regions.",
+      "fr": "XGA 1024 × 768 ; format 4:3 ; luminosité blanche et couleur de 3 300 lumens ; contraste 15 000:1 ; entrées HDMI et VGA. Le fabricant indique que ce modèle est arrêté dans certaines régions."
+    },
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": "Epson",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page037_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-eb-e01-projector",
+    "featured": false
+  },
+  {
+    "refs": [
+      128
+    ],
+    "page": 37,
+    "model": null,
+    "name": {
+      "en": "TP-Link Omada EAP110",
+      "fr": "TP-Link Omada EAP110"
+    },
+    "short_description": {
+      "en": "300 Mbps ceiling-mount wireless access point",
+      "fr": "Point d’accès Wi-Fi 300 Mbit/s à montage au plafond"
+    },
+    "description": {
+      "en": "2.4 GHz Wi-Fi N up to 300 Mbps; one 10/100 Mbps Ethernet port; passive PoE; two internal antennas; ceiling/wall mounting.",
+      "fr": "Wi-Fi N 2,4 GHz jusqu’à 300 Mbit/s ; un port Ethernet 10/100 Mbit/s ; PoE passif ; deux antennes internes ; montage au plafond ou au mur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 45000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page037_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-omada-eap110",
+    "featured": false
+  },
+  {
+    "refs": [
+      129
+    ],
+    "page": 38,
+    "model": null,
+    "name": {
+      "en": "SHL-R320 M.2 SSD Enclosure",
+      "fr": "SHL-R320 M.2 SSD Enclosure"
+    },
+    "short_description": {
+      "en": "USB-C external SSD enclosure",
+      "fr": "Boîtier externe SSD USB-C"
+    },
+    "description": {
+      "en": "Packaging states USB 3.1 and support for NVMe and NGFF M.2 drives. Confirm supported drive sizes and protocol compatibility with the supplier.",
+      "fr": "L’emballage indique USB 3.1 et la prise en charge des SSD M.2 NVMe et NGFF. Confirmer auprès du fournisseur les formats de SSD et la compatibilité des protocoles."
+    },
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page038_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "shl-r320-m-2-ssd-enclosure",
+    "featured": false
+  },
+  {
+    "refs": [
+      130
+    ],
+    "page": 38,
+    "model": null,
+    "name": {
+      "en": "USB 3.0 4-Port Hub — Model 303",
+      "fr": "USB 3.0 4-Port Hub — Model 303"
+    },
+    "short_description": {
+      "en": "4-port USB hub",
+      "fr": "Hub USB à 4 ports"
+    },
+    "description": {
+      "en": "Four USB 3.0 ports; 30 cm cable; packaging advertises up to 5 Gbps. The box also mentions a 5V power jack; included power supply should be confirmed.",
+      "fr": "Quatre ports USB 3.0 ; câble de 30 cm ; débit annoncé jusqu’à 5 Gbit/s. La boîte mentionne également une prise d’alimentation 5 V ; confirmer si l’adaptateur secteur est inclus."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page038_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "usb-3-0-4-port-hub-model-303",
+    "featured": false
+  },
+  {
+    "refs": [
+      131
+    ],
+    "page": 39,
+    "model": null,
+    "name": {
+      "en": "Epson LQ-350 Dot Matrix Printer",
+      "fr": "Imprimante matricielle Epson LQ-350"
+    },
+    "short_description": null,
+    "description": {
+      "en": "24-pin narrow-carriage impact printer for invoices, forms and multi-part documents. USB connectivity; serial/parallel connectivity depends on configuration. Caractéristiques (FR) : Imprimante à impact 24 aiguilles, chariot étroit ; adaptée aux factures, formulaires et documents multicopies. USB ; connectivité série/parallèle selon configuration.",
+      "fr": "24-pin narrow-carriage impact printer for invoices, forms and multi-part documents. USB connectivity; serial/parallel connectivity depends on configuration. Caractéristiques (FR) : Imprimante à impact 24 aiguilles, chariot étroit ; adaptée aux factures, formulaires et documents multicopies. USB ; connectivité série/parallèle selon configuration."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "brand": "Epson",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page039_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-lq-350-dot-matrix-printer",
+    "featured": false
+  },
+  {
+    "refs": [
+      132
+    ],
+    "page": 40,
+    "model": null,
+    "name": {
+      "en": "HP M24fw FHD Monitor",
+      "fr": "Écran HP M24fw Full HD"
+    },
+    "short_description": null,
+    "description": {
+      "en": "23.8-inch Full HD (1920 × 1080) display; IPS panel; anti-glare; HDMI and VGA inputs; AMD FreeSync. Caractéristiques (FR) : Écran de 23,8 pouces Full HD (1920 × 1080) ; dalle IPS ; antireflet ; entrées HDMI et VGA ; AMD FreeSync.",
+      "fr": "23.8-inch Full HD (1920 × 1080) display; IPS panel; anti-glare; HDMI and VGA inputs; AMD FreeSync. Caractéristiques (FR) : Écran de 23,8 pouces Full HD (1920 × 1080) ; dalle IPS ; antireflet ; entrées HDMI et VGA ; AMD FreeSync."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 150000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page040_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-m24fw-fhd-monitor",
+    "featured": false
+  },
+  {
+    "refs": [
+      133
+    ],
+    "page": 41,
+    "model": null,
+    "name": {
+      "en": "Ubiquiti UniFi U6 Pro Access Point",
+      "fr": "Point d’accès Ubiquiti UniFi U6 Pro"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Wi-Fi 6 dual-band access point for business and high-density wireless networks. Confirm exact model and included accessories before sale. Caractéristiques (FR) : Point d’accès Wi-Fi 6 double bande destiné aux réseaux professionnels et aux environnements à forte densité. Vérifier le modèle exact et les accessoires inclus avant la vente.",
+      "fr": "Wi-Fi 6 dual-band access point for business and high-density wireless networks. Confirm exact model and included accessories before sale. Caractéristiques (FR) : Point d’accès Wi-Fi 6 double bande destiné aux réseaux professionnels et aux environnements à forte densité. Vérifier le modèle exact et les accessoires inclus avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 150000
+      }
+    ],
+    "brand": "Ubiquiti",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page041_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "ubiquiti-unifi-u6-pro-access-point",
+    "featured": false
+  },
+  {
+    "refs": [
+      134
+    ],
+    "page": 42,
+    "model": null,
+    "name": {
+      "en": "IEC Power Adapter Cable — French Socket",
+      "fr": "Adaptateur d’alimentation IEC — prise française"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Adapter lead shown with an IEC connector on one end and a French/European-style socket on the other. Confirm connector type and electrical rating before purchase. Caractéristiques (FR) : Câble adaptateur présenté avec un connecteur IEC d’un côté et une prise de type français/européen de l’autre. Vérifier le type exact de connecteur et la puissance admissible avant achat.",
+      "fr": "Adapter lead shown with an IEC connector on one end and a French/European-style socket on the other. Confirm connector type and electrical rating before purchase. Caractéristiques (FR) : Câble adaptateur présenté avec un connecteur IEC d’un côté et une prise de type français/européen de l’autre. Vérifier le type exact de connecteur et la puissance admissible avant achat."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 2000
+      }
+    ],
+    "brand": null,
+    "category": "power",
+    "photos": [
+      "GGTECH_Page042_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "iec-power-adapter-cable-french-socket",
+    "featured": false
+  },
+  {
+    "refs": [
+      135
+    ],
+    "page": 43,
+    "model": null,
+    "name": {
+      "en": "TP-Link TD-W9970 VDSL/ADSL Modem Router",
+      "fr": "Modem-routeur TP-Link TD-W9970 VDSL/ADSL"
+    },
+    "short_description": null,
+    "description": {
+      "en": "300 Mbps 2.4 GHz Wi-Fi; VDSL/ADSL modem router; up to 100 Mbps VDSL access; USB 2.0 port for supported sharing/backup functions. Check ISP-line compatibility. Caractéristiques (FR) : Wi-Fi 2,4 GHz jusqu’à 300 Mb/s ; modem-routeur VDSL/ADSL ; accès VDSL jusqu’à 100 Mb/s ; port USB 2.0 pour les fonctions compatibles de partage/sauvegarde. Vérifier la compatibilité avec la ligne du fournisseur d’accès.",
+      "fr": "300 Mbps 2.4 GHz Wi-Fi; VDSL/ADSL modem router; up to 100 Mbps VDSL access; USB 2.0 port for supported sharing/backup functions. Check ISP-line compatibility. Caractéristiques (FR) : Wi-Fi 2,4 GHz jusqu’à 300 Mb/s ; modem-routeur VDSL/ADSL ; accès VDSL jusqu’à 100 Mb/s ; port USB 2.0 pour les fonctions compatibles de partage/sauvegarde. Vérifier la compatibilité avec la ligne du fournisseur d’accès."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 25000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page043_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-td-w9970-vdsl-adsl-modem-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      136
+    ],
+    "page": 44,
+    "model": null,
+    "name": {
+      "en": "Canon CanoScan LiDE 300 Scanner",
+      "fr": "Scanner Canon CanoScan LiDE 300"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Flatbed colour image scanner; optical resolution up to 2400 × 2400 dpi; USB connection; compact design. Caractéristiques (FR) : Scanner à plat couleur ; résolution optique jusqu’à 2400 × 2400 dpi ; connexion USB ; format compact.",
+      "fr": "Flatbed colour image scanner; optical resolution up to 2400 × 2400 dpi; USB connection; compact design. Caractéristiques (FR) : Scanner à plat couleur ; résolution optique jusqu’à 2400 × 2400 dpi ; connexion USB ; format compact."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 75000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page044_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "canon-canoscan-lide-300-scanner",
+    "featured": false
+  },
+  {
+    "refs": [
+      137
+    ],
+    "page": 45,
+    "model": null,
+    "name": {
+      "en": "Ubuntu Premium Toner for Kyocera Color Printers — 300 g",
+      "fr": "Toner Ubuntu Premium pour imprimantes couleur Kyocera — 300 g"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Premium toner powder, 300 g bottle, shown in cyan, magenta, yellow and black. Label lists Kyocera TASKalfa and ECOSYS compatibility; verify the exact printer model and color before use. Caractéristiques (FR) : Poudre de toner premium, flacon de 300 g, présentée en cyan, magenta, jaune et noir. L’étiquette indique une compatibilité avec certaines Kyocera TASKalfa et ECOSYS ; vérifier le modèle exact de l’imprimante et la couleur avant utilisation.",
+      "fr": "Premium toner powder, 300 g bottle, shown in cyan, magenta, yellow and black. Label lists Kyocera TASKalfa and ECOSYS compatibility; verify the exact printer model and color before use. Caractéristiques (FR) : Poudre de toner premium, flacon de 300 g, présentée en cyan, magenta, jaune et noir. L’étiquette indique une compatibilité avec certaines Kyocera TASKalfa et ECOSYS ; vérifier le modèle exact de l’imprimante et la couleur avant utilisation."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 12000
+      }
+    ],
+    "brand": "Ubuntu",
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page045_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "ubuntu-premium-toner-for-kyocera-color-printers-300-g",
+    "featured": false
+  },
+  {
+    "refs": [
+      138
+    ],
+    "page": 46,
+    "model": null,
+    "name": {
+      "en": "Canon i-SENSYS MF657Cdw Colour Laser All-in-One",
+      "fr": "Multifonction laser couleur Canon i-SENSYS MF657Cdw"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Colour laser multifunction printer: print, copy, scan and fax; wireless/network printing; automatic duplex printing; up to 21 ppm black and colour (manufacturer-rated). Uses Canon Cartridge 067 series. Caractéristiques (FR) : Multifonction laser couleur : impression, copie, numérisation et fax ; impression sans fil/réseau ; recto verso automatique ; jusqu’à 21 pages/min en noir et en couleur (selon le fabricant). Utilise les cartouches Canon série 067.",
+      "fr": "Colour laser multifunction printer: print, copy, scan and fax; wireless/network printing; automatic duplex printing; up to 21 ppm black and colour (manufacturer-rated). Uses Canon Cartridge 067 series. Caractéristiques (FR) : Multifonction laser couleur : impression, copie, numérisation et fax ; impression sans fil/réseau ; recto verso automatique ; jusqu’à 21 pages/min en noir et en couleur (selon le fabricant). Utilise les cartouches Canon série 067."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 500000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page046_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "canon-i-sensys-mf657cdw-colour-laser-all-in-one"
+  },
+  {
+    "refs": [
+      139
+    ],
+    "page": 47,
+    "model": null,
+    "name": {
+      "en": "USB 3.0 to HDMI Display Adapter",
+      "fr": "Adaptateur d’affichage USB 3.0 vers HDMI"
+    },
+    "short_description": null,
+    "description": {
+      "en": "USB-A 3.0 adapter with HDMI output for connecting a computer to an HDMI display. Driver/software and supported resolution depend on the exact model; confirm before sale. Caractéristiques (FR) : Adaptateur USB-A 3.0 avec sortie HDMI pour connecter un ordinateur à un écran HDMI. Le pilote/logiciel et la résolution prise en charge dépendent du modèle exact ; à confirmer avant la vente.",
+      "fr": "USB-A 3.0 adapter with HDMI output for connecting a computer to an HDMI display. Driver/software and supported resolution depend on the exact model; confirm before sale. Caractéristiques (FR) : Adaptateur USB-A 3.0 avec sortie HDMI pour connecter un ordinateur à un écran HDMI. Le pilote/logiciel et la résolution prise en charge dépendent du modèle exact ; à confirmer avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 8000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page047_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "usb-3-0-to-hdmi-display-adapter",
+    "featured": false
+  },
+  {
+    "refs": [
+      140
+    ],
+    "page": 48,
+    "model": null,
+    "name": {
+      "en": "APC Home/Office Surge Protector PM5-FR",
+      "fr": "Multiprise parafoudre APC Home/Office PM5-FR"
+    },
+    "short_description": null,
+    "description": {
+      "en": "5 French-style outlets; 1.8 m power cord; child-protection shutters; surge protection. Box indicates 36,000 A peak surge current. Caractéristiques (FR) : 5 prises de type français ; cordon d’alimentation de 1,8 m ; obturateurs de sécurité enfants ; protection contre les surtensions. La boîte indique un courant de surtension maximal de 36 000 A.",
+      "fr": "5 French-style outlets; 1.8 m power cord; child-protection shutters; surge protection. Box indicates 36,000 A peak surge current. Caractéristiques (FR) : 5 prises de type français ; cordon d’alimentation de 1,8 m ; obturateurs de sécurité enfants ; protection contre les surtensions. La boîte indique un courant de surtension maximal de 36 000 A."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 15000
+      }
+    ],
+    "brand": "APC",
+    "category": "power",
+    "photos": [
+      "GGTECH_Page048_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "apc-home-office-surge-protector-pm5-fr",
+    "featured": false
+  },
+  {
+    "refs": [
+      141
+    ],
+    "page": 49,
+    "model": null,
+    "name": {
+      "en": "AKAI AVR003A Automatic Voltage Regulator — 2000 VA",
+      "fr": "Régulateur automatique de tension AKAI AVR003A — 2000 VA"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Automatic voltage regulator rated at 2000 VA. Intended to help stabilize incoming voltage for compatible equipment. Confirm input/output voltage range and load limits before use.",
+      "fr": "Régulateur automatique de tension de 2000 VA, conçu pour stabiliser la tension d’alimentation des équipements compatibles. Vérifier la plage de tension d’entrée/sortie et les limites de charge avant utilisation."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": "AKAI",
+    "category": "power",
+    "photos": [
+      "GGTECH_Page049_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "akai-avr003a-automatic-voltage-regulator-2000-va",
+    "featured": false
+  },
+  {
+    "refs": [
+      142
+    ],
+    "page": 50,
+    "model": null,
+    "name": {
+      "en": "Epson Ribbon Cartridge — LQ-350 / LX-350 / 300 Series",
+      "fr": "Ruban Epson — LQ-350 / LX-350 / série 300"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Ribbon cartridge packaging lists Epson LQ-350, LX-350 and selected 300-series impact printers. Confirm exact cartridge part number and printer compatibility before ordering.",
+      "fr": "L’emballage indique une compatibilité avec Epson LQ-350, LX-350 et certaines imprimantes matricielles de la série 300. Vérifier la référence exacte du ruban et la compatibilité avant commande."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "brand": "Epson",
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page050_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-ribbon-cartridge-lq-350-lx-350-300-series",
+    "featured": false
+  },
+  {
+    "refs": [
+      143
+    ],
+    "page": 51,
+    "model": null,
+    "name": {
+      "en": "HP LaserJet Pro M15w Monochrome Laser Printer",
+      "fr": "Imprimante laser monochrome HP LaserJet Pro M15w"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Compact black-and-white laser printer with wireless printing. Uses HP 44A toner family; confirm region-specific cartridge and connectivity requirements.",
+      "fr": "Imprimante laser noir et blanc compacte avec impression sans fil. Utilise la famille de toner HP 44A ; vérifier la cartouche adaptée à la région et les besoins de connectivité."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 130000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page051_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-laserjet-pro-m15w-monochrome-laser-printer",
+    "featured": false
+  },
+  {
+    "refs": [
+      144
+    ],
+    "page": 52,
+    "model": null,
+    "name": {
+      "en": "Portable Tripod Projection Screen",
+      "fr": "Écran de projection portable sur trépied"
+    },
+    "short_description": null,
+    "description": {
+      "en": "White projection surface with black border and tripod stand. Screen size and aspect ratio are not visible in the photo; confirm dimensions before sale.",
+      "fr": "Surface de projection blanche avec bordure noire et trépied. La taille et le format ne sont pas visibles sur la photo ; confirmer les dimensions avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 65000
+      }
+    ],
+    "brand": null,
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page052_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "portable-tripod-projection-screen",
+    "featured": false
+  },
+  {
+    "refs": [
+      145
+    ],
+    "page": 53,
+    "model": null,
+    "name": {
+      "en": "TP-Link Archer C6 AC1200 Gigabit Wi-Fi Router",
+      "fr": "Routeur Wi-Fi Gigabit TP-Link Archer C6 AC1200"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Dual-band Wi-Fi router; box indicates 867 Mbps on 5 GHz plus 400 Mbps on 2.4 GHz, full Gigabit MU-MIMO, WPA3 and EasyMesh compatibility. Check hardware version for exact features.",
+      "fr": "Routeur Wi-Fi double bande ; la boîte indique 867 Mb/s en 5 GHz et 400 Mb/s en 2,4 GHz, MU-MIMO Gigabit, WPA3 et compatibilité EasyMesh. Vérifier la version matérielle pour les fonctions exactes."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page053_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-archer-c6-ac1200-gigabit-wi-fi-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      146
+    ],
+    "page": 54,
+    "model": null,
+    "name": {
+      "en": "Refill Ink Set — 51 Series (Black, Cyan, Magenta, Yellow)",
+      "fr": "Kit d’encre de recharge — série 51 (noir, cyan, magenta, jaune)"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Refill ink bottles: pigment black (PGBK), cyan, magenta and yellow. Price is per bottle, per the supplied pricing. Match the ink type to the exact printer model.",
+      "fr": "Flacons d’encre de recharge : noir pigmenté (PGBK), cyan, magenta et jaune. Prix indiqué par flacon, selon les tarifs fournis. Vérifier la compatibilité avec le modèle exact d’imprimante."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 15000
+      }
+    ],
+    "brand": null,
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page054_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "refill-ink-set-51-series-black-cyan-magenta-yellow",
+    "featured": false
+  },
+  {
+    "refs": [
+      147
+    ],
+    "page": 55,
+    "model": null,
+    "name": {
+      "en": "Thermal Paper Roll — Shirleyya",
+      "fr": "Rouleau de papier thermique — Shirleyya"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Thermal paper roll for compatible receipt or point-of-sale printers. Pricing: 1,500 FCFA per roll; 5,000 FCFA for a pack of 5 rolls. Confirm roll dimensions before purchase.",
+      "fr": "5 000 FCFA le lot de 5 rouleaux. Confirmer les dimensions avant achat."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 1500
+      }
+    ],
+    "brand": null,
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page055_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "thermal-paper-roll-shirleyya",
+    "featured": false
+  },
+  {
+    "refs": [
+      148
+    ],
+    "page": 56,
+    "model": null,
+    "name": {
+      "en": "Continuous/Fanfold Thermal Labels",
+      "fr": "Étiquettes thermiques en continu / en accordéon"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Folded continuous label stock with red directional marks. Label width, label height, gap and printer compatibility need confirmation before ordering.",
+      "fr": "Étiquettes en continu pliées en accordéon avec repères rouges. La largeur, la hauteur, l’espacement et la compatibilité avec l’imprimante doivent être confirmés avant commande."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 50000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page056_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "continuous-fanfold-thermal-labels",
+    "featured": false
+  },
+  {
+    "refs": [
+      149
+    ],
+    "page": 57,
+    "model": null,
+    "name": {
+      "en": "HP Color Laser MFP 178nw",
+      "fr": "Multifonction laser couleur HP Color Laser MFP 178nw"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Colour laser multifunction printer for printing, copying and scanning, with wireless/network connectivity. Confirm included toner and regional model number before sale.",
+      "fr": "Multifonction laser couleur pour impression, copie et numérisation, avec connectivité sans fil/réseau. Vérifier les toners inclus et la référence régionale avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 250000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page057_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-color-laser-mfp-178nw",
+    "featured": false
+  },
+  {
+    "refs": [
+      150
+    ],
+    "page": 58,
+    "model": null,
+    "name": {
+      "en": "Windows 11 Pro License Key",
+      "fr": "Clé de licence Windows 11 Pro"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Price supplied is for a Windows 11 Pro license key. The photo also shows several Microsoft Office editions; Office license prices are not specified and should be quoted separately. Verify license authenticity, activation region and transfer rights before purchase.",
+      "fr": "Le prix fourni concerne une clé de licence Windows 11 Pro. La photo montre également plusieurs éditions de Microsoft Office ; leurs prix ne sont pas précisés et doivent être communiqués séparément. Vérifier l’authenticité, la région d’activation et les droits de transfert avant achat."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 25000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page058_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "windows-11-pro-license-key",
+    "featured": false
+  },
+  {
+    "refs": [
+      151
+    ],
+    "page": 59,
+    "model": null,
+    "name": {
+      "en": "GI-490 Compatible Refill Ink Set (BK/C/M/Y)",
+      "fr": "Kit d’encre de recharge compatible GI-490 (N/C/M/J)"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Four-colour refill ink set. Packaging indicates GI-490: black 135 ml; cyan, magenta and yellow 70 ml each. Confirm printer compatibility before use.",
+      "fr": "Kit de recharge quatre couleurs. L’emballage indique GI-490 : noir 135 ml ; cyan, magenta et jaune 70 ml chacun. Confirmer la compatibilité de l’imprimante avant utilisation."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 4000
+      }
+    ],
+    "brand": null,
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page059_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "gi-490-compatible-refill-ink-set-bk-c-m-y",
+    "featured": false
+  },
+  {
+    "refs": [
+      152
+    ],
+    "page": 60,
+    "model": null,
+    "name": {
+      "en": "HP ProBook 430 G7 Laptop",
+      "fr": "Ordinateur portable HP ProBook 430 G7"
+    },
+    "short_description": {
+      "en": "Intel Core i5-10210U (10th generation); 8 GB RAM; 256 GB SSD; 13-inch display; approx. 3-hour battery life; charger included.",
+      "fr": "Intel Core i5-10210U (10e génération) ; RAM 8 Go ; SSD 256 Go ; écran 13 pouces ; autonomie d’environ 3 heures ; chargeur inclus."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page060_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-probook-430-g7-laptop",
+    "featured": false
+  },
+  {
+    "refs": [
+      153
+    ],
+    "page": 61,
+    "model": null,
+    "name": {
+      "en": "Dell Latitude 3420 Laptop",
+      "fr": "Ordinateur portable Dell Latitude 3420"
+    },
+    "short_description": {
+      "en": "Intel Core i5 (11th generation); 8 GB RAM; 256 GB SSD; 14-inch display; approx. 3-hour battery life; charger included.",
+      "fr": "Intel Core i5 (11e génération) ; RAM 8 Go ; SSD 256 Go ; écran 14 pouces ; autonomie d’environ 3 heures ; chargeur inclus."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 200000
+      }
+    ],
+    "brand": "Dell",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page061_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "dell-latitude-3420-laptop",
+    "featured": false
+  },
+  {
+    "refs": [
+      154
+    ],
+    "page": 62,
+    "model": null,
+    "name": {
+      "en": "Lenovo ThinkPad T14 Laptop",
+      "fr": "Ordinateur portable Lenovo ThinkPad T14"
+    },
+    "short_description": {
+      "en": "Intel Core i5 (10th generation); 8 GB RAM; 256 GB SSD; 14-inch display; approx. 3-hour battery life; charger included.",
+      "fr": "Intel Core i5 (10e génération) ; RAM 8 Go ; SSD 256 Go ; écran 14 pouces ; autonomie d’environ 3 heures ; chargeur inclus."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 210000
+      }
+    ],
+    "brand": "Lenovo",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page062_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "lenovo-thinkpad-t14-laptop",
+    "featured": false
+  },
+  {
+    "refs": [
+      155
+    ],
+    "page": 63,
+    "model": null,
+    "name": {
+      "en": "HP EliteBook 840 G6 Laptop",
+      "fr": "Ordinateur portable HP EliteBook 840 G6"
+    },
+    "short_description": {
+      "en": "Intel Core i7 (8th generation); 8 GB RAM; 256 GB SSD; 14-inch display; backlit keyboard; approx. 3-hour battery life; charger included.",
+      "fr": "Intel Core i7 (8e génération) ; RAM 8 Go ; SSD 256 Go ; écran 14 pouces ; clavier rétroéclairé ; autonomie d’environ 3 heures ; chargeur inclus."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 220000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page063_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-elitebook-840-g6-laptop",
+    "featured": false
+  },
+  {
+    "refs": [
+      156
+    ],
+    "page": 64,
+    "model": null,
+    "name": {
+      "en": "Dell Latitude 5480 Laptop",
+      "fr": "Ordinateur portable Dell Latitude 5480"
+    },
+    "short_description": {
+      "en": "Intel Core i5 (7th generation); 8 GB RAM; 256 GB SSD; 14-inch display; approx. 3-hour battery life; charger included.",
+      "fr": "Intel Core i5 (7e génération) ; RAM 8 Go ; SSD 256 Go ; écran 14 pouces ; autonomie d’environ 3 heures ; chargeur inclus."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 150000
+      }
+    ],
+    "brand": "Dell",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page064_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "dell-latitude-5480-laptop",
+    "featured": false
+  },
+  {
+    "refs": [
+      157
+    ],
+    "page": 65,
+    "model": null,
+    "name": {
+      "en": "Epson 103 EcoTank Ink Bottles (BK/C/M/Y)",
+      "fr": "Bouteilles d’encre Epson 103 EcoTank (N/C/M/J)"
+    },
+    "short_description": {
+      "en": "Epson 103 ink bottles shown in black, yellow, cyan and magenta. Price is per bottle. Confirm printer compatibility before purchase.",
+      "fr": "Bouteilles d’encre Epson 103 en noir, jaune, cyan et magenta. Prix indiqué par bouteille. Confirmer la compatibilité avec l’imprimante avant achat."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 4000
+      }
+    ],
+    "brand": "Epson",
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page065_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-103-ecotank-ink-bottles-bk-c-m-y",
+    "featured": false
+  },
+  {
+    "refs": [
+      158
+    ],
+    "page": 66,
+    "model": null,
+    "name": {
+      "en": "D-Link DWR-M960 4G LTE Router",
+      "fr": "Routeur 4G LTE D-Link DWR-M960"
+    },
+    "short_description": null,
+    "description": {
+      "en": "4G LTE router with SIM-based mobile broadband as shown on packaging. Confirm supported LTE bands, Wi-Fi details and carrier-unlock status with supplier.",
+      "fr": "Routeur 4G LTE avec connexion Internet mobile via carte SIM, selon l’emballage. Confirmer les bandes LTE, les caractéristiques Wi-Fi et le déverrouillage opérateur auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": null,
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page066_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "d-link-dwr-m960-4g-lte-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      159
+    ],
+    "page": 67,
+    "model": null,
+    "name": {
+      "en": "TP-Link Pharos CPE220 Outdoor CPE",
+      "fr": "CPE extérieur TP-Link Pharos CPE220"
+    },
+    "short_description": null,
+    "description": {
+      "en": "2.4 GHz outdoor CPE; up to 300 Mbps; 12 dBi antenna gain. Box indicates passive PoE adapter included. Confirm package contents before installation.",
+      "fr": "CPE extérieur 2,4 GHz ; jusqu’à 300 Mb/s ; gain d’antenne de 12 dBi. La boîte indique un adaptateur PoE passif inclus. Confirmer le contenu du paquet avant installation."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page067_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-pharos-cpe220-outdoor-cpe",
+    "featured": false
+  },
+  {
+    "refs": [
+      160
+    ],
+    "page": 68,
+    "model": null,
+    "name": {
+      "en": "HDMI-to-VGA Adapter",
+      "fr": "Adaptateur HDMI vers VGA"
+    },
+    "short_description": null,
+    "description": {
+      "en": "HDMI-to-VGA adapter shown with a USB-A power lead. Confirm maximum supported resolution and audio support with supplier.",
+      "fr": "Adaptateur HDMI vers VGA présenté avec un câble d’alimentation USB-A. Confirmer la résolution maximale prise en charge et la compatibilité audio auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "brand": null,
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page068_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hdmi-to-vga-adapter",
+    "featured": false
+  },
+  {
+    "refs": [
+      161
+    ],
+    "page": 69,
+    "model": null,
+    "name": {
+      "en": "TP-Link RE220 AC750 Mesh Wi-Fi Extender",
+      "fr": "Répéteur Wi-Fi Mesh TP-Link RE220 AC750"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Dual-band AC750: up to 433 Mbps on 5 GHz and 300 Mbps on 2.4 GHz. Mesh Wi-Fi extender; access point mode; app-based setup. Works with Wi-Fi routers.",
+      "fr": "Double bande AC750 : jusqu’à 433 Mb/s en 5 GHz et 300 Mb/s en 2,4 GHz. Répéteur Wi-Fi Mesh ; mode point d’accès ; configuration via application. Compatible avec les routeurs Wi-Fi."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page069_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-re220-ac750-mesh-wi-fi-extender",
+    "featured": false
+  },
+  {
+    "refs": [
+      162
+    ],
+    "page": 70,
+    "model": null,
+    "name": {
+      "en": "TP-Link TL-WA850RE N300 Wi-Fi Range Extender",
+      "fr": "Répéteur Wi-Fi TP-Link TL-WA850RE N300"
+    },
+    "short_description": {
+      "en": "2.4 GHz Wi-Fi range extender; up to 300 Mbps; 2×2 MIMO; easy setup and Tether app support.",
+      "fr": "Répéteur Wi-Fi 2,4 GHz ; jusqu’à 300 Mb/s ; technologie 2×2 MIMO ; configuration facile et prise en charge de l’application Tether."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 25000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page070_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-tl-wa850re-n300-wi-fi-range-extender",
+    "featured": false
+  },
+  {
+    "refs": [
+      163
+    ],
+    "page": 71,
+    "model": null,
+    "name": {
+      "en": "Seagate 2.5-inch Mobile HDD — 500 GB / 1 TB",
+      "fr": "Disque dur Seagate Mobile 2,5 pouces — 500 Go / 1 To"
+    },
+    "short_description": null,
+    "description": {
+      "en": "2.5-inch SATA mobile hard drive. The photo shows a 1 TB drive; 500 GB and 1 TB prices are listed as supplied. Confirm condition, interface and exact capacity before sale.",
+      "fr": "Disque dur mobile SATA de 2,5 pouces. La photo montre un disque de 1 To ; les prix des versions 500 Go et 1 To sont indiqués selon vos informations. Confirmer l’état, l’interface et la capacité exacte avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "500 GB",
+          "fr": "500 GB"
+        },
+        "price_xof": 15000
+      },
+      {
+        "label": {
+          "en": "1 TB",
+          "fr": "1 TB"
+        },
+        "price_xof": 25000
+      }
+    ],
+    "brand": "Seagate",
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page071_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "seagate-2-5-inch-mobile-hdd-500-gb-1-tb",
+    "featured": false
+  },
+  {
+    "refs": [
+      164
+    ],
+    "page": 72,
+    "model": null,
+    "name": {
+      "en": "Outdoor Waterproof CAT6 Cable",
+      "fr": "Câble CAT6 extérieur étanche"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Outdoor CAT6 network cable on reels. Reel lengths/packaging appear to vary; confirm exact length, conductor type and copper-clad aluminium versus pure copper with supplier.",
+      "fr": "Câble réseau CAT6 pour extérieur sur bobines. Les longueurs/emballages semblent varier ; confirmer la longueur exacte, le type de conducteur et s’il s’agit de cuivre pur ou de cuivre plaqué aluminium auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 50000
+      }
+    ],
+    "brand": null,
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page072_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "outdoor-waterproof-cat6-cable",
+    "featured": false
+  },
+  {
+    "refs": [
+      165
+    ],
+    "page": 73,
+    "model": null,
+    "name": {
+      "en": "Tenda 500 m Outdoor Surveillance Wireless Bridge Kit",
+      "fr": "Kit de pont sans fil Tenda 500 m pour vidéosurveillance extérieure"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Outdoor wireless bridge kit advertised for surveillance links up to 500 m. Confirm the exact model, number of units in the kit, frequency and included PoE accessories with supplier.",
+      "fr": "Kit de pont sans fil extérieur annoncé pour les liaisons de vidéosurveillance jusqu’à 500 m. Confirmer le modèle exact, le nombre d’unités, la fréquence et les accessoires PoE inclus auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 45000
+      }
+    ],
+    "brand": "Tenda",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page073_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tenda-500-m-outdoor-surveillance-wireless-bridge-kit",
+    "featured": false
+  },
+  {
+    "refs": [
+      166
+    ],
+    "page": 74,
+    "model": null,
+    "name": {
+      "en": "Comfast Wireless CPE — M2 / M5",
+      "fr": "CPE sans fil Comfast — M2 / M5"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Outdoor wireless CPE product family. Separate prices are listed for M2 and M5 as supplied. Confirm exact model code, frequency band, speed and included power/PoE accessories before sale.",
+      "fr": "Gamme de CPE sans fil pour extérieur. Les prix des versions M2 et M5 sont indiqués séparément selon vos informations. Confirmer le code modèle, la bande de fréquence, le débit et les accessoires d’alimentation/PoE inclus avant la vente."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "M2",
+          "fr": "M2"
+        },
+        "price_xof": 25000
+      },
+      {
+        "label": {
+          "en": "M5",
+          "fr": "M5"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "brand": "Comfast",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page074_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "comfast-wireless-cpe-m2-m5",
+    "featured": false
+  },
+  {
+    "refs": [
+      167
+    ],
+    "page": 75,
+    "model": null,
+    "name": {
+      "en": "Comfast Outdoor High-Power CPE — 5G Labelled",
+      "fr": "CPE extérieur haute puissance Comfast — étiquette 5G"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Outdoor high-power CPE. Packaging shows “5G”; confirm whether this refers to the 5 GHz Wi-Fi band and verify the exact model, throughput and PoE contents with supplier.",
+      "fr": "CPE extérieur haute puissance. L’emballage indique « 5G » ; confirmer s’il s’agit de la bande Wi-Fi 5 GHz et vérifier le modèle exact, le débit et le contenu PoE auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 40000
+      }
+    ],
+    "brand": "Comfast",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page075_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "comfast-outdoor-high-power-cpe-5g-labelled",
+    "featured": false
+  },
+  {
+    "refs": [
+      168
+    ],
+    "page": 76,
+    "model": null,
+    "name": {
+      "en": "Comfast Outdoor High-Power Wireless AP — 1300 Mbps",
+      "fr": "Point d’accès sans fil extérieur haute puissance Comfast — 1300 Mb/s"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Outdoor high-power wireless access point; packaging advertises 1300 Mbps and VLAN support. Model shown on box: CF-EW65. Confirm included accessories and actual supported Wi-Fi standard with supplier.",
+      "fr": "Point d’accès sans fil extérieur haute puissance ; l’emballage annonce 1300 Mb/s et la prise en charge du VLAN. Modèle visible sur la boîte : CF-EW65. Confirmer les accessoires inclus et la norme Wi-Fi réellement prise en charge auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": "Comfast",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page076_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "comfast-outdoor-high-power-wireless-ap-1300-mbps",
+    "featured": false
+  },
+  {
+    "refs": [
+      169
+    ],
+    "page": 77,
+    "model": null,
+    "name": {
+      "en": "HT-315 3-in-1 Modular Crimping Tool",
+      "fr": "Pince à sertir modulaire 3-en-1 HT-315"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Manual crimping tool for cutting, stripping and crimping network/telephone connectors; packaging lists RJ-45, RJ-11 and RJ-12-style connector support. Confirm exact connector compatibility.",
+      "fr": "Pince manuelle pour couper, dénuder et sertir les connecteurs réseau/téléphone ; l’emballage indique la prise en charge de connecteurs de type RJ-45, RJ-11 et RJ-12. Confirmer la compatibilité exacte des connecteurs."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 3000
+      }
+    ],
+    "brand": null,
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page077_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "ht-315-3-in-1-modular-crimping-tool",
+    "featured": false
+  },
+  {
+    "refs": [
+      170
+    ],
+    "page": 78,
+    "model": null,
+    "name": {
+      "en": "TP-Link TL-SG1008D 8-Port Gigabit Desktop Switch",
+      "fr": "Switch de bureau Gigabit 8 ports TP-Link TL-SG1008D"
+    },
+    "short_description": {
+      "en": "8-port Gigabit Ethernet desktop switch; plug-and-play; traffic prioritization and energy-saving features shown on packaging.",
+      "fr": "Switch de bureau Ethernet Gigabit à 8 ports ; installation Plug-and-Play ; priorisation du trafic et fonctions d’économie d’énergie indiquées sur l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page078_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "tp-link-tl-sg1008d-8-port-gigabit-desktop-switch",
+    "featured": false
+  },
+  {
+    "refs": [
+      171
+    ],
+    "page": 79,
+    "model": null,
+    "name": {
+      "en": "Epson Ribbon Cartridge S015589",
+      "fr": "Cartouche de ruban Epson S015589"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Ribbon cartridge, 17.0 m (55.7 ft), for Epson LQ-590, LQ-890, FX-890 and FX-589 series as printed on the box. Confirm exact printer compatibility before purchase.",
+      "fr": "Cartouche de ruban, 17,0 m (55,7 pieds), pour Epson LQ-590, LQ-890, FX-890 et séries FX-589 selon l’emballage. Confirmer la compatibilité exacte avec l’imprimante avant achat."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 8000
+      }
+    ],
+    "brand": "Epson",
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page085_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "epson-ribbon-cartridge-s015589",
+    "featured": false
+  },
+  {
+    "refs": [
+      172
+    ],
+    "page": 80,
+    "model": null,
+    "name": {
+      "en": "Canon i-SENSYS MF3010 Monochrome Laser All-in-One",
+      "fr": "Multifonction laser monochrome Canon i-SENSYS MF3010"
+    },
+    "short_description": {
+      "en": "Print, scan and copy; up to 18 pages per minute; USB 2.0; uses Canon Cartridge 725. Verify warranty and box condition.",
+      "fr": "Impression, numérisation et copie ; jusqu’à 18 pages par minute ; USB 2.0 ; utilise la cartouche Canon 725. Vérifier la garantie et l’état de l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 200000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [],
+    "compatibility": null,
+    "slug": "canon-i-sensys-mf3010-monochrome-laser-all-in-one",
+    "featured": false
+  },
+  {
+    "refs": [
+      173
+    ],
+    "page": 81,
+    "model": null,
+    "name": {
+      "en": "HP Pavilion 15 Laptop — Core i5, 12th Gen",
+      "fr": "Ordinateur portable HP Pavilion 15 — Core i5, 12e génération"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Intel Core i5 12th Gen; 512 GB SSD; 8 GB RAM; 15.6-inch touchscreen, according to supplied description. Exact SKU, operating system, battery condition and warranty not confirmed.",
+      "fr": "Intel Core i5 de 12e génération ; SSD 512 Go ; RAM 8 Go ; écran tactile de 15,6 pouces, selon la description fournie. Référence exacte, système d’exploitation, état de la batterie et garantie non confirmés."
+    },
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page080_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-pavilion-15-laptop-core-i5-12th-gen",
+    "featured": false
+  },
+  {
+    "refs": [
+      174
+    ],
+    "page": 82,
+    "model": null,
+    "name": {
+      "en": "TP-Link Archer C6 AC1200 Mesh Wi-Fi Router",
+      "fr": "Routeur Wi-Fi Mesh TP-Link Archer C6 AC1200"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Dual-band AC1200: up to 867 Mbps on 5 GHz + 300 Mbps on 2.4 GHz; MU-MIMO; Gigabit Ethernet; supports Smart Roaming as indicated on packaging.",
+      "fr": "Double bande AC1200 : jusqu’à 867 Mb/s en 5 GHz + 300 Mb/s en 2,4 GHz ; MU-MIMO ; Ethernet Gigabit ; prise en charge du Smart Roaming selon l’emballage."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "brand": "TP-Link",
+    "category": "networking",
+    "photos": [],
+    "compatibility": null,
+    "slug": "tp-link-archer-c6-ac1200-mesh-wi-fi-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      175
+    ],
+    "page": 83,
+    "model": null,
+    "name": {
+      "en": "HP ScanJet Pro 2600 f1 Scanner",
+      "fr": "Scanner HP ScanJet Pro 2600 f1"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Document scanner with automatic document feeder (ADF); the supplied product graphic advertises 60-page ADF and 25/50 images per minute. Confirm the exact specification and included accessories against the model label.",
+      "fr": "Scanner de documents avec chargeur automatique de documents (ADF) ; l’image fournie annonce un ADF de 60 pages et 25/50 images par minute. Confirmer les caractéristiques exactes et les accessoires inclus à partir de l’étiquette du modèle."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 240000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page083_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-scanjet-pro-2600-f1-scanner",
+    "featured": false
+  },
+  {
+    "refs": [
+      176
+    ],
+    "page": 84,
+    "model": null,
+    "name": {
+      "en": "HP Color Laser MFP 179fnw",
+      "fr": "Multifonction laser couleur HP 179fnw"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Color laser multifunction printer with print, copy and scan; network-ready and wireless, according to packaging. Uses HP 117A toner cartridges. Confirm included toner levels and warranty.",
+      "fr": "Multifonction laser couleur avec impression, copie et numérisation ; réseau et Wi-Fi selon l’emballage. Utilise les cartouches de toner HP 117A. Confirmer le niveau des toners inclus et la garantie."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 340000
+      }
+    ],
+    "brand": "HP",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page084_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-color-laser-mfp-179fnw",
+    "featured": false
+  },
+  {
+    "refs": [
+      177
+    ],
+    "page": 85,
+    "model": null,
+    "name": {
+      "en": "Epson EcoTank L18050 A3+ Photo Printer",
+      "fr": "Imprimante photo Epson EcoTank L18050 A3+"
+    },
+    "short_description": null,
+    "description": {
+      "en": "A3+ photo printer with Wi-Fi, as indicated on the box. EcoTank refillable ink system. Confirm regional bundle, included ink and warranty.",
+      "fr": "Imprimante photo A3+ avec Wi-Fi, selon l’emballage. Système EcoTank à réservoirs d’encre rechargeables. Confirmer le contenu du pack, les encres incluses et la garantie."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 550000
+      }
+    ],
+    "brand": "Epson",
+    "category": "printers",
+    "photos": [],
+    "compatibility": null,
+    "featured": true,
+    "slug": "epson-ecotank-l18050-a3-photo-printer"
+  },
+  {
+    "refs": [
+      178
+    ],
+    "page": 86,
+    "model": null,
+    "name": {
+      "en": "Canon Cartridge 054 Original Toner — CMYK",
+      "fr": "Toner original Canon Cartridge 054 — CMJN"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Original Canon Cartridge 054 toner family. The photos show yellow, magenta, cyan and black variants. Price supplied; confirm whether 70,000 FCFA applies per cartridge and specify the colour when ordering.",
+      "fr": "Gamme de toners originaux Canon Cartridge 054. Les photos montrent les versions jaune, magenta, cyan et noir. Prix fourni ; confirmer si 70 000 FCFA s’applique à chaque cartouche et préciser la couleur à la commande."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 70000
+      }
+    ],
+    "brand": "Canon",
+    "category": "toners",
+    "photos": [
+      "GGTECH_Page079_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "canon-cartridge-054-original-toner-cmyk",
+    "featured": false
+  },
+  {
+    "refs": [
+      179
+    ],
+    "page": 87,
+    "model": null,
+    "name": {
+      "en": "Multifunction Tripod Stand for Laptop / Projector / Tablet",
+      "fr": "Support trépied multifonction pour ordinateur portable / projecteur / tablette"
+    },
+    "short_description": null,
+    "description": {
+      "en": "Adjustable tripod stand advertised for laptop, projector, tablet, phone, camera and music-sheet use. Confirm maximum load and height range with supplier.",
+      "fr": "Support trépied réglable annoncé pour ordinateur portable, projecteur, tablette, téléphone, caméra et partitions. Confirmer la charge maximale et la plage de hauteur auprès du fournisseur."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 40000
+      }
+    ],
+    "brand": null,
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page087_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "multifunction-tripod-stand-for-laptop-projector-tablet",
+    "featured": false
+  },
+  {
+    "refs": [
+      180
+    ],
+    "page": 88,
+    "model": null,
+    "name": {
+      "en": "Golden Crown Colour Toner Powder — 100 g",
+      "fr": "Poudre de toner couleur Golden Crown — 100 g"
+    },
+    "short_description": null,
+    "description": {
+      "en": "100 g bottle. The photo shows colour toner powder variants including cyan, magenta, yellow and black. Check printer/toner compatibility before refilling.",
+      "fr": "Flacon de 100 g. La photo montre différentes couleurs de poudre de toner, notamment cyan, magenta, jaune et noir. Vérifier la compatibilité imprimante/toner avant le remplissage."
+    },
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 4000
+      }
+    ],
+    "brand": "Golden Crown",
+    "category": "toners",
+    "photos": [],
+    "compatibility": null,
+    "slug": "golden-crown-colour-toner-powder-100-g",
+    "featured": false
+  },
+  {
+    "refs": [
+      181
+    ],
+    "page": 89,
+    "model": null,
+    "name": {
+      "en": "HP Pavilion 15 Laptop — Core i5, 12th Gen",
+      "fr": "HP Pavilion 15 Laptop — Core i5, 12th Gen"
+    },
+    "short_description": {
+      "en": "PRICE CORRECTION",
+      "fr": "CORRECTION DE PRIX"
+    },
+    "description": {
+      "en": "HP Pavilion 15 Laptop — Core i5, 12th Gen Intel Core i5 12th Gen 8 GB RAM 512 GB SSD 15.6-inch touchscreen",
+      "fr": "Écran tactile de 15,6 pouces This correction supersedes the previous “Price on request” entry. Cette correction remplace la mention précédente « Prix sur demande »."
+    },
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 550000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page080_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-pavilion-15-laptop-core-i5-12th-gen-2",
+    "featured": false
+  },
+  {
+    "refs": [
+      182
+    ],
+    "page": 90,
+    "model": null,
+    "name": {
+      "en": "SanDisk Extreme Portable SSD — 1 TB",
+      "fr": "SSD portable SanDisk Extreme — 1 To"
+    },
+    "short_description": {
+      "en": "Portable SSD; packaging advertises up to 1,050 MB/s read and 1,000 MB/s write.",
+      "fr": "SSD portable ; emballage annonçant jusqu’à 1 050 Mo/s en lecture et 1 000 Mo/s en écriture."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 100000
+      }
+    ],
+    "brand": "SanDisk",
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page090_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "sandisk-extreme-portable-ssd-1-tb",
+    "featured": false
+  },
+  {
+    "refs": [
+      183
+    ],
+    "page": 91,
+    "model": null,
+    "name": {
+      "en": "SanDisk Extreme Portable SSD — 2 TB",
+      "fr": "SSD portable SanDisk Extreme — 2 To"
+    },
+    "short_description": {
+      "en": "Portable SSD; packaging advertises up to 1,050 MB/s read and 1,000 MB/s write.",
+      "fr": "SSD portable ; emballage annonçant jusqu’à 1 050 Mo/s en lecture et 1 000 Mo/s en écriture."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 160000
+      }
+    ],
+    "brand": "SanDisk",
+    "category": "accessories",
+    "photos": [
+      "GGTECH_Page091_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "sandisk-extreme-portable-ssd-2-tb",
+    "featured": false
+  },
+  {
+    "refs": [
+      184
+    ],
+    "page": 92,
+    "model": null,
+    "name": {
+      "en": "HP 15.6-inch Laptop — Core i3, 8 GB RAM, 512 GB SSD",
+      "fr": "Ordinateur HP 15,6 pouces — Core i3, RAM 8 Go, SSD 512 Go"
+    },
+    "short_description": {
+      "en": "Intel Core i3, 8 GB RAM, 512 GB SSD, 15.6-inch HD (1366 × 768), Windows 11 Home S mode, as shown.",
+      "fr": "Intel Core i3, RAM 8 Go, SSD 512 Go, écran HD 15,6 pouces (1366 × 768), Windows 11 Home mode S, selon l’image."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 350000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page092_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "hp-15-6-inch-laptop-core-i3-8-gb-ram-512-gb-ssd",
+    "featured": false
+  },
+  {
+    "refs": [
+      185
+    ],
+    "page": 93,
+    "model": null,
+    "name": {
+      "en": "Canon i-SENSYS MF465dw Multifunction Laser Printer",
+      "fr": "Imprimante laser multifonction Canon i-SENSYS MF465dw"
+    },
+    "short_description": {
+      "en": "Monochrome laser multifunction printer; wireless printing, automatic duplex, 40 ppm; Cartridge 070 shown on box.",
+      "fr": "Multifonction laser monochrome ; impression sans fil, recto verso automatique, 40 ppm ; cartouche 070 indiquée sur le carton."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 500000
+      }
+    ],
+    "brand": "Canon",
+    "category": "printers",
+    "photos": [
+      "GGTECH_Page093_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "canon-i-sensys-mf465dw-multifunction-laser-printer"
+  },
+  {
+    "refs": [
+      186
+    ],
+    "page": 94,
+    "model": null,
+    "name": {
+      "en": "HP All-in-One Desktop Computer — Intel Core i5, 8 GB RAM, 512 GB SSD, 24-inch screen",
+      "fr": "Ordinateur de bureau tout-en-un HP — Intel Core i5, RAM 8 Go, SSD 512 Go, écran 24 pouces"
+    },
+    "short_description": {
+      "en": "HP All-in-One desktop computer; Intel Core i5 processor, 8 GB RAM, 512 GB SSD and 24-inch screen, as specified by GG-TECH.",
+      "fr": "Ordinateur de bureau tout-en-un HP ; processeur Intel Core i5, RAM 8 Go, SSD 512 Go et écran 24 pouces, selon les informations fournies par GG-TECH."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 650000
+      }
+    ],
+    "brand": "HP",
+    "category": "computing",
+    "photos": [
+      "GGTECH_Page094_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "featured": true,
+    "slug": "hp-all-in-one-desktop-computer-intel-core-i5-8-gb-ram-512-gb-ssd-24-inch-screen"
+  },
+  {
+    "refs": [
+      187
+    ],
+    "page": 95,
+    "model": null,
+    "name": {
+      "en": "Sealed Rechargeable Battery — 12 V, 7.2 Ah",
+      "fr": "Batterie rechargeable étanche — 12 V, 7,2 Ah"
+    },
+    "short_description": {
+      "en": "12 V / 7.2 Ah sealed rechargeable battery. Packaging displays Panasonic branding; authenticity and chemistry should be confirmed.",
+      "fr": "Batterie rechargeable étanche 12 V / 7,2 Ah. L’emballage affiche Panasonic ; l’authenticité et la technologie sont à confirmer."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 10000
+      }
+    ],
+    "brand": null,
+    "category": "power",
+    "photos": [
+      "GGTECH_Page095_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "sealed-rechargeable-battery-12-v-7-2-ah",
+    "featured": false
+  },
+  {
+    "refs": [
+      188
+    ],
+    "page": 96,
+    "model": null,
+    "name": {
+      "en": "Fiber Optic Tool Kit",
+      "fr": "Kit d’outils pour fibre optique"
+    },
+    "short_description": {
+      "en": "Appears to include a fiber cleaver, stripping/cutting tools, cleaning accessories and a carrying case; exact contents to confirm.",
+      "fr": "Semble comprendre une cliveuse, des outils de dénudage/coupe, des accessoires de nettoyage et une mallette ; contenu exact à confirmer."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 30000
+      }
+    ],
+    "brand": null,
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page096_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "fiber-optic-tool-kit",
+    "featured": false
+  },
+  {
+    "refs": [
+      189
+    ],
+    "page": 97,
+    "model": null,
+    "name": {
+      "en": "MikroTik RouterBOARD RB951 Series",
+      "fr": "MikroTik RouterBOARD série RB951"
+    },
+    "short_description": {
+      "en": "Router with five Ethernet ports visible. Exact RB951 model suffix and wireless specifications need confirmation.",
+      "fr": "Routeur avec cinq ports Ethernet visibles. La référence RB951 exacte et les caractéristiques Wi-Fi doivent être confirmées."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 45000
+      }
+    ],
+    "brand": "MikroTik",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page097_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "mikrotik-routerboard-rb951-series",
+    "featured": false
+  },
+  {
+    "refs": [
+      190
+    ],
+    "page": 98,
+    "model": null,
+    "name": {
+      "en": "NetLink Fiber Optic Ethernet Device",
+      "fr": "Appareil Ethernet pour fibre optique NetLink"
+    },
+    "short_description": {
+      "en": "Packaging indicates a Fast Ethernet/Gigabit Ethernet fiber-optic device. Exact model, connector type and distance should be confirmed.",
+      "fr": "L’emballage indique un appareil fibre optique Fast Ethernet/Gigabit Ethernet. Modèle, type de connecteur et distance à confirmer."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 40000
+      }
+    ],
+    "brand": "NetLink",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page098_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "netlink-fiber-optic-ethernet-device",
+    "featured": false
+  },
+  {
+    "refs": [
+      191
+    ],
+    "page": 99,
+    "model": null,
+    "name": {
+      "en": "Cudy 4G LTE Cat 4 N300 Wi-Fi Router",
+      "fr": "Routeur Wi-Fi Cudy 4G LTE Cat 4 N300"
+    },
+    "short_description": {
+      "en": "Packaging indicates IP65, 24 V passive PoE and operation from −40 to 65 °C. Exact model number should be confirmed.",
+      "fr": "L’emballage indique IP65, PoE passif 24 V et fonctionnement de −40 à 65 °C. Référence exacte à confirmer."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 50000
+      }
+    ],
+    "brand": "Cudy",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page099_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "cudy-4g-lte-cat-4-n300-wi-fi-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      192
+    ],
+    "page": 100,
+    "model": "GWN7630LR",
+    "name": {
+      "en": "Grandstream GWN7630LR Outdoor Long-Range Wi-Fi Access Point",
+      "fr": "Point d’accès Wi-Fi extérieur longue portée Grandstream GWN7630LR"
+    },
+    "short_description": {
+      "en": "Outdoor 802.11ac Wave-2 Wi-Fi access point for businesses, campuses, warehouses and outdoor environments.",
+      "fr": "Point d’accès Wi-Fi extérieur 802.11ac Wave 2 destiné aux entreprises, campus, entrepôts et environnements extérieurs."
+    },
+    "description": null,
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "brand": "Grandstream",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page100_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "grandstream-gwn7630lr-outdoor-long-range-wi-fi-access-point",
+    "featured": false
+  },
+  {
+    "refs": [
+      193
+    ],
+    "page": 100,
+    "model": "GWN7605LR",
+    "name": {
+      "en": "Grandstream GWN7605LR Long-Range Outdoor/Indoor Wi-Fi Access Point",
+      "fr": "Point d’accès Wi-Fi longue portée intérieur/extérieur Grandstream GWN7605LR"
+    },
+    "short_description": {
+      "en": "Enterprise-grade, weatherproof IP66 Wi-Fi 5 (802.11ac Wave-2) long-range access point.",
+      "fr": "Point d’accès longue portée Wi-Fi 5 (802.11ac Wave 2), de qualité professionnelle et protégé contre les intempéries (IP66)."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 65000
+      }
+    ],
+    "brand": "Grandstream",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page100_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "grandstream-gwn7605lr-long-range-outdoor-indoor-wi-fi-access-point",
+    "featured": false
+  },
+  {
+    "refs": [
+      194
+    ],
+    "page": 101,
+    "model": "LT500 Outdoor",
+    "name": {
+      "en": "Cudy LT500 Outdoor 4G LTE AC1200 Wi-Fi Router",
+      "fr": "Routeur Wi-Fi Cudy LT500 Outdoor 4G LTE AC1200"
+    },
+    "short_description": {
+      "en": "4G LTE Cat 4; AC1200 Wi-Fi; indoor/outdoor use indicated on packaging.",
+      "fr": "4G LTE Cat 4 ; Wi-Fi AC1200 ; usage intérieur/extérieur indiqué sur l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 50000
+      }
+    ],
+    "brand": "Cudy",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page101_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "cudy-lt500-outdoor-4g-lte-ac1200-wi-fi-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      195
+    ],
+    "page": 101,
+    "model": "AP3000",
+    "name": {
+      "en": "Cudy AP3000 AX3000 Wi-Fi 6 Ceiling Access Point",
+      "fr": "Point d’accès plafond Cudy AP3000 AX3000 Wi-Fi 6"
+    },
+    "short_description": {
+      "en": "Wi-Fi 6; AX3000; 2.5G Ethernet port; PoE/passive DC power indicated on packaging.",
+      "fr": "Wi-Fi 6 ; AX3000 ; port Ethernet 2,5 G ; alimentation PoE/CC passive indiquée sur l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 65000
+      }
+    ],
+    "brand": "Cudy",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page101_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "cudy-ap3000-ax3000-wi-fi-6-ceiling-access-point",
+    "featured": false
+  },
+  {
+    "refs": [
+      196
+    ],
+    "page": 102,
+    "model": "GS108",
+    "name": {
+      "en": "Cudy GS108 8-Port Gigabit Desktop Switch",
+      "fr": "Switch de bureau Gigabit 8 ports Cudy GS108"
+    },
+    "short_description": {
+      "en": "8 × 10/100/1000 Mbps Ethernet ports; plug-and-play desktop switch.",
+      "fr": "8 ports Ethernet 10/100/1000 Mbit/s ; switch de bureau prêt à l’emploi."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 20000
+      }
+    ],
+    "brand": "Cudy",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page102_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "cudy-gs108-8-port-gigabit-desktop-switch",
+    "featured": false
+  },
+  {
+    "refs": [
+      197
+    ],
+    "page": 102,
+    "model": "LAP-GPS",
+    "name": {
+      "en": "Ubiquiti LAP-GPS airMAX LiteAP AC Base Station",
+      "fr": "Station de base Ubiquiti LAP-GPS airMAX LiteAP AC"
+    },
+    "short_description": {
+      "en": "5 GHz; up to 450 Mbps advertised; 2×2 MIMO; integrated 17 dBi antenna; 90° coverage as shown on packaging.",
+      "fr": "5 GHz ; jusqu’à 450 Mbit/s annoncés ; MIMO 2×2 ; antenne intégrée 17 dBi ; couverture de 90° selon l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 80000
+      }
+    ],
+    "brand": "Ubiquiti",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page102_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "ubiquiti-lap-gps-airmax-liteap-ac-base-station",
+    "featured": false
+  },
+  {
+    "refs": [
+      198
+    ],
+    "page": 103,
+    "model": "AERIAL HD9I (confirm exact code with supplier / confirmer le code exact auprès du fournisseur)",
+    "name": {
+      "en": "Wavlink AERIAL HD9I AX3000 Wi-Fi 6 Outdoor Access Point",
+      "fr": "Point d’accès extérieur Wavlink AERIAL HD9I AX3000 Wi-Fi 6"
+    },
+    "short_description": {
+      "en": "AX3000 dual-band Wi-Fi 6; IP67; 802.3at/af active and passive PoE; four 8 dBi antennas as shown on packaging.",
+      "fr": "Wi-Fi 6 double bande AX3000 ; IP67 ; PoE actif et passif 802.3at/af ; quatre antennes 8 dBi selon l’emballage."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 110000
+      }
+    ],
+    "brand": "Wavlink",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page103_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "wavlink-aerial-hd9i-ax3000-wi-fi-6-outdoor-access-point",
+    "featured": false
+  },
+  {
+    "refs": [
+      199
+    ],
+    "page": 103,
+    "model": "hAP 2x lite",
+    "name": {
+      "en": "MikroTik hAP 2x lite Router",
+      "fr": "Routeur MikroTik hAP 2x lite"
+    },
+    "short_description": {
+      "en": "Model supplied by customer; specifications should be checked against the device label before publishing detailed technical claims.",
+      "fr": "Modèle communiqué par le client ; vérifier l’étiquette de l’appareil avant de publier des caractéristiques détaillées."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 75000
+      }
+    ],
+    "brand": "MikroTik",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page103_Photo02.jpg"
+    ],
+    "compatibility": null,
+    "slug": "mikrotik-hap-2x-lite-router",
+    "featured": false
+  },
+  {
+    "refs": [
+      200
+    ],
+    "page": 104,
+    "model": "Exact Chateau model to confirm / modèle Chateau exact à confirmer",
+    "name": {
+      "en": "MikroTik Chateau Series Wi-Fi Router",
+      "fr": "Routeur Wi-Fi MikroTik série Chateau"
+    },
+    "short_description": {
+      "en": "Dual-antenna router shown; exact model and LTE/cellular capabilities should be confirmed from the product label.",
+      "fr": "Routeur à deux antennes ; modèle exact et fonctions LTE/cellulaires à confirmer sur l’étiquette."
+    },
+    "description": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 145000
+      }
+    ],
+    "brand": "MikroTik",
+    "category": "networking",
+    "photos": [
+      "GGTECH_Page104_Photo01.jpg"
+    ],
+    "compatibility": null,
+    "slug": "mikrotik-chateau-series-wi-fi-router",
+    "featured": false
+  }
+]
