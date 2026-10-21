@@ -130,6 +130,16 @@ it('saves product prices and translations from the edit form', function () {
         ->search_text->toContain('baie réseau 12u');
 });
 
+it('hides photo uploads when the hosting cannot keep uploaded files', function () {
+    config(['store.photo_uploads' => false]);
+    $product = Product::factory()->priced()->create();
+
+    $this->actingAs(User::factory()->create())
+        ->get("/admin/products/{$product->slug}/edit")
+        ->assertOk()
+        ->assertDontSee('Add a photo');
+});
+
 it('stores the WhatsApp number from the settings page', function () {
     $this->actingAs(User::factory()->create());
 

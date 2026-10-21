@@ -61,6 +61,20 @@ return [
         ],
 
         /*
+        | Watermarked catalogue photos committed with the code (public/media), used in
+        | production until Cloudflare R2 is set up.
+        */
+
+        'media' => [
+            'driver' => 'local',
+            'root' => public_path('media'),
+            'url' => rtrim(env('APP_URL', 'http://localhost'), '/').'/media',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        /*
         | Cloudflare R2 (S3-compatible). Watermarked product photos go to the public
         | bucket; untouched originals stay in the private one.
         */

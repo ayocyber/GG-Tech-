@@ -114,6 +114,7 @@ class StoreSettings extends Page
                 ->label(__('Regenerate all photos'))
                 ->icon('heroicon-o-arrow-path')
                 ->color('gray')
+                ->visible(fn () => config('store.photo_uploads'))
                 ->requiresConfirmation()
                 ->modalDescription(__('Applies the current watermark to every product photo. This can take a few minutes.'))
                 ->action(function (ProductImageProcessor $processor) {

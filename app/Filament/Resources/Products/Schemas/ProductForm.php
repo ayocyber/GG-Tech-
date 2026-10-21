@@ -92,6 +92,7 @@ class ProductForm
                             ]),
 
                         Section::make(__('Photos'))
+                            ->visible(fn () => config('store.photo_uploads'))
                             ->description(__('Photos are cropped square and get the GG-TECH watermark automatically.'))
                             ->schema([
                                 Repeater::make('images')

@@ -65,6 +65,13 @@ return [
     ],
 
     /*
+    | Staff can upload product photos from the admin. Turn this off on hosting
+    | without persistent storage, where uploaded files would be lost on restart.
+    */
+
+    'photo_uploads' => (bool) env('STORE_PHOTO_UPLOADS', true),
+
+    /*
     |--------------------------------------------------------------------------
     | First admin account (used by the AdminUserSeeder)
     |--------------------------------------------------------------------------
