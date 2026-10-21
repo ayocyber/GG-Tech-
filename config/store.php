@@ -55,6 +55,16 @@ return [
     'image_sizes' => [400, 800, 1200],
 
     /*
+    | Where product photos live: local folders in development, Cloudflare R2
+    | in production (STORE_IMAGES_DISK=r2_public, STORE_ORIGINALS_DISK=r2_private).
+    */
+
+    'disks' => [
+        'images' => env('STORE_IMAGES_DISK', 'public'),
+        'originals' => env('STORE_ORIGINALS_DISK', 'local'),
+    ],
+
+    /*
     |--------------------------------------------------------------------------
     | First admin account (used by the AdminUserSeeder)
     |--------------------------------------------------------------------------

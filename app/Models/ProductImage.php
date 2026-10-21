@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Facades\Storage;
 
 #[Fillable(['product_id', 'original_path', 'position', 'processed_at'])]
 class ProductImage extends Model
@@ -26,7 +25,7 @@ class ProductImage extends Model
                 $previous = $image->getOriginal('original_path');
 
                 if ($image->wasChanged('original_path') && $previous && $previous !== $image->original_path) {
-                    Storage::disk('local')->delete($previous);
+                    ProductImageProcessor::originalsDisk()->delete($previous);
                 }
 
                 app(ProductImageProcessor::class)->process($image);
@@ -35,7 +34,7 @@ class ProductImage extends Model
 
         static::deleted(function (ProductImage $image) {
             app(ProductImageProcessor::class)->deleteCopies($image);
-            Storage::disk('local')->delete($image->original_path);
+            ProductImageProcessor::originalsDisk()->delete($image->original_path);
         });
     }
 
@@ -54,7 +53,7 @@ class ProductImage extends Model
 
     public function url(int $size = 800): string
     {
-        return Storage::disk('public')->url($this->pathFor($size)).'?v='.$this->processed_at?->timestamp;
+        return ProductImageProcessor::imagesDisk()->url($this->pathFor($size)).'?v='.$this->processed_at?->timestamp;
     }
 
     public function srcset(): string

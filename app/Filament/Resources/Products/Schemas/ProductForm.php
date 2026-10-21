@@ -105,7 +105,7 @@ class ProductForm
                                         FileUpload::make('original_path')
                                             ->hiddenLabel()
                                             ->image()
-                                            ->disk('local')
+                                            ->disk(config('store.disks.originals'))
                                             ->directory('products/originals/uploads')
                                             ->visibility('private')
                                             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])

@@ -51,6 +51,20 @@ it('places a free in-store pickup order and empties the cart', function () {
     Mail::assertQueued(NewOrderAlert::class, fn (NewOrderAlert $mail) => $mail->hasTo(config('store.email')));
 });
 
+it('still places the order when the email service is down', function () {
+    Mail::shouldReceive('to')->andThrow(new RuntimeException('SMTP unreachable'));
+    $product = Product::factory()->priced()->create();
+    app(Cart::class)->add($product->variants->first());
+
+    fillCustomer(Livewire::test(CheckoutForm::class))
+        ->set('fulfilment', 'pickup')
+        ->call('placeOrder')
+        ->assertHasNoErrors()
+        ->assertRedirectContains('/thank-you');
+
+    expect(Order::query()->count())->toBe(1);
+});
+
 it('adds the delivery zone fee to the total', function () {
     Mail::fake();
     $zone = DeliveryZone::factory()->create(['fee' => 2000]);

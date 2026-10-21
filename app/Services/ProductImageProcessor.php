@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\ProductImage;
 use App\Models\Setting;
+use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Interfaces\ImageInterface;
@@ -11,16 +12,26 @@ use Intervention\Image\Interfaces\ImageInterface;
 /**
  * Builds the public, watermarked WebP copies of a product photo.
  *
- * Originals stay on the private "local" disk; only processed copies are public.
+ * Originals stay on the private originals disk; only processed copies are public.
  */
 class ProductImageProcessor
 {
     public function __construct(private ImageManager $images) {}
 
+    public static function originalsDisk(): Filesystem
+    {
+        return Storage::disk(config('store.disks.originals'));
+    }
+
+    public static function imagesDisk(): Filesystem
+    {
+        return Storage::disk(config('store.disks.images'));
+    }
+
     public function process(ProductImage $image): void
     {
         $original = $this->images
-            ->read(Storage::disk('local')->path($image->original_path))
+            ->read(static::originalsDisk()->get($image->original_path))
             ->orient();
 
         $side = max($original->width(), $original->height());
@@ -31,7 +42,10 @@ class ProductImageProcessor
 
             $this->applyWatermark($copy);
 
-            Storage::disk('public')->put($image->pathFor($size), (string) $copy->toWebp(85));
+            static::imagesDisk()->put($image->pathFor($size), (string) $copy->toWebp(85), [
+                'ContentType' => 'image/webp',
+                'CacheControl' => 'public, max-age=31536000',
+            ]);
         }
 
         $image->forceFill(['processed_at' => now()])->saveQuietly();
@@ -39,7 +53,7 @@ class ProductImageProcessor
 
     public function deleteCopies(ProductImage $image): void
     {
-        Storage::disk('public')->delete(
+        static::imagesDisk()->delete(
             collect(config('store.image_sizes'))->map(fn (int $size) => $image->pathFor($size))->all(),
         );
     }

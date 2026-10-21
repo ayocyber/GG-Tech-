@@ -50,8 +50,9 @@ class SubmitQuoteRequest
 
         $quote->load('items');
 
-        Mail::to($quote->email)->locale($quote->locale)->queue(new QuoteRequestReceived($quote));
-        Mail::to(Setting::value('email'))->queue(new NewQuoteRequestAlert($quote));
+        // The request is saved either way, so a mail outage must not fail the form.
+        rescue(fn () => Mail::to($quote->email)->locale($quote->locale)->queue(new QuoteRequestReceived($quote)));
+        rescue(fn () => Mail::to(Setting::value('email'))->queue(new NewQuoteRequestAlert($quote)));
 
         return $quote;
     }

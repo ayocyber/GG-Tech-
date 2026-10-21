@@ -6,6 +6,7 @@ use App\Enums\ProductStatus;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Services\ProductImageProcessor;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -60,8 +61,9 @@ class CatalogSeeder extends Seeder
                         continue;
                     }
 
+                    // The source photos are always local; originals may live on R2 in production.
                     $path = "products/originals/{$product->id}/{$photo}";
-                    Storage::disk('local')->copy("{$photoDirectory}/{$photo}", $path);
+                    ProductImageProcessor::originalsDisk()->put($path, Storage::disk('local')->get("{$photoDirectory}/{$photo}"));
 
                     // Saving the image builds its watermarked copies (see ProductImage::booted).
                     $product->images()->create([

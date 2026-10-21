@@ -81,8 +81,9 @@ class PlaceOrder
 
         $order->load(['items', 'deliveryZone']);
 
-        Mail::to($order->email)->locale($order->locale)->queue(new OrderReceived($order));
-        Mail::to(Setting::value('email'))->queue(new NewOrderAlert($order));
+        // The order is saved and confirmed on WhatsApp either way, so a mail outage must not fail checkout.
+        rescue(fn () => Mail::to($order->email)->locale($order->locale)->queue(new OrderReceived($order)));
+        rescue(fn () => Mail::to(Setting::value('email'))->queue(new NewOrderAlert($order)));
 
         return $order;
     }

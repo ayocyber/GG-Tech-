@@ -21,6 +21,18 @@ it('builds public watermarked copies when a photo is saved', function () {
     expect([$width, $height])->toBe([400, 400]);
 });
 
+it('stores photos on the disks chosen for production', function () {
+    config(['store.disks.images' => 'r2_public', 'store.disks.originals' => 'r2_private']);
+    Storage::fake('r2_public');
+    Storage::fake('r2_private');
+    Storage::disk('r2_private')->put('products/originals/1/photo.jpg', UploadedFile::fake()->image('photo.jpg', 600, 600)->getContent());
+
+    $image = ProductImage::factory()->create(['original_path' => 'products/originals/1/photo.jpg']);
+
+    Storage::disk('r2_public')->assertExists($image->pathFor(800));
+    expect($image->refresh()->url())->toStartWith(Storage::disk('r2_public')->url($image->pathFor(800)));
+});
+
 it('keeps the original out of the public disk', function () {
     Storage::fake('local');
     Storage::fake('public');
