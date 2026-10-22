@@ -119,39 +119,41 @@
                 </form>
             </div>
 
-            {{-- Mobile menu --}}
-            <div x-cloak x-show="menuOpen" class="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
-                <div class="absolute inset-0 bg-navy/60" x-on:click="menuOpen = false" x-show="menuOpen" x-transition.opacity></div>
-                <div class="absolute inset-y-0 left-0 flex w-[86%] max-w-sm flex-col bg-white shadow-2xl" x-show="menuOpen"
-                     x-transition:enter="transition duration-200" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-                     x-transition:leave="transition duration-150" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
-                    <div class="flex h-[76px] items-center justify-between border-b border-silver/50 px-4">
-                        <x-logo class="h-9 w-auto" />
-                        <button type="button" class="rounded-full p-2 text-navy" x-on:click="menuOpen = false" aria-label="{{ __('Close menu') }}">
-                            <x-glyph name="close" class="size-6" />
-                        </button>
-                    </div>
-                    <nav class="flex-1 overflow-y-auto p-4">
-                        <p class="eyebrow mb-2 px-2">{{ __('Categories') }}</p>
-                        @foreach ($menuCategories as $menuCategory)
-                            <a href="{{ route('shop', $menuCategory) }}" class="flex items-center gap-3 rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">
-                                <span class="flex size-9 items-center justify-center rounded-lg bg-royal-50 text-royal"><x-glyph :name="$menuCategory->icon" class="size-4.5" /></span>
-                                {{ $menuCategory->translate('name') }}
+            {{-- Mobile menu (teleported to body: the header's backdrop-blur would otherwise trap the fixed overlay) --}}
+            <template x-teleport="body">
+                <div x-cloak x-show="menuOpen" class="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
+                    <div class="absolute inset-0 bg-navy/60" x-on:click="menuOpen = false" x-show="menuOpen" x-transition.opacity></div>
+                    <div class="absolute inset-y-0 left-0 flex w-[86%] max-w-sm flex-col bg-white shadow-2xl" x-show="menuOpen"
+                         x-transition:enter="transition duration-200" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+                         x-transition:leave="transition duration-150" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
+                        <div class="flex h-[76px] items-center justify-between border-b border-silver/50 px-4">
+                            <x-logo class="h-9 w-auto" />
+                            <button type="button" class="rounded-full p-2 text-navy" x-on:click="menuOpen = false" aria-label="{{ __('Close menu') }}">
+                                <x-glyph name="close" class="size-6" />
+                            </button>
+                        </div>
+                        <nav class="flex-1 overflow-y-auto p-4">
+                            <p class="eyebrow mb-2 px-2">{{ __('Categories') }}</p>
+                            @foreach ($menuCategories as $menuCategory)
+                                <a href="{{ route('shop', $menuCategory) }}" class="flex items-center gap-3 rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">
+                                    <span class="flex size-9 items-center justify-center rounded-lg bg-royal-50 text-royal"><x-glyph :name="$menuCategory->icon" class="size-4.5" /></span>
+                                    {{ $menuCategory->translate('name') }}
+                                </a>
+                            @endforeach
+                            <div class="my-4 border-t border-silver/50"></div>
+                            <a href="{{ route('shop') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('All products') }}</a>
+                            <a href="{{ route('quote') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Business quote') }}</a>
+                            <a href="{{ route('store') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Our shop in Lomé') }}</a>
+                        </nav>
+                        <div class="border-t border-silver/50 p-4">
+                            <a href="{{ WhatsApp::url() }}" target="_blank" rel="noopener" class="btn-whatsapp w-full">
+                                <x-glyph name="chat" />
+                                {{ __('Chat on WhatsApp') }}
                             </a>
-                        @endforeach
-                        <div class="my-4 border-t border-silver/50"></div>
-                        <a href="{{ route('shop') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('All products') }}</a>
-                        <a href="{{ route('quote') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Business quote') }}</a>
-                        <a href="{{ route('store') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Our shop in Lomé') }}</a>
-                    </nav>
-                    <div class="border-t border-silver/50 p-4">
-                        <a href="{{ WhatsApp::url() }}" target="_blank" rel="noopener" class="btn-whatsapp w-full">
-                            <x-glyph name="chat" />
-                            {{ __('Chat on WhatsApp') }}
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
         </header>
 
         <main id="content">
