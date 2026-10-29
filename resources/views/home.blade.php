@@ -1,5 +1,4 @@
 @php
-    use App\Models\Setting;
     use App\Support\WhatsApp;
 
     $heroProducts = $featuredProducts->filter(fn ($product) => $product->coverImage)->take(3)->values();
@@ -27,7 +26,7 @@
                     {{ __('Professional IT equipment, delivered in 24–48 h') }}
                 </h1>
                 <p class="mt-6 max-w-xl text-lg leading-8 text-white/70">
-                    {{ __('Original toners, printers, copiers, networking and power equipment for companies, resellers and individuals across Togo.') }}
+                    {{ __('Original and premium compatible toners, printers, copiers, networking and power equipment for companies, resellers and individuals across Togo.') }}
                 </p>
                 <div class="mt-9 flex flex-wrap gap-3">
                     <a href="{{ route('shop') }}" class="btn-white px-7 py-3.5">{{ __('Browse the catalogue') }} <x-glyph name="arrow-right" class="size-4" /></a>
@@ -72,7 +71,7 @@
                         <span class="flex size-10 items-center justify-center rounded-xl bg-signal/10 text-signal"><x-glyph name="store" /></span>
                         <span>
                             <span class="block text-sm font-semibold">{{ __('Free in-store pickup') }}</span>
-                            <span class="block text-xs text-muted">Amoutivé, Lomé</span>
+                            <span class="block text-xs text-muted">{{ $shopLocations->map->title()->implode(' · ') }}</span>
                         </span>
                     </div>
                 </div>
@@ -86,7 +85,7 @@
             @foreach ([
                 ['shield', __('Genuine products'), __('Original and premium compatible')],
                 ['truck', __('Fast delivery'), __('Anywhere in Togo')],
-                ['store', __('In-store pickup'), __('Free, in Amoutivé')],
+                ['store', __('In-store pickup'), trans_choice('Free, in our shop|Free, in our shops', $shopLocations->count())],
                 ['chat', __('Expert advice'), __('Quick answers on WhatsApp')],
             ] as [$icon, $title, $subtitle])
                 <div class="flex items-center gap-3.5">
@@ -136,7 +135,7 @@
                     <h2 class="mt-3 text-3xl font-semibold text-white">{{ __('Find the toner for your printer') }}</h2>
                     <p class="mt-3 text-white/70">{{ __('Type your printer model or the cartridge reference: HP 26A, M402, Canon C-EXV 42…') }}</p>
                 </div>
-                <form action="{{ route('shop', 'toners') }}" method="GET" class="flex flex-col gap-3 sm:flex-row">
+                <form action="{{ route('shop') }}" method="GET" class="flex flex-col gap-3 sm:flex-row">
                     <label for="toner-finder" class="sr-only">{{ __('Printer model or cartridge') }}</label>
                     <input id="toner-finder" name="q" type="search" placeholder="{{ __('e.g. LaserJet Pro M402') }}"
                            class="w-full rounded-full border-0 bg-white px-6 py-4 text-sm text-ink placeholder:text-muted focus:outline-none focus:ring-4 focus:ring-white/30">
@@ -213,28 +212,20 @@
         </section>
     @endif
 
-    {{-- Visit the shop --}}
+    {{-- Visit the shops --}}
     <section class="container-page py-20">
-        <div class="grid overflow-hidden rounded-[2rem] border border-silver/60 lg:grid-cols-2">
-            <div class="p-8 sm:p-12">
-                <p class="eyebrow">{{ __('Our shop') }}</p>
-                <h2 class="mt-3 text-3xl font-semibold">{{ __('Visit us in Amoutivé') }}</h2>
-                <p class="mt-4 text-muted">{{ __('See the products, get advice from our team and collect your order for free.') }}</p>
-                <ul class="mt-8 space-y-4 text-sm">
-                    <li class="flex gap-3"><x-glyph name="map-pin" class="mt-0.5 text-royal" /> {{ Setting::value('address') }}</li>
-                    <li class="flex gap-3"><x-glyph name="clock" class="mt-0.5 text-royal" /> {{ Setting::value('opening_hours')[app()->getLocale()] ?? '' }}</li>
-                    <li class="flex gap-3"><x-glyph name="phone" class="mt-0.5 text-royal" /> <a href="tel:{{ Setting::value('phone') }}" class="hover:text-royal">{{ Setting::value('phone') }}</a></li>
-                </ul>
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <a href="{{ Setting::value('maps_url') }}" target="_blank" rel="noopener" class="btn-blue">{{ __('Get directions') }}</a>
-                    <a href="{{ route('store') }}" class="btn-outline">{{ __('Shop details') }}</a>
-                </div>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+                <p class="eyebrow">{{ trans_choice('Our shop|Our shops', $shopLocations->count()) }}</p>
+                <h2 class="mt-3 text-3xl font-semibold">{{ trans_choice('Visit our shop|Visit our shops', $shopLocations->count()) }}</h2>
+                <p class="mt-3 max-w-2xl text-muted">{{ __('See the products, get advice from our team and collect your order for free.') }}</p>
             </div>
-            <div class="min-h-80 bg-pearl">
-                <iframe title="{{ __('Map: GG-TECH shop in Amoutivé, Lomé') }}" class="size-full min-h-80"
-                        src="https://www.google.com/maps?q={{ urlencode('Marché d\'Amoutivé, Lomé, Togo') }}&output=embed"
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <a href="{{ route('store') }}" class="btn-outline">{{ __('Shop details') }}</a>
+        </div>
+        <div @class(['mt-8 grid gap-6', 'md:grid-cols-2' => $shopLocations->count() > 1])>
+            @foreach ($shopLocations as $location)
+                <x-shop-card :location="$location" :map="true" />
+            @endforeach
         </div>
     </section>
 </x-layouts.store>

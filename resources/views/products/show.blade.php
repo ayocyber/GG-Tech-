@@ -1,5 +1,5 @@
 @php
-    use App\Models\Setting;
+    use App\Enums\TonerType;
 
     $name = $product->translate('name');
     $description = $product->translate('description');
@@ -18,29 +18,8 @@
 
         <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:gap-14">
             {{-- Gallery --}}
-            <div class="lg:col-span-7" x-data="{ active: 0 }">
-                <div class="relative aspect-square overflow-hidden rounded-[1.75rem] border border-silver/60 bg-white">
-                    @forelse ($product->images as $image)
-                        <div x-show="active === {{ $loop->index }}" @if (! $loop->first) x-cloak @endif class="absolute inset-0 p-4">
-                            <x-product-image :image="$image" :alt="$name" sizes="(min-width: 1024px) 55vw, 100vw" :eager="$loop->first" />
-                        </div>
-                    @empty
-                        <x-product-image :alt="$name" :icon="$product->category->icon" :model="$product->model" :brand="$product->brand?->name" />
-                    @endforelse
-                </div>
-
-                @if ($product->images->count() > 1)
-                    <div class="mt-4 flex gap-3">
-                        @foreach ($product->images as $image)
-                            <button type="button" x-on:click="active = {{ $loop->index }}"
-                                    class="size-20 overflow-hidden rounded-xl border-2 bg-white transition"
-                                    :class="active === {{ $loop->index }} ? 'border-royal' : 'border-silver/60 hover:border-royal/40'"
-                                    aria-label="{{ __('Photo :number', ['number' => $loop->iteration]) }}">
-                                <x-product-image :image="$image" :alt="''" sizes="80px" />
-                            </button>
-                        @endforeach
-                    </div>
-                @endif
+            <div class="lg:col-span-7">
+                <x-product-gallery :product="$product" :alt="$name" />
             </div>
 
             {{-- Buy box --}}
@@ -54,6 +33,22 @@
                     <p class="mt-5 leading-7 text-muted">{{ $shortDescription }}</p>
                 @endif
 
+                @if ($product->toner_type)
+                    <div class="mt-6 rounded-2xl border border-silver/60 bg-pearl/60 p-4">
+                        <x-toner-type-badge :type="$product->toner_type" />
+                        <p class="mt-2 text-sm text-muted">{{ $product->toner_type->explanation() }}</p>
+                        @if ($tonerCounterpart)
+                            <a href="{{ route('products.show', $tonerCounterpart) }}" class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:underline">
+                                {{ __('Also available as :type', ['type' => $tonerCounterpart->toner_type->getLabel()]) }}
+                                @if (! $tonerCounterpart->price_on_request && $tonerCounterpart->startingPrice($market))
+                                    — {{ $market->format($tonerCounterpart->startingPrice($market)) }}
+                                @endif
+                                <x-glyph name="arrow-right" class="size-4" />
+                            </a>
+                        @endif
+                    </div>
+                @endif
+
                 <div class="mt-8">
                     <livewire:product-purchase :product="$product" />
                 </div>
@@ -61,7 +56,7 @@
                 <ul class="mt-8 space-y-3 border-t border-silver/50 pt-6 text-sm">
                     <li class="flex gap-3">
                         <x-glyph name="store" class="mt-0.5 text-instock" />
-                        <span><strong class="font-semibold text-ink">{{ __('Available for pickup in Amoutivé, Lomé') }}</strong> — {{ __('ready once confirmed') }}</span>
+                        <span><strong class="font-semibold text-ink">{{ __('Available for in-store pickup') }}</strong> — {{ $shopLocations->map->title()->implode(' · ') }}, {{ __('ready once confirmed') }}</span>
                     </li>
                     <li class="flex gap-3">
                         <x-glyph name="truck" class="mt-0.5 text-royal" />
@@ -69,7 +64,7 @@
                     </li>
                     <li class="flex gap-3">
                         <x-glyph name="shield" class="mt-0.5 text-royal" />
-                        <span>{{ __('Genuine product, checked by our team before delivery.') }}</span>
+                        <span>{{ $product->toner_type === TonerType::PremiumCompatible ? __('Premium compatible product, tested by our team before delivery.') : __('Genuine product, checked by our team before delivery.') }}</span>
                     </li>
                 </ul>
             </div>
@@ -121,7 +116,9 @@
                         </div>
                     @endif
                     <div x-cloak x-show="tab === 'delivery'" role="tabpanel" class="space-y-3">
-                        <p>{{ __('Free pickup at our shop: :address.', ['address' => Setting::value('address')]) }}</p>
+                        @foreach ($shopLocations as $location)
+                            <p>{{ __('Free pickup at :shop (:role): :address.', ['shop' => $location->title(), 'role' => $location->shop->getLabel(), 'address' => $location->address]) }}</p>
+                        @endforeach
                         <p>{{ __('Delivery anywhere in Togo. The fee depends on your zone and is shown at checkout.') }}</p>
                         <a href="{{ route('store') }}#delivery" class="font-semibold text-royal hover:underline">{{ __('See delivery zones') }} →</a>
                     </div>

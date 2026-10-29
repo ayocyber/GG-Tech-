@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Enums\Market;
 use App\Http\Middleware\SetLocale;
 use App\Models\Category;
+use App\Support\ShopLocation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -36,6 +37,10 @@ class AppServiceProvider extends ServiceProvider
                 'menuCategories' => Category::query()->active()->get(),
                 'market' => Market::current(),
             ]);
+        });
+
+        View::composer(['components.layouts.store', 'home', 'store', 'products.show'], function (ViewInstance $view) {
+            $view->with('shopLocations', ShopLocation::listed());
         });
     }
 }

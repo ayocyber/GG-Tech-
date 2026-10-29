@@ -4,6 +4,9 @@
 **Client :** {{ $order->customer_name }} · {{ $order->phone }} · {{ $order->email }}<br>
 **Langue :** {{ strtoupper($order->locale) }}<br>
 **Mode :** {{ $order->fulfilment->getLabel() }}{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name', 'fr') : '' }}
+@if ($order->pickupLocation())
+<br>**Boutique de retrait :** {{ $order->pickupLocation()->title() }} ({{ $order->pickupLocation()->shop->getLabel() }})
+@endif
 
 @if ($order->address)
 **Adresse :** {{ $order->address }}, {{ $order->city }}{{ $order->landmark ? ' (repère : '.$order->landmark.')' : '' }}

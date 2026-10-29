@@ -22,6 +22,7 @@ class ProductController extends Controller
 
         return view('products.show', [
             'product' => $product,
+            'tonerCounterpart' => $product->tonerCounterpart(),
             'relatedProducts' => Product::query()
                 ->published()
                 ->whereBelongsTo($product->category)

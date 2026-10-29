@@ -11,6 +11,8 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StoreLocationController;
 use App\Http\Middleware\SetLocale;
+use App\Support\LegacyLinks;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,8 +26,12 @@ Route::prefix('{locale}')
     ->middleware(SetLocale::class)
     ->group(function () {
         Route::get('/', HomeController::class)->name('home');
-        Route::get('/shop/{category:slug?}', ShopController::class)->name('shop');
-        Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+        Route::get('/shop/{category:slug?}', ShopController::class)
+            ->name('shop')
+            ->missing(fn (Request $request) => LegacyLinks::redirectCategory($request));
+        Route::get('/products/{product:slug}', [ProductController::class, 'show'])
+            ->name('products.show')
+            ->missing(fn (Request $request) => LegacyLinks::redirectProduct($request));
         Route::get('/cart', CartController::class)->name('cart');
         Route::get('/checkout', CheckoutController::class)->name('checkout');
         Route::get('/orders/{order:number}/thank-you', OrderConfirmationController::class)

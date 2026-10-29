@@ -1,7 +1,3 @@
-@php
-    use App\Models\Setting;
-@endphp
-
 <form wire:submit="placeOrder" class="grid gap-8 lg:grid-cols-12 lg:gap-12" novalidate>
     <div class="space-y-8 lg:col-span-7">
         {{-- Step 1: contact --}}
@@ -41,7 +37,7 @@
                     <input type="radio" wire:model.live="fulfilment" value="pickup" class="mt-1 text-royal focus:ring-royal">
                     <span>
                         <span class="flex items-center gap-2 font-semibold text-navy"><x-glyph name="store" class="size-4" /> {{ __('In-store pickup') }}</span>
-                        <span class="mt-1 block text-sm text-muted">{{ __('Free · Amoutivé, Lomé · ready once confirmed') }}</span>
+                        <span class="mt-1 block text-sm text-muted">{{ __('Free · ready once confirmed') }}</span>
                     </span>
                 </label>
                 <label @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 transition', 'border-royal bg-royal-50 ring-1 ring-royal' => ! $isPickup, 'border-silver hover:border-royal/40' => $isPickup])>
@@ -55,14 +51,28 @@
             @error('fulfilment') <p class="field-error">{{ $message }}</p> @enderror
 
             @if ($isPickup)
-                <div class="mt-6 flex gap-3 rounded-2xl bg-pearl p-4 text-sm">
-                    <x-glyph name="map-pin" class="mt-0.5 size-5 text-royal" />
-                    <div>
-                        <p class="font-semibold text-navy">GG-TECH — Great God Technology</p>
-                        <p class="text-muted">{{ Setting::value('address') }}</p>
-                        <p class="text-muted">{{ Setting::value('opening_hours')[app()->getLocale()] ?? '' }}</p>
+                <fieldset class="mt-6">
+                    <legend class="field-label">{{ __('Pickup shop') }}</legend>
+                    <div class="grid gap-2">
+                        @foreach ($shopLocations as $location)
+                            <label wire:key="shop-{{ $location->shop->value }}" @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 text-sm transition', 'border-royal bg-royal-50' => $pickup_shop === $location->shop->value, 'border-silver hover:border-royal/40' => $pickup_shop !== $location->shop->value])>
+                                <input type="radio" wire:model.live="pickup_shop" value="{{ $location->shop->value }}" class="mt-1 text-royal focus:ring-royal">
+                                <span>
+                                    <span class="flex flex-wrap items-center gap-2">
+                                        <span class="font-semibold text-navy">{{ $location->title() }}</span>
+                                        <x-shop-badge :shop="$location->shop" />
+                                    </span>
+                                    <span class="mt-1 block text-muted">{{ $location->address }}</span>
+                                    @if ($location->hours())
+                                        <span class="block text-muted">{{ $location->hours() }}</span>
+                                    @endif
+                                    <a href="{{ $location->directionsUrl() }}" target="_blank" rel="noopener" class="mt-1 inline-block font-semibold text-royal hover:underline">{{ __('Get directions') }} →</a>
+                                </span>
+                            </label>
+                        @endforeach
                     </div>
-                </div>
+                    @error('pickup_shop') <p class="field-error">{{ $message }}</p> @enderror
+                </fieldset>
             @else
                 <div class="mt-6 space-y-5">
                     <fieldset>

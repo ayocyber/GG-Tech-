@@ -47,6 +47,10 @@ class OrderInfolist
                     ]),
                     Section::make(__('Delivery'))->columns(2)->schema([
                         TextEntry::make('fulfilment')->label(__('Method'))->badge(),
+                        TextEntry::make('pickup_shop')
+                            ->label(__('Pickup shop'))
+                            ->state(fn (Order $record) => $record->pickupLocation() ? $record->pickupLocation()->shop->getLabel().' · '.$record->pickupLocation()->title() : null)
+                            ->placeholder('—'),
                         TextEntry::make('deliveryZone.name')
                             ->label(__('Zone'))
                             ->formatStateUsing(fn (Order $record) => $record->deliveryZone?->translate('name'))

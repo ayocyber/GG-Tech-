@@ -17,6 +17,9 @@
         />
 
         <div class="absolute left-3 top-3 flex flex-col items-start gap-1.5">
+            @if ($product->toner_type)
+                <x-toner-type-badge :type="$product->toner_type" />
+            @endif
             @if ($product->is_featured)
                 <span class="rounded-full bg-navy px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">{{ __('Premium') }}</span>
             @endif

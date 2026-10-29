@@ -1,12 +1,14 @@
 <?php
 
 use App\Enums\FulfilmentMethod;
+use App\Enums\Shop;
 use App\Livewire\CheckoutForm;
 use App\Mail\NewOrderAlert;
 use App\Mail\OrderReceived;
 use App\Models\DeliveryZone;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Setting;
 use App\Services\Baskets\Cart;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Features\SupportTesting\Testable;
@@ -151,4 +153,35 @@ it('rejects a phone number that is too short', function () {
         ->set('fulfilment', 'pickup')
         ->call('placeOrder')
         ->assertHasErrors(['phone' => 'regex']);
+});
+
+it('records the shop the customer collects the order from', function () {
+    Mail::fake();
+    $shops = config('store.shops');
+    $shops['second_store']['address'] = 'Boulevard du 13 Janvier, Bè, Lomé';
+    Setting::store(['shops' => $shops]);
+    $product = Product::factory()->priced()->create();
+    app(Cart::class)->add($product->variants->first(), 1);
+
+    fillCustomer(Livewire::test(CheckoutForm::class))
+        ->assertSet('pickup_shop', Shop::HeadOffice->value)
+        ->set('pickup_shop', Shop::SecondStore->value)
+        ->call('placeOrder')
+        ->assertHasNoErrors();
+
+    expect(Order::query()->sole())
+        ->pickup_shop->toBe(Shop::SecondStore)
+        ->pickupLocation()->address->toBe('Boulevard du 13 Janvier, Bè, Lomé');
+});
+
+it('rejects pickup from a store that has no address yet', function () {
+    $product = Product::factory()->priced()->create();
+    app(Cart::class)->add($product->variants->first(), 1);
+
+    fillCustomer(Livewire::test(CheckoutForm::class))
+        ->set('pickup_shop', Shop::SecondStore->value)
+        ->call('placeOrder')
+        ->assertHasErrors(['pickup_shop' => 'in']);
+
+    expect(Order::query()->exists())->toBeFalse();
 });

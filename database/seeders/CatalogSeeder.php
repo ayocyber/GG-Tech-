@@ -34,6 +34,7 @@ class CatalogSeeder extends Seeder
             $product = Product::query()->updateOrCreate(['slug' => $entry['slug']], [
                 'category_id' => $categories[$entry['category']],
                 'brand_id' => $brand?->id,
+                'toner_type' => $entry['toner_type'],
                 'name' => $entry['name'],
                 'short_description' => $entry['short_description'],
                 'description' => $entry['description'],

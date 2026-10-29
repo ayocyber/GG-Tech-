@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Products\Tables;
 
 use App\Enums\Market;
 use App\Enums\ProductStatus;
+use App\Enums\TonerType;
 use App\Models\Category;
 use App\Models\Product;
 use Filament\Actions\Action;
@@ -44,6 +45,7 @@ class ProductsTable
                     ->formatStateUsing(fn (Product $record) => $record->category->translate('name'))
                     ->badge()
                     ->color('gray'),
+                TextColumn::make('toner_type')->label(__('Toner type'))->badge()->placeholder('—')->toggleable(),
                 TextColumn::make('brand.name')->label(__('Brand'))->toggleable(),
                 TextColumn::make('price')
                     ->label(__('Price'))
@@ -74,6 +76,7 @@ class ProductsTable
                     ->options(fn () => Category::query()->active()->get()->mapWithKeys(
                         fn (Category $category) => [$category->id => $category->translate('name')],
                     )),
+                SelectFilter::make('toner_type')->label(__('Toner type'))->options(TonerType::class),
                 SelectFilter::make('brand_id')->label(__('Brand'))->relationship('brand', 'name')->searchable()->preload(),
                 SelectFilter::make('status')->label(__('Status'))->options(ProductStatus::class),
                 TernaryFilter::make('needs_review')->label(__('Needs review')),

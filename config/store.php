@@ -18,15 +18,31 @@ return [
 
     'email' => env('STORE_EMAIL', 'greatgodtech@gmail.com'),
 
-    'address' => 'Rue de France, Amoutivé, non loin du marché d\'Amoutivé, Lomé, Togo',
-
-    'maps_url' => env('STORE_MAPS_URL', 'https://www.google.com/maps/search/?api=1&query=March%C3%A9+d%27Amoutiv%C3%A9+Lom%C3%A9+Togo'),
-
     'google_business_url' => env('STORE_GOOGLE_BUSINESS_URL'),
 
-    'opening_hours' => [
-        'fr' => 'Lundi – samedi, 8 h – 19 h',
-        'en' => 'Monday – Saturday, 8 am – 7 pm',
+    /*
+    | Physical stores, keyed by App\Enums\Shop. A store without an address is
+    | hidden from the website until staff fill it in (Store settings).
+    */
+
+    'shops' => [
+        'head_office' => [
+            'name' => ['fr' => 'Amoutivé', 'en' => 'Amoutivé'],
+            'address' => 'Rue de France, Amoutivé, non loin du marché d\'Amoutivé, Lomé, Togo',
+            'maps_url' => env('STORE_MAPS_URL'),
+            'opening_hours' => [
+                'fr' => 'Lundi – samedi, 8 h – 19 h',
+                'en' => 'Monday – Saturday, 8 am – 7 pm',
+            ],
+            'phone' => null,
+        ],
+        'second_store' => [
+            'name' => ['fr' => null, 'en' => null],
+            'address' => null,
+            'maps_url' => null,
+            'opening_hours' => ['fr' => null, 'en' => null],
+            'phone' => null,
+        ],
     ],
 
     /*
@@ -46,6 +62,7 @@ return [
     */
 
     'watermark' => [
+        'enabled' => (bool) env('STORE_WATERMARK', false),
         'path' => resource_path('images/watermark.png'),
         'width_percent' => 18,
         'opacity' => 16,

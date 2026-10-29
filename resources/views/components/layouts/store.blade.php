@@ -1,12 +1,13 @@
 @props(['title' => null, 'description' => null])
 
 @php
+    use App\Enums\TonerType;
     use App\Models\Setting;
     use App\Support\LocaleSwitcher;
     use App\Support\WhatsApp;
 
     $pageTitle = $title ? $title.' · GG-TECH' : 'GG-TECH · '.__('IT equipment in Lomé, Togo');
-    $pageDescription = $description ?? __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo, free pickup in Amoutivé, Lomé.');
+    $pageDescription = $description ?? __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo, free in-store pickup in Lomé.');
     $otherLocale = app()->getLocale() === 'fr' ? 'en' : 'fr';
 @endphp
 
@@ -36,7 +37,7 @@
             <div class="container-page flex h-10 items-center justify-between gap-4 text-xs">
                 <p class="flex min-w-0 items-center gap-2 truncate">
                     <x-glyph name="truck" class="size-4 text-white/60" />
-                    <span class="truncate">{{ __('Delivery across Togo · Free pickup in Amoutivé, Lomé') }}</span>
+                    <span class="truncate">{{ __('Delivery across Togo · Free in-store pickup') }}</span>
                 </p>
 
                 <div class="flex shrink-0 items-center gap-4">
@@ -89,9 +90,24 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('shop', 'toners') }}" class="rounded-full px-3.5 py-2 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Toners') }}</a>
+                    <div class="relative" x-data="{ open: false }" x-on:mouseenter="open = true" x-on:mouseleave="open = false">
+                        <a href="{{ route('shop', TonerType::Original->categorySlug()) }}" class="flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-semibold text-navy hover:bg-pearl" x-on:focus="open = true">
+                            {{ __('Toners') }}
+                            <x-glyph name="chevron-down" class="size-4 text-muted" />
+                        </a>
+                        <div x-cloak x-show="open" x-transition.opacity.duration.150ms class="absolute left-0 top-full w-72 pt-3">
+                            <div class="grid gap-1 rounded-2xl border border-silver/60 bg-white p-3 shadow-[0_24px_60px_-30px_rgba(10,16,51,0.45)]">
+                                @foreach (TonerType::cases() as $tonerType)
+                                    <a href="{{ route('shop', $tonerType->categorySlug()) }}" class="block rounded-xl p-3 transition hover:bg-pearl">
+                                        <x-toner-type-badge :type="$tonerType" />
+                                        <span class="mt-1.5 block text-xs text-muted">{{ $tonerType->explanation() }}</span>
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                     <a href="{{ route('quote') }}" class="rounded-full px-3.5 py-2 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Business quote') }}</a>
-                    <a href="{{ route('store') }}" class="rounded-full px-3.5 py-2 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Our shop') }}</a>
+                    <a href="{{ route('store') }}" class="rounded-full px-3.5 py-2 text-sm font-semibold text-navy hover:bg-pearl">{{ trans_choice('Our shop|Our shops', $shopLocations->count()) }}</a>
                 </nav>
 
                 <form action="{{ route('shop') }}" method="GET" role="search" class="ml-auto hidden max-w-sm flex-1 md:block">
@@ -143,7 +159,7 @@
                             <div class="my-4 border-t border-silver/50"></div>
                             <a href="{{ route('shop') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('All products') }}</a>
                             <a href="{{ route('quote') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Business quote') }}</a>
-                            <a href="{{ route('store') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ __('Our shop in Lomé') }}</a>
+                            <a href="{{ route('store') }}" class="block rounded-xl px-2 py-2.5 text-sm font-semibold text-navy hover:bg-pearl">{{ trans_choice('Our shop|Our shops', $shopLocations->count()) }}</a>
                         </nav>
                         <div class="border-t border-silver/50 p-4">
                             <a href="{{ WhatsApp::url() }}" target="_blank" rel="noopener" class="btn-whatsapp w-full">
@@ -194,8 +210,19 @@
                 <div class="lg:col-span-3">
                     <h2 class="font-sans text-sm font-semibold text-white">{{ __('Visit us') }}</h2>
                     <ul class="mt-4 space-y-3 text-sm">
-                        <li class="flex gap-2.5"><x-glyph name="map-pin" class="mt-0.5 size-4 text-white/50" /> <span>{{ Setting::value('address') }}</span></li>
-                        <li class="flex gap-2.5"><x-glyph name="clock" class="mt-0.5 size-4 text-white/50" /> <span>{{ Setting::value('opening_hours')[app()->getLocale()] ?? '' }}</span></li>
+                        @foreach ($shopLocations as $location)
+                            <li class="flex gap-2.5">
+                                <x-glyph name="map-pin" class="mt-0.5 size-4 shrink-0 text-white/50" />
+                                <span>
+                                    <span class="block font-semibold text-white">{{ $location->shop->getLabel() }} · {{ $location->title() }}</span>
+                                    <span class="block">{{ $location->address }}</span>
+                                    @if ($location->hours())
+                                        <span class="block text-white/50">{{ $location->hours() }}</span>
+                                    @endif
+                                    <a href="{{ $location->directionsUrl() }}" target="_blank" rel="noopener" class="mt-1 inline-block font-semibold text-white underline-offset-2 hover:underline">{{ __('Get directions') }} →</a>
+                                </span>
+                            </li>
+                        @endforeach
                         <li class="flex gap-2.5"><x-glyph name="phone" class="mt-0.5 size-4 text-white/50" /> <a href="tel:{{ Setting::value('phone') }}" class="hover:text-white">{{ Setting::value('phone') }}</a></li>
                         <li class="flex gap-2.5"><x-glyph name="mail" class="mt-0.5 size-4 text-white/50" /> <a href="mailto:{{ Setting::value('email') }}" class="hover:text-white">{{ Setting::value('email') }}</a></li>
                     </ul>
@@ -215,7 +242,7 @@
                  class="w-72 overflow-hidden rounded-2xl border border-silver/60 bg-white shadow-[0_24px_60px_-20px_rgba(10,16,51,0.5)]">
                 <div class="bg-whatsapp px-4 py-3 text-white">
                     <p class="text-sm font-semibold">{{ __('How can we help?') }}</p>
-                    <p class="text-xs text-white/85">{{ Setting::value('opening_hours')[app()->getLocale()] ?? '' }}</p>
+                    <p class="text-xs text-white/85">{{ $shopLocations->first()?->hours() }}</p>
                 </div>
                 <div class="divide-y divide-silver/50">
                     @foreach ([__('Sales') => __('Hello GG-TECH, I have a question about a product.'), __('Business quote') => __('Hello GG-TECH, I would like a quote for my company.'), __('After-sales support') => __('Hello GG-TECH, I need help with a product I bought.')] as $topic => $message)

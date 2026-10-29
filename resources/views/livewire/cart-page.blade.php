@@ -67,7 +67,7 @@
                     @endif
 
                     <ul class="space-y-2 border-t border-silver/60 pt-4 text-xs text-muted">
-                        <li class="flex items-center gap-2"><x-glyph name="store" class="size-4 text-royal" /> {{ __('Free in-store pickup in Amoutivé') }}</li>
+                        <li class="flex items-center gap-2"><x-glyph name="store" class="size-4 text-royal" /> {{ __('Free in-store pickup') }}</li>
                         <li class="flex items-center gap-2"><x-glyph name="truck" class="size-4 text-royal" /> {{ __('Delivery in 24–48 h in Lomé') }}</li>
                         <li class="flex items-center gap-2"><x-glyph name="chat" class="size-4 text-royal" /> {{ __('WhatsApp support') }}</li>
                     </ul>

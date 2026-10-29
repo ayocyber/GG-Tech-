@@ -4,6 +4,7 @@ namespace App\Actions;
 
 use App\Enums\FulfilmentMethod;
 use App\Enums\Market;
+use App\Enums\Shop;
 use App\Mail\NewOrderAlert;
 use App\Mail\OrderReceived;
 use App\Models\DeliveryZone;
@@ -20,7 +21,7 @@ class PlaceOrder
     public function __construct(private Cart $cart) {}
 
     /**
-     * @param  array{customer_name: string, email: string, phone: string, fulfilment: string, delivery_zone_id?: int|null, address?: string|null, city?: string|null, landmark?: string|null, notes?: string|null}  $details
+     * @param  array{customer_name: string, email: string, phone: string, fulfilment: string, pickup_shop?: string|null, delivery_zone_id?: int|null, address?: string|null, city?: string|null, landmark?: string|null, notes?: string|null}  $details
      */
     public function handle(array $details, Market $market): Order
     {
@@ -51,6 +52,7 @@ class PlaceOrder
                 'email' => $details['email'],
                 'phone' => $details['phone'],
                 'fulfilment' => $fulfilment,
+                'pickup_shop' => $fulfilment === FulfilmentMethod::Pickup ? ($details['pickup_shop'] ?? Shop::HeadOffice->value) : null,
                 'delivery_zone_id' => $zone?->id,
                 'address' => $fulfilment === FulfilmentMethod::Delivery ? ($details['address'] ?? null) : null,
                 'city' => $fulfilment === FulfilmentMethod::Delivery ? ($details['city'] ?? null) : null,

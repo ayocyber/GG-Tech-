@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\ProductStatus;
+use App\Enums\TonerType;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariant;
@@ -56,6 +57,11 @@ class ProductFactory extends Factory
     {
         return $this->state(['price_on_request' => true])
             ->has(ProductVariant::factory()->state(['price_xof' => null]), 'variants');
+    }
+
+    public function tonerType(TonerType $type): static
+    {
+        return $this->state(['toner_type' => $type]);
     }
 
     public function heavy(): static

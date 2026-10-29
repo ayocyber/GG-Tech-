@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Enums\Shop;
 use App\Filament\NavigationGroup;
 use App\Models\ProductImage;
 use App\Models\Setting;
@@ -49,10 +50,8 @@ class StoreSettings extends Page
             'whatsapp' => Setting::value('whatsapp'),
             'phone' => Setting::value('phone'),
             'email' => Setting::value('email'),
-            'address' => Setting::value('address'),
-            'opening_hours' => Setting::value('opening_hours'),
-            'maps_url' => Setting::value('maps_url'),
             'google_business_url' => Setting::value('google_business_url'),
+            'shops' => Setting::value('shops'),
             'watermark' => [
                 'opacity' => Setting::value('watermark.opacity'),
                 'width_percent' => Setting::value('watermark.width_percent'),
@@ -72,12 +71,9 @@ class StoreSettings extends Page
                         TextInput::make('whatsapp')->label(__('WhatsApp number'))->tel()->required(),
                         TextInput::make('phone')->label(__('Phone'))->tel()->required(),
                         TextInput::make('email')->label(__('Email (receives orders)'))->email()->required(),
-                        TextInput::make('address')->label(__('Shop address'))->required(),
-                        TextInput::make('opening_hours.fr')->label(__('Opening hours (French)'))->required(),
-                        TextInput::make('opening_hours.en')->label(__('Opening hours (English)'))->required(),
-                        TextInput::make('maps_url')->label(__('Google Maps link'))->url(),
                         TextInput::make('google_business_url')->label(__('Google Business Profile'))->url(),
                     ]),
+                ...array_map(fn (Shop $shop) => $this->shopSection($shop), Shop::cases()),
                 Section::make(__('Photo watermark'))
                     ->schema([
                         Grid::make(2)->schema([
@@ -85,6 +81,30 @@ class StoreSettings extends Page
                             TextInput::make('watermark.width_percent')->label(__('Size (share of photo width)'))->numeric()->minValue(5)->maxValue(50)->suffix('%')->required(),
                         ]),
                     ]),
+            ]);
+    }
+
+    private function shopSection(Shop $shop): Section
+    {
+        $isHeadOffice = $shop === Shop::HeadOffice;
+        $path = "shops.{$shop->value}";
+
+        return Section::make($shop->getLabel())
+            ->description($isHeadOffice
+                ? __('Shown first on the website.')
+                : __('Hidden from the website until it has an address.'))
+            ->columns(2)
+            ->schema([
+                TextInput::make("{$path}.name.fr")->label(__('Name (French)'))->placeholder(__('e.g. Amoutivé'))->maxLength(80),
+                TextInput::make("{$path}.name.en")->label(__('Name (English)'))->maxLength(80)
+                    ->helperText(__('Leave empty to reuse the French name.')),
+                TextInput::make("{$path}.address")->label(__('Address'))->required($isHeadOffice)->maxLength(255)->columnSpanFull(),
+                TextInput::make("{$path}.maps_url")->label(__('Google Maps link'))->url()->columnSpanFull()
+                    ->helperText(__('Paste the “Share” link from Google Maps. Without it, directions search for the address.')),
+                TextInput::make("{$path}.opening_hours.fr")->label(__('Opening hours (French)'))->required($isHeadOffice),
+                TextInput::make("{$path}.opening_hours.en")->label(__('Opening hours (English)'))->required($isHeadOffice),
+                TextInput::make("{$path}.phone")->label(__('Phone'))->tel()
+                    ->helperText(__('Leave empty to use the main phone number.')),
             ]);
     }
 
@@ -96,10 +116,8 @@ class StoreSettings extends Page
             'whatsapp' => $state['whatsapp'],
             'phone' => $state['phone'],
             'email' => $state['email'],
-            'address' => $state['address'],
-            'opening_hours' => $state['opening_hours'],
-            'maps_url' => $state['maps_url'],
             'google_business_url' => $state['google_business_url'],
+            'shops' => $state['shops'],
             'watermark.opacity' => (int) $state['watermark']['opacity'],
             'watermark.width_percent' => (int) $state['watermark']['width_percent'],
         ]);

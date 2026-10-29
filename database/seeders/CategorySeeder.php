@@ -10,11 +10,27 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            'toners' => [
-                'name' => ['fr' => 'Toners & cartouches', 'en' => 'Toners & cartridges'],
+            'original-toners' => [
+                'name' => ['fr' => 'Toners originaux', 'en' => 'Original toners'],
                 'description' => [
-                    'fr' => 'Toners HP et Canon originaux et compatibles premium, rubans et encres.',
-                    'en' => 'Original and premium compatible HP and Canon toners, ribbons and inks.',
+                    'fr' => 'Cartouches de toner HP et Canon d’origine, fabriquées par le constructeur.',
+                    'en' => 'Genuine HP and Canon toner cartridges, made by the printer manufacturer.',
+                ],
+                'icon' => 'toner',
+            ],
+            'compatible-toners' => [
+                'name' => ['fr' => 'Toners compatibles premium', 'en' => 'Premium compatible toners'],
+                'description' => [
+                    'fr' => 'Toners compatibles de qualité premium pour HP et Canon, à prix réduit.',
+                    'en' => 'Premium quality compatible toners for HP and Canon, at a lower price.',
+                ],
+                'icon' => 'toner',
+            ],
+            'inks-ribbons' => [
+                'name' => ['fr' => 'Encres, rubans & consommables', 'en' => 'Inks, ribbons & supplies'],
+                'description' => [
+                    'fr' => 'Encres, rubans, poudres de toner et autres consommables d’impression.',
+                    'en' => 'Inks, ribbons, toner powders and other printing supplies.',
                 ],
                 'icon' => 'toner',
             ],

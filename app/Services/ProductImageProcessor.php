@@ -10,7 +10,7 @@ use Intervention\Image\ImageManager;
 use Intervention\Image\Interfaces\ImageInterface;
 
 /**
- * Builds the public, watermarked WebP copies of a product photo.
+ * Builds the public WebP copies of a product photo, watermarked when store.watermark.enabled is on.
  *
  * Originals stay on the private originals disk; only processed copies are public.
  */
@@ -62,7 +62,7 @@ class ProductImageProcessor
     {
         $path = config('store.watermark.path');
 
-        if (! is_file($path)) {
+        if (! config('store.watermark.enabled') || ! is_file($path)) {
             return;
         }
 

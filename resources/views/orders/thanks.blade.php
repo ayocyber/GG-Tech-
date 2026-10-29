@@ -1,6 +1,5 @@
 @php
     use App\Enums\FulfilmentMethod;
-    use App\Models\Setting;
     use App\Support\WhatsApp;
 @endphp
 
@@ -52,8 +51,10 @@
             <div class="rounded-card bg-pearl p-6 text-sm">
                 <p class="font-semibold text-navy">{{ $order->fulfilment === FulfilmentMethod::Pickup ? __('Pickup address') : __('Delivery address') }}</p>
                 <p class="mt-3 text-muted">
-                    @if ($order->fulfilment === FulfilmentMethod::Pickup)
-                        {{ Setting::value('address') }}
+                    @if ($order->pickupLocation())
+                        <span class="block font-semibold text-ink">{{ $order->pickupLocation()->title() }} · {{ $order->pickupLocation()->shop->getLabel() }}</span>
+                        {{ $order->pickupLocation()->address }}
+                        <a href="{{ $order->pickupLocation()->directionsUrl() }}" target="_blank" rel="noopener" class="mt-2 block font-semibold text-royal hover:underline">{{ __('Get directions') }} →</a>
                     @else
                         {{ $order->address }}, {{ $order->city }}@if ($order->landmark)<br>{{ __('Landmark') }} : {{ $order->landmark }}@endif
                     @endif

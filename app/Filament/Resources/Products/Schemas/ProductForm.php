@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use App\Enums\ProductStatus;
+use App\Enums\TonerType;
 use App\Models\Brand;
 use App\Models\Category;
 use Filament\Forms\Components\FileUpload;
@@ -93,7 +94,7 @@ class ProductForm
 
                         Section::make(__('Photos'))
                             ->visible(fn () => config('store.photo_uploads'))
-                            ->description(__('Photos are cropped square and get the GG-TECH watermark automatically.'))
+                            ->description(__('Photos are cropped square and get the GG-TECH watermark automatically. The first photo is the cover: drag the photos to change their order. Use “Add several photos” at the top of the page to upload many at once.'))
                             ->schema([
                                 Repeater::make('images')
                                     ->hiddenLabel()
@@ -130,6 +131,19 @@ class ProductForm
                                 ->helperText(__('Catalogue details to confirm (model, price, specifications).')),
                         ]),
                         Section::make(__('Organisation'))->schema([
+                            Select::make('toner_type')
+                                ->label(__('Toner type'))
+                                ->options(TonerType::class)
+                                ->placeholder(__('Not a toner'))
+                                ->helperText(__('Moves the product to the matching toner category and shows the badge in the shop.'))
+                                ->live()
+                                ->afterStateUpdated(function (Set $set, TonerType|string|null $state) {
+                                    $type = is_string($state) ? TonerType::tryFrom($state) : $state;
+
+                                    if ($type) {
+                                        $set('category_id', Category::query()->where('slug', $type->categorySlug())->value('id'));
+                                    }
+                                }),
                             Select::make('category_id')
                                 ->label(__('Category'))
                                 ->relationship('category', 'slug')

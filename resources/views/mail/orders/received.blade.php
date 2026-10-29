@@ -17,8 +17,9 @@
 **{{ $order->fulfilment->getLabel() }}**{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name') : '' }}<br>
 @if ($order->address)
 {{ $order->address }}, {{ $order->city }}
-@else
-{{ config('store.address') }}
+@elseif ($order->pickupLocation())
+{{ $order->pickupLocation()->title() }} ({{ $order->pickupLocation()->shop->getLabel() }}) — {{ $order->pickupLocation()->address }}<br>
+[{{ __('Get directions') }}]({{ $order->pickupLocation()->directionsUrl() }})
 @endif
 
 <x-mail::button :url="$whatsappUrl" color="success">

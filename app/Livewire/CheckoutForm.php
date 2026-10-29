@@ -7,6 +7,7 @@ use App\Enums\FulfilmentMethod;
 use App\Enums\Market;
 use App\Models\DeliveryZone;
 use App\Services\Baskets\Cart;
+use App\Support\ShopLocation;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
@@ -25,6 +26,8 @@ class CheckoutForm extends Component
 
     public string $fulfilment = '';
 
+    public string $pickup_shop = '';
+
     public ?int $delivery_zone_id = null;
 
     public string $address = '';
@@ -38,6 +41,7 @@ class CheckoutForm extends Component
     public function mount(): void
     {
         $this->fulfilment = FulfilmentMethod::Pickup->value;
+        $this->pickup_shop = ShopLocation::listed()->first()?->shop->value ?? '';
         $this->phone = Market::current()->phonePrefix().' ';
     }
 
@@ -76,6 +80,11 @@ class CheckoutForm extends Component
             'email' => ['required', 'email', 'max:190'],
             'phone' => ['required', 'string', 'max:30', 'regex:/^\+?[0-9 ()\-.]{8,}$/'],
             'fulfilment' => ['required', Rule::enum(FulfilmentMethod::class)],
+            'pickup_shop' => [
+                Rule::requiredIf(! $isDelivery),
+                'nullable',
+                Rule::in(ShopLocation::listed()->map(fn (ShopLocation $location) => $location->shop->value)),
+            ],
             'delivery_zone_id' => [
                 Rule::requiredIf($isDelivery),
                 'nullable',
@@ -99,6 +108,7 @@ class CheckoutForm extends Component
             'customer_name' => __('full name'),
             'email' => __('email'),
             'phone' => __('phone'),
+            'pickup_shop' => __('pickup shop'),
             'delivery_zone_id' => __('delivery zone'),
             'address' => __('address'),
             'city' => __('city'),
@@ -128,6 +138,7 @@ class CheckoutForm extends Component
             'deliveryPending' => ! $isPickup && $zone !== null && $deliveryFee === null,
             'total' => $subtotal + ($deliveryFee ?? 0),
             'isPickup' => $isPickup,
+            'shopLocations' => ShopLocation::listed(),
         ]);
     }
 }

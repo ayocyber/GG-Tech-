@@ -32,7 +32,11 @@ class OrdersTable
                     ->formatStateUsing(fn (Order $record) => $record->formatMoney($record->total))
                     ->description(fn (Order $record) => $record->delivery_fee === null && $record->fulfilment === FulfilmentMethod::Delivery ? '+ '.__('delivery to be confirmed') : null)
                     ->sortable(),
-                TextColumn::make('fulfilment')->label(__('Method'))->badge()->color('gray'),
+                TextColumn::make('fulfilment')
+                    ->label(__('Method'))
+                    ->badge()
+                    ->color('gray')
+                    ->description(fn (Order $record) => $record->pickupLocation()?->title()),
                 TextColumn::make('status')->label(__('Status'))->badge(),
             ])
             ->filters([
