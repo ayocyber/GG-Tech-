@@ -16,13 +16,17 @@ class CartSidebar extends Component
         // Re-rendering reads the latest lines from the session.
     }
 
-    public function increment(Cart $cart, int $variantId): void
+    /**
+     * Each tap sends its own $tappedAt because Livewire merges identical calls made while a
+     * request is running, which would otherwise lose fast taps. The same applies to decrement().
+     */
+    public function increment(Cart $cart, int $variantId, ?float $tappedAt = null): void
     {
         $cart->update($variantId, ($cart->quantities()[$variantId] ?? 0) + 1);
         $this->dispatch('basket-updated');
     }
 
-    public function decrement(Cart $cart, int $variantId): void
+    public function decrement(Cart $cart, int $variantId, ?float $tappedAt = null): void
     {
         $cart->update($variantId, max(1, ($cart->quantities()[$variantId] ?? 0) - 1));
         $this->dispatch('basket-updated');

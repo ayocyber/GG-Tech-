@@ -52,6 +52,17 @@ it('increases and decreases the quantity of a line', function () {
     expect(app(Cart::class)->quantities())->toBe([$variant->id => 2]);
 });
 
+it('counts every fast tap, each sent with its own click timestamp', function () {
+    $variant = Product::factory()->priced()->create()->variants->first();
+    app(Cart::class)->add($variant);
+
+    Livewire::test(CartSidebar::class)
+        ->call('increment', $variant->id, 1000.5)
+        ->call('increment', $variant->id, 1025.5);
+
+    expect(app(Cart::class)->quantities())->toBe([$variant->id => 3]);
+});
+
 it('keeps a line at quantity one when decreasing', function () {
     $variant = Product::factory()->priced()->create()->variants->first();
     app(Cart::class)->add($variant);

@@ -71,12 +71,16 @@ class QuickAdd extends Component
         }
     }
 
-    public function increment(): void
+    /**
+     * Each tap sends its own $tappedAt because Livewire merges identical calls made while a
+     * request is running, which would otherwise lose fast taps. The same applies to decrement().
+     */
+    public function increment(?float $tappedAt = null): void
     {
         $this->quantity = min(SessionBasket::MAX_QUANTITY, (int) $this->quantity + 1);
     }
 
-    public function decrement(): void
+    public function decrement(?float $tappedAt = null): void
     {
         $this->quantity = max(1, (int) $this->quantity - 1);
     }
