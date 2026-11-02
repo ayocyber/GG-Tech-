@@ -127,9 +127,15 @@ class Product extends Model
 
     public function canBeAddedToCart(): bool
     {
-        return ! $this->price_on_request && $this->variants->contains(
-            fn (ProductVariant $variant) => $variant->in_stock && $variant->price_xof !== null,
-        );
+        return $this->variants->contains(fn (ProductVariant $variant) => $this->canSellOnline($variant));
+    }
+
+    public function canSellOnline(?ProductVariant $variant): bool
+    {
+        return $variant !== null
+            && ! $this->price_on_request
+            && $variant->in_stock
+            && $variant->price_xof !== null;
     }
 
     protected function casts(): array

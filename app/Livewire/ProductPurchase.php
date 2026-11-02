@@ -60,7 +60,7 @@ class ProductPurchase extends Component
     {
         $variant = $this->variant;
 
-        if (! $variant || ! $variant->in_stock || $variant->price_xof === null || $this->product->price_on_request) {
+        if (! $this->product->canSellOnline($variant)) {
             $this->addError('cart', __('This option cannot be ordered online. Ask us on WhatsApp or request a quote.'));
 
             return;

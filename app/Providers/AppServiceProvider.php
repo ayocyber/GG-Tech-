@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
         Livewire::addPersistentMiddleware([SetLocale::class]);
 
-        View::composer(['components.layouts.store', 'home', 'products.show'], function (ViewInstance $view) {
+        View::composer(['components.layouts.store', 'home', 'products.show', 'shop.index'], function (ViewInstance $view) {
             $view->with([
                 'menuCategories' => Category::query()->active()->get(),
                 'market' => Market::current(),

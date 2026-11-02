@@ -7,10 +7,17 @@ use App\Services\Baskets\BasketLine;
 use App\Services\Baskets\Cart;
 use App\Services\Baskets\QuoteBasket;
 use Illuminate\View\View;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class CartPage extends Component
 {
+    #[On('basket-updated')]
+    public function refresh(): void
+    {
+        // Re-rendering reads the latest lines from the session, e.g. after a change in the cart sidebar.
+    }
+
     public function updateQuantity(Cart $cart, int $variantId, int|string $quantity): void
     {
         $cart->update($variantId, (int) $quantity);

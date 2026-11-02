@@ -27,6 +27,33 @@ it('shows only the products of the chosen category', function () {
         ->assertDontSee('Switch 8 ports');
 });
 
+it('links to every active category from the shop page', function () {
+    $toners = Category::factory()->create(['slug' => 'toners-neufs', 'name' => ['fr' => 'Toners neufs', 'en' => 'New toners']]);
+    Category::factory()->inactive()->create(['slug' => 'archive', 'name' => ['fr' => 'Archive cachée', 'en' => 'Hidden archive']]);
+
+    $this->get('/fr/shop')
+        ->assertOk()
+        ->assertSee('aria-label="Catégories"', false)
+        ->assertSee(route('shop', $toners))
+        ->assertDontSee('Archive cachée');
+});
+
+it('keeps the other categories available inside a category and marks the current one', function () {
+    $toners = Category::factory()->create(['slug' => 'toners-neufs']);
+    $printers = Category::factory()->create(['slug' => 'imprimantes']);
+
+    $response = $this->get('/fr/shop/toners-neufs')
+        ->assertOk()
+        ->assertSee(route('shop', $printers))
+        ->assertSee(route('shop'));
+
+    $markedAsCurrent = fn (Category $category) => '/href="'.preg_quote(route('shop', $category), '/').'"\s+aria-current="page"/';
+
+    expect($response->getContent())
+        ->toMatch($markedAsCurrent($toners))
+        ->not->toMatch($markedAsCurrent($printers));
+});
+
 it('returns 404 for a hidden category', function () {
     Category::factory()->inactive()->create(['slug' => 'archive']);
 

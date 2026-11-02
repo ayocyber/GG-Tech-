@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class CheckoutForm extends Component
@@ -57,14 +58,30 @@ class CheckoutForm extends Component
         return $this->zones->firstWhere('id', $this->delivery_zone_id);
     }
 
-    public function placeOrder(PlaceOrder $placeOrder): void
+    /**
+     * The cart sidebar can empty the cart while this page is open; totals update through the re-render.
+     */
+    #[On('basket-updated')]
+    public function leaveWhenCartIsEmpty(Cart $cart): void
     {
+        if ($cart->isEmpty()) {
+            $this->redirectRoute('cart');
+        }
+    }
+
+    public function placeOrder(PlaceOrder $placeOrder, Cart $cart): void
+    {
+        if ($cart->isEmpty()) {
+            $this->redirectRoute('cart');
+
+            return;
+        }
+
         $market = Market::current();
         $validated = $this->validate($this->checkoutRules($market));
 
         $order = $placeOrder->handle($validated, $market);
 
-        $this->dispatch('basket-updated');
         $this->redirect(URL::signedRoute('orders.thanks', ['order' => $order]));
     }
 

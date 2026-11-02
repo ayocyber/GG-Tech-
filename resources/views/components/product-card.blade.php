@@ -49,7 +49,7 @@
             </div>
         @endif
 
-        <div class="mt-auto flex items-end justify-between gap-2 pt-2">
+        <div class="mt-auto pt-2">
             @if ($product->price_on_request || $price === null)
                 <span class="text-sm font-semibold text-royal">{{ __('Price on request') }}</span>
             @else
@@ -60,10 +60,22 @@
                     <span class="font-display text-lg font-bold text-navy">{{ $market->format($price) }}</span>
                 </div>
             @endif
-
-            <span class="relative z-10 inline-flex size-9 items-center justify-center rounded-full bg-pearl text-royal transition group-hover:bg-signal group-hover:text-white" aria-hidden="true">
-                <x-glyph name="arrow-right" class="size-4" />
-            </span>
         </div>
+
+        @if ($product->canBeAddedToCart())
+            <button type="button"
+                    x-data="{ isWaiting: false }"
+                    x-on:click="isWaiting = true; $dispatch('quick-add', { productId: {{ $product->id }} })"
+                    x-on:quick-add-finished.window="isWaiting = false"
+                    x-bind:disabled="isWaiting"
+                    class="btn-red relative z-10 w-full px-2 py-2.5 text-xs sm:text-sm">
+                <x-glyph name="cart" class="hidden size-4 shrink-0 sm:block" />
+                {{ $product->hasVariantChoice() ? __('Choose options') : __('Add to cart') }}
+            </button>
+        @else
+            <a href="{{ route('products.show', $product) }}" class="btn-outline relative z-10 w-full px-2 py-2.5 text-xs sm:text-sm">
+                {{ __('View product') }}
+            </a>
+        @endif
     </div>
 </article>

@@ -258,6 +258,9 @@
             </button>
         </div>
 
+        <livewire:quick-add />
+        <livewire:cart-sidebar />
+
         @livewireScripts
     </body>
 </html>
