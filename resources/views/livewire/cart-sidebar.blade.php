@@ -7,7 +7,7 @@
              x-transition:leave="transition duration-150" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
             <div class="flex h-[76px] shrink-0 items-center justify-between gap-4 border-b border-silver/50 px-4 sm:px-6">
                 <h2 id="cart-sidebar-title" class="font-sans text-lg font-semibold text-navy">{{ __('Your cart') }} ({{ $lines->sum('quantity') }})</h2>
-                <button type="button" class="-mr-2 rounded-full p-2 text-navy hover:bg-pearl" x-on:click="isOpen = false" aria-label="{{ __('Close') }}">
+                <button type="button" x-ref="closeButton" class="-mr-2 rounded-full p-2 text-navy hover:bg-pearl" x-on:click="isOpen = false" aria-label="{{ __('Close') }}">
                     <x-glyph name="close" class="size-6" />
                 </button>
             </div>
@@ -30,7 +30,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-start justify-between gap-2">
                                     <a href="{{ route('products.show', $line->product()) }}" class="line-clamp-2 text-sm font-semibold text-ink hover:text-royal">{{ $line->product()->translate('name') }}</a>
-                                    <button type="button" wire:click="remove({{ $line->variant->id }})" class="-mr-1 -mt-1 shrink-0 rounded-full p-1.5 text-muted hover:bg-pearl hover:text-signal" aria-label="{{ __('Remove') }}">
+                                    <button type="button" wire:click="remove({{ $line->variant->id }})" x-on:click="$refs.closeButton.focus()" class="-mr-1 -mt-1 shrink-0 rounded-full p-1.5 text-muted hover:bg-pearl hover:text-signal" aria-label="{{ __('Remove') }}">
                                         <x-glyph name="trash" class="size-5" />
                                     </button>
                                 </div>
@@ -41,7 +41,7 @@
 
                                 <div class="mt-2 flex items-center justify-between gap-2">
                                     <div class="flex items-center rounded-full border border-silver">
-                                        <button type="button" wire:click="decrement({{ $line->variant->id }}, $event.timeStamp)" @disabled($line->quantity <= 1) class="flex size-8 items-center justify-center rounded-full text-navy hover:bg-pearl disabled:cursor-not-allowed disabled:opacity-40" aria-label="{{ __('Decrease quantity') }}">
+                                        <button type="button" wire:click="decrement({{ $line->variant->id }}, $event.timeStamp)" aria-disabled="{{ $line->quantity <= 1 ? 'true' : 'false' }}" @class(['flex size-8 items-center justify-center rounded-full text-navy', 'cursor-not-allowed opacity-40' => $line->quantity <= 1, 'hover:bg-pearl' => $line->quantity > 1]) aria-label="{{ __('Decrease quantity') }}">
                                             <x-glyph name="minus" class="size-3.5" />
                                         </button>
                                         <span class="min-w-7 text-center text-sm font-semibold" aria-label="{{ __('Quantity') }}">{{ $line->quantity }}</span>
