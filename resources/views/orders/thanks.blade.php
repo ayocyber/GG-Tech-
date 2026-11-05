@@ -1,19 +1,48 @@
 @php
     use App\Enums\FulfilmentMethod;
+    use App\Enums\PaymentStatus;
     use App\Support\WhatsApp;
 @endphp
 
 <x-layouts.store :title="__('Order :number', ['number' => $order->number])">
     <div class="container-page max-w-3xl py-16">
         <div class="text-center">
-            <span class="mx-auto flex size-16 items-center justify-center rounded-full bg-instock/10 text-instock">
-                <x-glyph name="check" class="size-8" />
-            </span>
-            <h1 class="mt-6 text-3xl font-bold sm:text-4xl">{{ __('Thank you, :name!', ['name' => $order->customer_name]) }}</h1>
-            <p class="mt-3 text-muted">{{ __('Your order :number has been received. Confirm it on WhatsApp so our team can prepare it right away.', ['number' => $order->number]) }}</p>
-            <a href="{{ WhatsApp::orderConfirmation($order) }}" target="_blank" rel="noopener" class="btn-whatsapp mt-8 px-8 py-4 text-base">
-                <x-glyph name="chat" /> {{ __('Confirm on WhatsApp') }}
-            </a>
+            @if ($order->paysOnline() && ! $order->isPaid())
+                <span class="mx-auto flex size-16 items-center justify-center rounded-full bg-amber-100 text-amber-600">
+                    <x-glyph name="sparkles" class="size-8" />
+                </span>
+                <h1 class="mt-6 text-3xl font-bold sm:text-4xl">
+                    {{ $order->payment_status === PaymentStatus::Pending ? __('Waiting for your payment') : __('Your payment did not go through') }}
+                </h1>
+                <p class="mt-3 text-muted">
+                    {{ $order->payment_status === PaymentStatus::Pending
+                        ? __('If you have just confirmed the payment on your phone, refresh this page in a moment. Otherwise, try again.')
+                        : __('No money was taken. Your order :number is saved: you can try again, or confirm it on WhatsApp and pay on delivery or at pickup.', ['number' => $order->number]) }}
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <form method="POST" action="{{ route('payments.retry', ['order' => $order, 'key' => $order->paymentKey()]) }}">
+                        @csrf
+                        <button type="submit" class="btn-red px-8 py-4 text-base">{{ __('Pay :amount', ['amount' => $order->formatMoney($order->total)]) }}</button>
+                    </form>
+                    <a href="{{ WhatsApp::orderConfirmation($order) }}" target="_blank" rel="noopener" class="btn-whatsapp px-8 py-4 text-base">
+                        <x-glyph name="chat" /> {{ __('Confirm on WhatsApp') }}
+                    </a>
+                </div>
+            @else
+                <span class="mx-auto flex size-16 items-center justify-center rounded-full bg-instock/10 text-instock">
+                    <x-glyph name="check" class="size-8" />
+                </span>
+                <h1 class="mt-6 text-3xl font-bold sm:text-4xl">{{ __('Thank you, :name!', ['name' => $order->customer_name]) }}</h1>
+                @if ($order->isPaid())
+                    <p class="mt-3 text-muted">{{ __('We have received your payment of :amount for order :number. Our team is now preparing your order.', ['amount' => $order->formatMoney($order->total), 'number' => $order->number]) }}</p>
+                    <p class="mt-2 text-sm text-muted">{{ __('Transaction reference') }} : <span class="font-semibold text-ink">{{ $order->payment_reference }}</span></p>
+                @else
+                    <p class="mt-3 text-muted">{{ __('Your order :number has been received. Confirm it on WhatsApp so our team can prepare it right away.', ['number' => $order->number]) }}</p>
+                @endif
+                <a href="{{ WhatsApp::orderConfirmation($order) }}" target="_blank" rel="noopener" class="btn-whatsapp mt-8 px-8 py-4 text-base">
+                    <x-glyph name="chat" /> {{ $order->isPaid() ? __('Contact us on WhatsApp') : __('Confirm on WhatsApp') }}
+                </a>
+            @endif
         </div>
 
         <div class="card mt-12 p-6 sm:p-8">
@@ -43,9 +72,14 @@
             <div class="rounded-card bg-pearl p-6 text-sm">
                 <p class="font-semibold text-navy">{{ __('What happens next?') }}</p>
                 <ol class="mt-3 list-decimal space-y-1.5 pl-4 text-muted">
-                    <li>{{ __('We confirm availability on WhatsApp.') }}</li>
-                    <li>{{ $order->fulfilment === FulfilmentMethod::Pickup ? __('We tell you when your order is ready for pickup.') : __('We agree on the delivery time with you.') }}</li>
-                    <li>{{ __('You pay on delivery or at pickup.') }}</li>
+                    @if ($order->isPaid())
+                        <li>{{ __('Your payment is confirmed.') }}</li>
+                        <li>{{ $order->fulfilment === FulfilmentMethod::Pickup ? __('We tell you when your order is ready for pickup.') : __('We agree on the delivery time with you.') }}</li>
+                    @else
+                        <li>{{ __('We confirm availability on WhatsApp.') }}</li>
+                        <li>{{ $order->fulfilment === FulfilmentMethod::Pickup ? __('We tell you when your order is ready for pickup.') : __('We agree on the delivery time with you.') }}</li>
+                        <li>{{ $order->paysOnline() ? __('You pay online, or on delivery or at pickup.') : __('You pay on delivery or at pickup.') }}</li>
+                    @endif
                 </ol>
             </div>
             <div class="rounded-card bg-pearl p-6 text-sm">
@@ -62,7 +96,9 @@
             </div>
         </div>
 
-        <p class="mt-10 text-center text-sm text-muted">{{ __('A confirmation email has been sent to :email.', ['email' => $order->email]) }}</p>
+        @if (! $order->paysOnline() || $order->isPaid())
+            <p class="mt-10 text-center text-sm text-muted">{{ __('A confirmation email has been sent to :email.', ['email' => $order->email]) }}</p>
+        @endif
         <div class="mt-4 text-center">
             <a href="{{ route('shop') }}" class="font-semibold text-royal hover:underline">{{ __('Continue shopping') }} →</a>
         </div>

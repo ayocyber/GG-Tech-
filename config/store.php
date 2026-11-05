@@ -53,6 +53,12 @@ return [
 
     'online_payments_enabled' => (bool) env('STORE_ONLINE_PAYMENTS', false),
 
+    /*
+    | Who receives the "payment received" alert for every online payment.
+    */
+
+    'payments_email' => env('STORE_PAYMENTS_EMAIL', 'greatgodtech@gmail.com'),
+
     'bulk_quantity' => 10,
 
     /*

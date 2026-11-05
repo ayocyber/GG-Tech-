@@ -21,7 +21,7 @@ class PlaceOrder
     public function __construct(private Cart $cart) {}
 
     /**
-     * @param  array{customer_name: string, email: string, phone: string, fulfilment: string, pickup_shop?: string|null, delivery_zone_id?: int|null, address?: string|null, city?: string|null, landmark?: string|null, notes?: string|null}  $details
+     * @param  array{customer_name: string, email: string, phone: string, fulfilment: string, pickup_shop?: string|null, delivery_zone_id?: int|null, address?: string|null, city?: string|null, landmark?: string|null, notes?: string|null, pay_online?: bool}  $details
      */
     public function handle(array $details, Market $market): Order
     {
@@ -43,7 +43,13 @@ class PlaceOrder
             default => $zone->fee,
         };
 
-        $order = DB::transaction(function () use ($details, $market, $fulfilment, $zone, $lines, $subtotal, $deliveryFee) {
+        $paysOnline = (bool) ($details['pay_online'] ?? false);
+
+        if ($paysOnline && $deliveryFee === null) {
+            throw new InvalidArgumentException('An order cannot be paid online before its delivery fee is known.');
+        }
+
+        $order = DB::transaction(function () use ($details, $market, $fulfilment, $zone, $lines, $subtotal, $deliveryFee, $paysOnline) {
             $order = Order::create([
                 'locale' => app()->getLocale(),
                 'market' => $market,
@@ -66,6 +72,10 @@ class PlaceOrder
 
             $order->update(['number' => 'GG-'.($order->id + 1000)]);
 
+            if ($paysOnline) {
+                $order->startPaymentAttempt();
+            }
+
             $order->items()->createMany($lines->map(fn (BasketLine $line) => [
                 'product_id' => $line->product()->id,
                 'product_variant_id' => $line->variant->id,
@@ -82,6 +92,11 @@ class PlaceOrder
         $this->cart->clear();
 
         $order->load(['items', 'deliveryZone']);
+
+        // Online orders are announced once the payment succeeds (SyncOrderPayment).
+        if ($order->paysOnline()) {
+            return $order;
+        }
 
         // The order is saved and confirmed on WhatsApp either way, so a mail outage must not fail checkout.
         rescue(fn () => Mail::to($order->email)->locale($order->locale)->queue(new OrderReceived($order)));

@@ -5,9 +5,12 @@ namespace App\Livewire;
 use App\Actions\PlaceOrder;
 use App\Enums\FulfilmentMethod;
 use App\Enums\Market;
+use App\Http\Controllers\PaymentReturnController;
 use App\Models\DeliveryZone;
 use App\Services\Baskets\Cart;
+use App\Services\Payments\PaymentGateway;
 use App\Support\ShopLocation;
+use Closure;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
@@ -39,11 +42,34 @@ class CheckoutForm extends Component
 
     public string $notes = '';
 
+    public string $payment_option = self::PayLater;
+
+    public const PayOnline = 'online';
+
+    public const PayLater = 'later';
+
     public function mount(): void
     {
         $this->fulfilment = FulfilmentMethod::Pickup->value;
         $this->pickup_shop = ShopLocation::listed()->first()?->shop->value ?? '';
         $this->phone = Market::current()->phonePrefix().' ';
+        $this->payment_option = $this->onlinePaymentsEnabled ? self::PayOnline : self::PayLater;
+    }
+
+    /**
+     * Switching to a delivery our team still has to price falls back to paying on delivery.
+     */
+    public function updated(): void
+    {
+        if ($this->payment_option === self::PayOnline && $this->deliveryFeeIsPending(app(Cart::class))) {
+            $this->payment_option = self::PayLater;
+        }
+    }
+
+    #[Computed]
+    public function onlinePaymentsEnabled(): bool
+    {
+        return (bool) config('store.online_payments_enabled');
     }
 
     #[Computed]
@@ -69,7 +95,7 @@ class CheckoutForm extends Component
         }
     }
 
-    public function placeOrder(PlaceOrder $placeOrder, Cart $cart): void
+    public function placeOrder(PlaceOrder $placeOrder, Cart $cart, PaymentGateway $gateway): void
     {
         if ($cart->isEmpty()) {
             $this->redirectRoute('cart');
@@ -80,7 +106,16 @@ class CheckoutForm extends Component
         $market = Market::current();
         $validated = $this->validate($this->checkoutRules($market));
 
+        $validated['pay_online'] = $validated['payment_option'] === self::PayOnline;
+        unset($validated['payment_option']);
+
         $order = $placeOrder->handle($validated, $market);
+
+        if ($order->paysOnline()) {
+            $this->redirect($gateway->checkoutUrl($order, PaymentReturnController::urlFor($order)));
+
+            return;
+        }
 
         $this->redirect(URL::signedRoute('orders.thanks', ['order' => $order]));
     }
@@ -113,6 +148,15 @@ class CheckoutForm extends Component
             'city' => [Rule::requiredIf($isDelivery), 'nullable', 'string', 'max:120'],
             'landmark' => ['nullable', 'string', 'max:255'],
             'notes' => ['nullable', 'string', 'max:1000'],
+            'payment_option' => [
+                'required',
+                Rule::in($this->onlinePaymentsEnabled ? [self::PayOnline, self::PayLater] : [self::PayLater]),
+                function (string $attribute, string $value, Closure $fail) {
+                    if ($value === self::PayOnline && $this->deliveryFeeIsPending(app(Cart::class))) {
+                        $fail(__('Online payment opens once our team has confirmed the delivery fee. Choose to pay on delivery for now.'));
+                    }
+                },
+            ],
         ];
     }
 
@@ -129,7 +173,22 @@ class CheckoutForm extends Component
             'delivery_zone_id' => __('delivery zone'),
             'address' => __('address'),
             'city' => __('city'),
+            'payment_option' => __('payment method'),
         ];
+    }
+
+    /**
+     * A delivery that our team still has to price cannot be paid online yet.
+     */
+    protected function deliveryFeeIsPending(Cart $cart): bool
+    {
+        if ($this->fulfilment !== FulfilmentMethod::Delivery->value) {
+            return false;
+        }
+
+        $zone = $this->selectedZone;
+
+        return $zone === null || $zone->isQuoted() || $cart->needsDeliveryQuote($cart->lines(Market::current()));
     }
 
     public function render(Cart $cart): View
@@ -156,6 +215,8 @@ class CheckoutForm extends Component
             'total' => $subtotal + ($deliveryFee ?? 0),
             'isPickup' => $isPickup,
             'shopLocations' => ShopLocation::listed(),
+            'canPayOnline' => $this->onlinePaymentsEnabled && ! $this->deliveryFeeIsPending($cart),
+            'paysOnline' => $this->payment_option === self::PayOnline,
         ]);
     }
 }

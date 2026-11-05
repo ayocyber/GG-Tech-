@@ -3,8 +3,12 @@
 use App\Http\Controllers\AdminLocaleController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\DemoPaymentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderConfirmationController;
+use App\Http\Controllers\PayGateCallbackController;
+use App\Http\Controllers\PaymentRetryController;
+use App\Http\Controllers\PaymentReturnController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuoteConfirmationController;
 use App\Http\Controllers\QuoteController;
@@ -20,6 +24,10 @@ Route::get('/', function () {
 });
 
 Route::get('/admin-language/{locale}', AdminLocaleController::class)->name('admin.locale');
+
+Route::post('/paygate/callback', PayGateCallbackController::class)
+    ->middleware('throttle:60,1')
+    ->name('payments.callback');
 
 Route::prefix('{locale}')
     ->whereIn('locale', SetLocale::SUPPORTED)
@@ -37,6 +45,12 @@ Route::prefix('{locale}')
         Route::get('/orders/{order:number}/thank-you', OrderConfirmationController::class)
             ->middleware('signed')
             ->name('orders.thanks');
+        Route::get('/orders/{order:number}/payment/{key}/return', PaymentReturnController::class)->name('payments.return');
+        Route::post('/orders/{order:number}/payment/{key}', PaymentRetryController::class)
+            ->middleware('throttle:10,1')
+            ->name('payments.retry');
+        Route::get('/payments/demo/{order:number}/{key}', [DemoPaymentController::class, 'show'])->name('payments.demo');
+        Route::post('/payments/demo/{order:number}/{key}', [DemoPaymentController::class, 'complete'])->name('payments.demo.complete');
         Route::get('/quote', QuoteController::class)->name('quote');
         Route::get('/quotes/{quoteRequest:number}/thank-you', QuoteConfirmationController::class)
             ->middleware('signed')

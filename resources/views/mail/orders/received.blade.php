@@ -26,7 +26,7 @@
 {{ __('Confirm on WhatsApp') }}
 </x-mail::button>
 
-{{ __('Online payment is coming soon. For now, you pay on delivery or at pickup.') }}
+{{ __('You pay on delivery or at pickup.') }}
 
 {{ config('app.name') }} — {{ __('Technology · Solutions · Trust') }}
 </x-mail::message>

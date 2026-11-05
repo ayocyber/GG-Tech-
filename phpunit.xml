@@ -32,5 +32,8 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>
+        <env name="STORE_ONLINE_PAYMENTS" value="false"/>
+        <env name="PAYGATE_MODE" value="demo"/>
+        <env name="PAYGATE_API_KEY" value=""/>
     </php>
 </phpunit>

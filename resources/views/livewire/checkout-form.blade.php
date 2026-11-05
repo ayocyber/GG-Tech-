@@ -129,13 +129,48 @@
                 <span class="flex size-8 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">3</span>
                 <h2 class="text-xl font-semibold">{{ __('Payment') }}</h2>
             </div>
-            <div class="mt-6 flex gap-4 rounded-2xl border border-royal/20 bg-royal-50 p-5">
-                <x-glyph name="sparkles" class="size-6 text-royal" />
-                <div class="text-sm">
-                    <p class="font-semibold text-navy">{{ __('Online payment coming soon') }}</p>
-                    <p class="mt-1 text-muted">{{ __('Place your order now: we confirm it on WhatsApp during opening hours. You pay on delivery or at pickup.') }}</p>
+            @if ($this->onlinePaymentsEnabled)
+                <fieldset class="mt-6 grid gap-3">
+                    <legend class="sr-only">{{ __('Payment method') }}</legend>
+                    <label @class([
+                        'flex gap-4 rounded-2xl border p-5 transition',
+                        'cursor-pointer' => $canPayOnline,
+                        'cursor-not-allowed opacity-60' => ! $canPayOnline,
+                        'border-royal bg-royal-50 ring-1 ring-royal' => $paysOnline,
+                        'border-silver/70 hover:border-royal/50' => ! $paysOnline,
+                    ])>
+                        <input type="radio" wire:model.live="payment_option" value="online" class="mt-1 accent-royal" @disabled(! $canPayOnline)>
+                        <span class="text-sm">
+                            <span class="block font-semibold text-navy">{{ __('Pay now with Flooz or T-Money') }}</span>
+                            <span class="mt-1 block text-muted">
+                                {{ $canPayOnline
+                                    ? __('Secure mobile money payment through PayGate Global. You confirm the payment on your phone.')
+                                    : __('Available once the delivery fee is known: choose a zone with a fixed fee, or pick up in store.') }}
+                            </span>
+                        </span>
+                    </label>
+                    <label @class([
+                        'flex cursor-pointer gap-4 rounded-2xl border p-5 transition',
+                        'border-royal bg-royal-50 ring-1 ring-royal' => ! $paysOnline,
+                        'border-silver/70 hover:border-royal/50' => $paysOnline,
+                    ])>
+                        <input type="radio" wire:model.live="payment_option" value="later" class="mt-1 accent-royal">
+                        <span class="text-sm">
+                            <span class="block font-semibold text-navy">{{ $isPickup ? __('Pay at pickup') : __('Pay on delivery') }}</span>
+                            <span class="mt-1 block text-muted">{{ __('We confirm your order on WhatsApp during opening hours.') }}</span>
+                        </span>
+                    </label>
+                </fieldset>
+                @error('payment_option') <p class="field-error">{{ $message }}</p> @enderror
+            @else
+                <div class="mt-6 flex gap-4 rounded-2xl border border-royal/20 bg-royal-50 p-5">
+                    <x-glyph name="sparkles" class="size-6 text-royal" />
+                    <div class="text-sm">
+                        <p class="font-semibold text-navy">{{ __('Online payment coming soon') }}</p>
+                        <p class="mt-1 text-muted">{{ __('Place your order now: we confirm it on WhatsApp during opening hours. You pay on delivery or at pickup.') }}</p>
+                    </div>
                 </div>
-            </div>
+            @endif
         </section>
     </div>
 
@@ -184,7 +219,7 @@
             </div>
 
             <button type="submit" class="btn-red mt-6 w-full" wire:loading.attr="disabled" wire:target="placeOrder">
-                <span wire:loading.remove wire:target="placeOrder">{{ __('Place my order') }}</span>
+                <span wire:loading.remove wire:target="placeOrder">{{ $paysOnline && $canPayOnline ? __('Pay :amount', ['amount' => $market->format($total)]) : __('Place my order') }}</span>
                 <span wire:loading wire:target="placeOrder">{{ __('Sending…') }}</span>
             </button>
             <p class="mt-3 text-center text-xs text-muted">{{ __('Free in-store pickup · 24–48 h delivery · WhatsApp support') }}</p>

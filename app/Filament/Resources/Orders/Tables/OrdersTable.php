@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Orders\Tables;
 
 use App\Enums\FulfilmentMethod;
 use App\Enums\OrderStatus;
+use App\Enums\PaymentStatus;
 use App\Models\Order;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -38,9 +39,14 @@ class OrdersTable
                     ->color('gray')
                     ->description(fn (Order $record) => $record->pickupLocation()?->title()),
                 TextColumn::make('status')->label(__('Status'))->badge(),
+                TextColumn::make('payment_status')
+                    ->label(__('Payment'))
+                    ->badge()
+                    ->placeholder(__('On delivery / pickup')),
             ])
             ->filters([
                 SelectFilter::make('status')->label(__('Status'))->options(OrderStatus::class),
+                SelectFilter::make('payment_status')->label(__('Payment'))->options(PaymentStatus::class),
                 SelectFilter::make('fulfilment')->label(__('Method'))->options(FulfilmentMethod::class),
             ])
             ->recordActions([

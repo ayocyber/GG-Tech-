@@ -69,6 +69,15 @@ class OrderInfolist
                             ->formatStateUsing(fn (string $state) => OrderResource::paymentMethods()[$state] ?? $state),
                         TextEntry::make('created_at')->label(__('Received'))->dateTime('d/m/Y H:i'),
                     ]),
+                    Section::make(__('Online payment'))
+                        ->visible(fn (Order $record) => $record->paysOnline())
+                        ->schema([
+                            TextEntry::make('payment_status')->label(__('Status'))->badge(),
+                            TextEntry::make('payment_network')->label(__('Network'))->placeholder('—'),
+                            TextEntry::make('payment_reference')->label(__('PayGate reference'))->copyable()->placeholder('—'),
+                            TextEntry::make('payment_provider_reference')->label(__('Flooz / T-Money reference'))->copyable()->placeholder('—'),
+                            TextEntry::make('paid_at')->label(__('Paid on'))->dateTime('d/m/Y H:i')->placeholder('—'),
+                        ]),
                     Section::make(__('Customer'))->schema([
                         TextEntry::make('customer_name')->label(__('Name')),
                         TextEntry::make('phone')->label(__('Phone'))->copyable(),
