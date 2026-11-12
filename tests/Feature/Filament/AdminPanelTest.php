@@ -4,8 +4,10 @@ use App\Enums\OrderStatus;
 use App\Enums\Shop;
 use App\Enums\TonerType;
 use App\Filament\Pages\StoreSettings;
+use App\Filament\Resources\Categories\Pages\ManageCategories;
 use App\Filament\Resources\Orders\Pages\EditOrder;
 use App\Filament\Resources\Products\Pages\EditProduct;
+use App\Filament\Widgets\StoreStatsOverview;
 use App\Models\Category;
 use App\Models\DeliveryZone;
 use App\Models\Order;
@@ -153,6 +155,20 @@ it('moves a toner to the matching category when staff choose its toner type', fu
         ->category_id->toBe($compatibleToners->id);
 });
 
+it('fills a new category slug from its French name and lets staff change it', function () {
+    $this->actingAs(User::factory()->create());
+
+    Livewire::test(ManageCategories::class)
+        ->mountAction('create')
+        ->fillForm(['name' => ['fr' => 'Cartouches d’encre', 'en' => 'Ink cartridges']])
+        ->assertSchemaStateSet(['slug' => 'cartouches-dencre'])
+        ->fillForm(['slug' => 'ink-cartridges', 'icon' => 'toner'])
+        ->callMountedAction()
+        ->assertHasNoFormErrors();
+
+    expect(Category::query()->where('slug', 'ink-cartridges')->exists())->toBeTrue();
+});
+
 it('hides photo uploads when the hosting cannot keep uploaded files', function () {
     config(['store.photo_uploads' => false]);
     $product = Product::factory()->priced()->create();
@@ -231,4 +247,13 @@ it('hides the bulk photo upload when the hosting cannot keep uploaded files', fu
 
     Livewire::test(EditProduct::class, ['record' => $product->getRouteKey()])
         ->assertActionHidden('uploadPhotos');
+});
+
+it('shows staff how many products are live on the site', function () {
+    $this->actingAs(User::factory()->create());
+    Product::factory()->count(3)->create();
+    Product::factory()->draft()->count(2)->create();
+
+    Livewire::test(StoreStatsOverview::class)
+        ->assertSeeInOrder(['Produits sur le site', '3', '2 brouillons non affichés']);
 });

@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Enums\Market;
 use App\Enums\OrderStatus;
+use App\Enums\ProductStatus;
 use App\Enums\QuoteStatus;
 use App\Models\Order;
 use App\Models\Product;
@@ -21,7 +22,13 @@ class StoreStatsOverview extends StatsOverviewWidget
             ->where('created_at', '>=', now()->startOfMonth())
             ->where('status', '!=', OrderStatus::Cancelled);
 
+        $draftCount = Product::query()->where('status', ProductStatus::Draft)->count();
+
         return [
+            Stat::make(__('Products on the site'), Product::query()->published()->count())
+                ->description(trans_choice(':count draft not shown|:count drafts not shown', $draftCount, ['count' => $draftCount]))
+                ->icon('heroicon-o-cube')
+                ->color('success'),
             Stat::make(__('Orders to process'), Order::query()->where('status', OrderStatus::New)->count())
                 ->description(__('New orders to confirm'))
                 ->icon('heroicon-o-shopping-bag')

@@ -13,11 +13,14 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use UnitEnum;
 
 class CategoryResource extends Resource
@@ -45,7 +48,16 @@ class CategoryResource extends Resource
         return $schema
             ->components([
                 Grid::make(2)->schema([
-                    TextInput::make('name.fr')->label(__('Name (French)'))->required()->maxLength(120),
+                    TextInput::make('name.fr')
+                        ->label(__('Name (French)'))
+                        ->required()
+                        ->maxLength(120)
+                        ->live(onBlur: true)
+                        ->afterStateUpdated(function (Get $get, Set $set, ?string $state, string $operation) {
+                            if ($operation === 'create' && blank($get('slug'))) {
+                                $set('slug', Str::slug($state));
+                            }
+                        }),
                     TextInput::make('name.en')->label(__('Name (English)'))->required()->maxLength(120),
                     Textarea::make('description.fr')->label(__('Description (French)'))->rows(2),
                     Textarea::make('description.en')->label(__('Description (English)'))->rows(2),

@@ -6057,5 +6057,1508 @@
     "slug": "mikrotik-chateau-series-wi-fi-router",
     "featured": false,
     "toner_type": null
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "CS700",
+    "category": "accessories",
+    "name": {
+      "en": "HP CS700 Wireless Keyboard & Mouse Combo",
+      "fr": "Ensemble clavier-souris sans fil HP CS700"
+    },
+    "short_description": {
+      "en": "Wireless keyboard and mouse combo",
+      "fr": "Ensemble clavier et souris sans fil"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 10000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-cs700-wireless-keyboard-mouse-combo",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "K1600",
+    "category": "accessories",
+    "name": {
+      "en": "HP K1600 Wired Keyboard",
+      "fr": "Clavier filaire HP K1600"
+    },
+    "short_description": {
+      "en": "Wired USB keyboard",
+      "fr": "Clavier USB filaire"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-k1600-wired-keyboard",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "M10",
+    "category": "accessories",
+    "name": {
+      "en": "HP M10 Wired Optical Mouse",
+      "fr": "Souris optique filaire HP M10"
+    },
+    "short_description": {
+      "en": "Wired optical mouse",
+      "fr": "Souris optique filaire"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 1500
+      }
+    ],
+    "photos": [],
+    "slug": "hp-m10-wired-optical-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "X9500 Plus",
+    "category": "accessories",
+    "name": {
+      "en": "HP X9500 Plus Bluetooth Mouse",
+      "fr": "Souris Bluetooth HP X9500 Plus"
+    },
+    "short_description": {
+      "en": "Bluetooth mouse",
+      "fr": "Souris Bluetooth"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 3000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-x9500-plus-bluetooth-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "MW500",
+    "category": "accessories",
+    "name": {
+      "en": "HP MW500 Optical Mouse",
+      "fr": "Souris optique HP MW500"
+    },
+    "short_description": {
+      "en": "Optical mouse",
+      "fr": "Souris optique"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 1500
+      }
+    ],
+    "photos": [],
+    "slug": "hp-mw500-optical-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "X500",
+    "category": "accessories",
+    "name": {
+      "en": "HP X500 Wired Mouse",
+      "fr": "Souris filaire HP X500"
+    },
+    "short_description": {
+      "en": "Wired mouse",
+      "fr": "Souris filaire"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 1500
+      }
+    ],
+    "photos": [],
+    "slug": "hp-x500-wired-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "HP",
+    "model": "G270",
+    "category": "accessories",
+    "name": {
+      "en": "HP G270 Gaming Mouse",
+      "fr": "Souris gaming HP G270"
+    },
+    "short_description": {
+      "en": "Gaming mouse",
+      "fr": "Souris gaming"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 2000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-g270-gaming-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      77,
+      82
+    ],
+    "page": 8,
+    "brand": "WAKER",
+    "model": "WM323",
+    "category": "accessories",
+    "name": {
+      "en": "WAKER WM323 Bluetooth Mouse",
+      "fr": "Souris Bluetooth WAKER WM323"
+    },
+    "short_description": {
+      "en": "Bluetooth mouse",
+      "fr": "Souris Bluetooth"
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 3500
+      }
+    ],
+    "photos": [],
+    "slug": "waker-wm323-bluetooth-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      101,
+      103
+    ],
+    "page": 25,
+    "brand": "HP",
+    "model": "W10",
+    "category": "accessories",
+    "name": {
+      "en": "HP W10 Bluetooth & Wireless Mouse",
+      "fr": "Souris Bluetooth et sans fil HP W10"
+    },
+    "short_description": {
+      "en": "Dual-mode mouse: Bluetooth and 2.4 GHz wireless, 4 buttons.",
+      "fr": "Souris double mode : Bluetooth et sans fil 2,4 GHz, 4 boutons."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 4000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page025_Photo03.jpg"
+    ],
+    "slug": "hp-w10-bluetooth-wireless-mouse",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      78,
+      82,
+      103
+    ],
+    "page": 9,
+    "brand": "Logitech",
+    "model": "C920",
+    "category": "accessories",
+    "name": {
+      "en": "Logitech C920 Pro HD Webcam",
+      "fr": "Webcam Logitech C920 Pro HD"
+    },
+    "short_description": {
+      "en": "Full HD 1080p webcam, 30 fps, autofocus.",
+      "fr": "Webcam Full HD 1080p, 30 images/s, autofocus."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 60000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page009_Photo01.jpg"
+    ],
+    "slug": "logitech-c920-pro-hd-webcam",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      78,
+      82,
+      103
+    ],
+    "page": 9,
+    "brand": "Logitech",
+    "model": "C270",
+    "category": "accessories",
+    "name": {
+      "en": "Logitech C270 HD Webcam",
+      "fr": "Webcam Logitech C270 HD"
+    },
+    "short_description": {
+      "en": "HD 720p webcam, 30 fps.",
+      "fr": "Webcam HD 720p, 30 images/s."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 20000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page009_Photo02.jpg"
+    ],
+    "slug": "logitech-c270-hd-webcam",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      78,
+      82,
+      103
+    ],
+    "page": 9,
+    "brand": null,
+    "model": null,
+    "category": "computing",
+    "name": {
+      "en": "Customer Display for POS Systems",
+      "fr": "Afficheur client pour système de caisse"
+    },
+    "short_description": {
+      "en": "Customer-facing display for point-of-sale systems.",
+      "fr": "Afficheur côté client pour système de caisse."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 60000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page009_Photo03.jpg"
+    ],
+    "slug": "customer-display-for-pos-systems",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      78,
+      82,
+      103
+    ],
+    "page": 9,
+    "brand": null,
+    "model": null,
+    "category": "accessories",
+    "name": {
+      "en": "USB Podcast Microphone",
+      "fr": "Microphone USB pour podcast"
+    },
+    "short_description": {
+      "en": "USB microphone for podcasting, recording and gaming.",
+      "fr": "Microphone USB pour podcast, enregistrement et jeux."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page009_Photo04.jpg"
+    ],
+    "slug": "usb-podcast-microphone",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      79,
+      82,
+      103
+    ],
+    "page": 10,
+    "brand": null,
+    "model": null,
+    "category": "networking",
+    "name": {
+      "en": "USB 3.0 / Type-C Gigabit Ethernet Adapter",
+      "fr": "Adaptateur Ethernet Gigabit USB 3.0 / Type-C"
+    },
+    "short_description": {
+      "en": "10/100/1000 Mbps Ethernet adapter for laptops.",
+      "fr": "Adaptateur Ethernet 10/100/1000 Mbps pour ordinateurs portables."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page010_Photo01.jpg"
+    ],
+    "slug": "usb-3-0-type-c-gigabit-ethernet-adapter",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      79,
+      82,
+      103
+    ],
+    "page": 10,
+    "brand": null,
+    "model": "SHUN-1",
+    "category": "accessories",
+    "name": {
+      "en": "Laptop Cooling Pad SHUN-1",
+      "fr": "Support ventilé pour ordinateur portable SHUN-1"
+    },
+    "short_description": {
+      "en": "Cooling pad with blue LED, for laptops up to 17 in.",
+      "fr": "Support ventilé avec LED bleue, jusqu’à 17 pouces."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 8000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page010_Photo02.jpg"
+    ],
+    "slug": "laptop-cooling-pad-shun-1",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      79,
+      82,
+      103
+    ],
+    "page": 10,
+    "brand": "Seagate",
+    "model": "Backup Plus Slim",
+    "category": "accessories",
+    "name": {
+      "en": "Seagate Backup Plus Slim External Drive",
+      "fr": "Disque dur externe Seagate Backup Plus Slim"
+    },
+    "short_description": {
+      "en": "Slim portable external hard drive.",
+      "fr": "Disque dur externe portable et fin."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "500 GB",
+          "fr": "500 Go"
+        },
+        "price_xof": 25000
+      },
+      {
+        "label": {
+          "en": "1 TB",
+          "fr": "1 To"
+        },
+        "price_xof": 30000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page010_Photo03.jpg"
+    ],
+    "slug": "seagate-backup-plus-slim-external-drive",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      79,
+      82,
+      103
+    ],
+    "page": 10,
+    "brand": null,
+    "model": null,
+    "category": "accessories",
+    "name": {
+      "en": "Foldable Laptop Stand",
+      "fr": "Support pliable pour ordinateur portable"
+    },
+    "short_description": {
+      "en": "Adjustable, portable laptop stand.",
+      "fr": "Support d’ordinateur portable pliable et réglable."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 5000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page010_Photo04.jpg"
+    ],
+    "slug": "foldable-laptop-stand",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      80,
+      82
+    ],
+    "page": 11,
+    "brand": null,
+    "model": null,
+    "category": "networking",
+    "name": {
+      "en": "Network Cable Tester & Tool Kit",
+      "fr": "Testeur de câbles réseau et kit d’outils"
+    },
+    "short_description": {
+      "en": "Network cable testing and installation tools.",
+      "fr": "Testeur de câbles réseau et outils d’installation."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 12000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page011_Photo01.jpg"
+    ],
+    "slug": "network-cable-tester-tool-kit",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      81,
+      83
+    ],
+    "page": 14,
+    "brand": null,
+    "model": null,
+    "category": "accessories",
+    "name": {
+      "en": "USB 2.0 Flash Drive",
+      "fr": "Clé USB 2.0"
+    },
+    "short_description": {
+      "en": "BOOST / OSCOO USB flash drive for file storage and transfer.",
+      "fr": "Clé USB BOOST / OSCOO pour le stockage et le transfert de fichiers."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": {
+          "en": "2 GB",
+          "fr": "2 Go"
+        },
+        "price_xof": 2000
+      },
+      {
+        "label": {
+          "en": "4 GB",
+          "fr": "4 Go"
+        },
+        "price_xof": 2500
+      },
+      {
+        "label": {
+          "en": "8 GB",
+          "fr": "8 Go"
+        },
+        "price_xof": 3500
+      },
+      {
+        "label": {
+          "en": "16 GB",
+          "fr": "16 Go"
+        },
+        "price_xof": 4000
+      },
+      {
+        "label": {
+          "en": "32 GB",
+          "fr": "32 Go"
+        },
+        "price_xof": 5000
+      },
+      {
+        "label": {
+          "en": "64 GB",
+          "fr": "64 Go"
+        },
+        "price_xof": 8000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page012_Photo01.jpg",
+      "GGTECH_Page014_Photo02.jpg",
+      "GGTECH_Page014_Photo03.jpg",
+      "GGTECH_Page014_Photo01.jpg"
+    ],
+    "slug": "usb-2-0-flash-drive",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      94
+    ],
+    "page": 18,
+    "brand": "INVO",
+    "model": "IMPB100",
+    "category": "computing",
+    "name": {
+      "en": "INVO IMPB100 Ceiling Projector Mount",
+      "fr": "Support de plafond pour projecteur INVO IMPB100"
+    },
+    "short_description": {
+      "en": "Ceiling mount for projectors, up to 20 kg (per packaging).",
+      "fr": "Support plafond pour projecteur, jusqu’à 20 kg (selon l’emballage)."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 12000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page018_Photo01.jpg"
+    ],
+    "slug": "invo-impb100-ceiling-projector-mount",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      94,
+      103
+    ],
+    "page": 18,
+    "brand": "TP-Link",
+    "model": "LS1008G",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link LiteWave LS1008G 8-Port Gigabit Switch",
+      "fr": "Switch Gigabit 8 ports TP-Link LiteWave LS1008G"
+    },
+    "short_description": {
+      "en": "8-port Gigabit desktop switch, plug and play.",
+      "fr": "Switch de bureau Gigabit 8 ports, prêt à l’emploi."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 18000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page018_Photo02.jpg"
+    ],
+    "slug": "tp-link-litewave-ls1008g-8-port-gigabit-switch",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      94,
+      103
+    ],
+    "page": 18,
+    "brand": "TP-Link",
+    "model": "LS1008",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link LiteWave LS1008 8-Port 10/100 Mbps Switch",
+      "fr": "Switch 8 ports 10/100 Mbps TP-Link LiteWave LS1008"
+    },
+    "short_description": {
+      "en": "8-port 10/100 Mbps desktop switch, plug and play.",
+      "fr": "Switch de bureau 8 ports 10/100 Mbps, prêt à l’emploi."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 8000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page018_Photo02.jpg"
+    ],
+    "slug": "tp-link-litewave-ls1008-8-port-10-100-mbps-switch",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      95,
+      102
+    ],
+    "page": 19,
+    "brand": "TP-Link",
+    "model": "TL-SF1008P",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link TL-SF1008P 8-Port 10/100 Mbps PoE Switch",
+      "fr": "Switch PoE 8 ports 10/100 Mbps TP-Link TL-SF1008P"
+    },
+    "short_description": {
+      "en": "8-port 10/100 Mbps desktop switch with PoE ports.",
+      "fr": "Switch de bureau 8 ports 10/100 Mbps avec ports PoE."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page019_Photo01.jpg"
+    ],
+    "slug": "tp-link-tl-sf1008p-8-port-10-100-mbps-poe-switch",
+    "featured": false,
+    "toner_type": null,
+    "draft": true,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      95,
+      102
+    ],
+    "page": 19,
+    "brand": "TP-Link",
+    "model": "TL-SG1008P",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link TL-SG1008P 8-Port Gigabit PoE+ Switch",
+      "fr": "Switch Gigabit PoE+ 8 ports TP-Link TL-SG1008P"
+    },
+    "short_description": {
+      "en": "8-port Gigabit desktop switch with PoE+ ports.",
+      "fr": "Switch de bureau Gigabit 8 ports avec ports PoE+."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page019_Photo01.jpg"
+    ],
+    "slug": "tp-link-tl-sg1008p-8-port-gigabit-poe-switch",
+    "featured": false,
+    "toner_type": null,
+    "draft": true,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      95,
+      103
+    ],
+    "page": 19,
+    "brand": "TP-Link",
+    "model": "TL-SF1009P",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link TL-SF1009P 9-Port Switch with 8 PoE+ Ports",
+      "fr": "Switch 9 ports avec 8 ports PoE+ TP-Link TL-SF1009P"
+    },
+    "short_description": {
+      "en": "9-port 10/100 Mbps desktop switch with 8 PoE+ ports.",
+      "fr": "Switch de bureau 9 ports 10/100 Mbps dont 8 ports PoE+."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page019_Photo02.jpg"
+    ],
+    "slug": "tp-link-tl-sf1009p-9-port-switch-with-8-poe-ports",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      95,
+      103
+    ],
+    "page": 19,
+    "brand": "TP-Link",
+    "model": "TL-SG1008MP",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link TL-SG1008MP 8-Port Gigabit PoE+ Switch",
+      "fr": "Switch Gigabit PoE+ 8 ports TP-Link TL-SG1008MP"
+    },
+    "short_description": {
+      "en": "8-port Gigabit desktop/rackmount switch with 8 PoE+ ports.",
+      "fr": "Switch Gigabit 8 ports de bureau ou en baie, 8 ports PoE+."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page019_Photo02.jpg"
+    ],
+    "slug": "tp-link-tl-sg1008mp-8-port-gigabit-poe-switch",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      97,
+      102,
+      103
+    ],
+    "page": 21,
+    "brand": "TP-Link",
+    "model": "Archer C20",
+    "category": "networking",
+    "name": {
+      "en": "TP-Link Archer C20 AC750 Dual-Band Wi-Fi Router",
+      "fr": "Routeur Wi-Fi double bande TP-Link Archer C20 AC750"
+    },
+    "short_description": {
+      "en": "AC750 dual-band router: 300 Mbps (2.4 GHz) + 433 Mbps (5 GHz).",
+      "fr": "Routeur double bande AC750 : 300 Mbps (2,4 GHz) + 433 Mbps (5 GHz)."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 25000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page021_Photo01.jpg"
+    ],
+    "slug": "tp-link-archer-c20-ac750-dual-band-wi-fi-router",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      96,
+      103
+    ],
+    "page": 20,
+    "brand": "HP",
+    "model": "4003n",
+    "category": "printers",
+    "name": {
+      "en": "HP LaserJet Pro 4003n Network Printer",
+      "fr": "Imprimante réseau HP LaserJet Pro 4003n"
+    },
+    "short_description": {
+      "en": "Black-and-white laser printer, up to 40 pages per minute, network.",
+      "fr": "Imprimante laser monochrome réseau, jusqu’à 40 pages par minute."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 200000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page020_Photo01.jpg"
+    ],
+    "slug": "hp-laserjet-pro-4003n-network-printer",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      99,
+      103
+    ],
+    "page": 23,
+    "brand": "HP",
+    "model": "M141a",
+    "category": "printers",
+    "name": {
+      "en": "HP LaserJet MFP M141a",
+      "fr": "HP LaserJet MFP M141a"
+    },
+    "short_description": {
+      "en": "Monochrome laser all-in-one: print, copy and scan; up to 20 ppm A4; USB.",
+      "fr": "Multifonction laser monochrome : impression, copie et numérisation ; jusqu’à 20 ppm A4 ; USB."
+    },
+    "description": {
+      "en": "Up to 600 × 600 dpi; up to 20 ppm A4 for the M141 series. USB connection; no Wi-Fi on the M141a variant.",
+      "fr": "Résolution jusqu’à 600 × 600 dpi ; jusqu’à 20 ppm A4 pour la série M141. Connexion USB ; pas de Wi-Fi sur la version M141a."
+    },
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 140000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page023_Photo01.jpg"
+    ],
+    "slug": "hp-laserjet-mfp-m141a",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      99,
+      103
+    ],
+    "page": 23,
+    "brand": "HP",
+    "model": "M141w",
+    "category": "printers",
+    "name": {
+      "en": "HP LaserJet MFP M141w",
+      "fr": "HP LaserJet MFP M141w"
+    },
+    "short_description": {
+      "en": "Monochrome laser all-in-one: print, copy and scan; up to 20 ppm A4; Wi-Fi and USB.",
+      "fr": "Multifonction laser monochrome : impression, copie et numérisation ; jusqu’à 20 ppm A4 ; Wi-Fi et USB."
+    },
+    "description": {
+      "en": "Up to 20 ppm A4, 2.4 GHz Wi-Fi and USB; manual duplex printing.",
+      "fr": "Jusqu’à 20 ppm A4, Wi-Fi 2,4 GHz et USB ; impression recto verso manuelle."
+    },
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 150000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page023_Photo02.jpg"
+    ],
+    "slug": "hp-laserjet-mfp-m141w",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      99,
+      103
+    ],
+    "page": 23,
+    "brand": "Canon",
+    "model": "LBP6030B",
+    "category": "printers",
+    "name": {
+      "en": "Canon i-SENSYS LBP6030B",
+      "fr": "Canon i-SENSYS LBP6030B"
+    },
+    "short_description": {
+      "en": "A4 monochrome laser printer, print only; up to 18 ppm; USB.",
+      "fr": "Imprimante laser monochrome A4, impression uniquement ; jusqu’à 18 ppm ; USB."
+    },
+    "description": {
+      "en": "Enhanced resolution up to 2400 × 600 dpi. Uses the Canon 725 cartridge.",
+      "fr": "Résolution améliorée jusqu’à 2400 × 600 dpi. Utilise la cartouche Canon 725."
+    },
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 140000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page023_Photo03.jpg"
+    ],
+    "slug": "canon-i-sensys-lbp6030b",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      100,
+      103
+    ],
+    "page": 24,
+    "brand": "HP",
+    "model": "3303sdw",
+    "category": "printers",
+    "name": {
+      "en": "HP Color LaserJet Pro MFP 3303sdw",
+      "fr": "HP Color LaserJet Pro MFP 3303sdw"
+    },
+    "short_description": {
+      "en": "Colour laser all-in-one: print, copy and scan; up to 25 ppm A4.",
+      "fr": "Multifonction laser couleur : impression, copie et numérisation ; jusqu’à 25 ppm A4."
+    },
+    "description": {
+      "en": "Up to 25 ppm A4 in black and colour; automatic duplex; dual-band Wi-Fi, Gigabit Ethernet and USB.",
+      "fr": "Jusqu’à 25 ppm A4 en noir et en couleur ; recto verso automatique ; Wi-Fi double bande, Ethernet Gigabit et USB."
+    },
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 330000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page024_Photo01.jpg"
+    ],
+    "slug": "hp-color-laserjet-pro-mfp-3303sdw",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      100,
+      102,
+      103
+    ],
+    "page": 24,
+    "brand": "HP",
+    "model": "4003dn",
+    "category": "printers",
+    "name": {
+      "en": "HP LaserJet Pro 4003dn",
+      "fr": "HP LaserJet Pro 4003dn"
+    },
+    "short_description": {
+      "en": "A4 monochrome laser office printer; up to 40 ppm; automatic duplex; Ethernet and USB.",
+      "fr": "Imprimante laser monochrome A4 de bureau ; jusqu’à 40 ppm ; recto verso automatique ; Ethernet et USB."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 220000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page024_Photo02.jpg"
+    ],
+    "slug": "hp-laserjet-pro-4003dn",
+    "featured": false,
+    "toner_type": null,
+    "draft": true,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      102
+    ],
+    "page": 26,
+    "brand": "HP",
+    "model": "4003dw",
+    "category": "printers",
+    "name": {
+      "en": "HP LaserJet Pro 4003dw",
+      "fr": "HP LaserJet Pro 4003dw"
+    },
+    "short_description": {
+      "en": "Mono laser, up to 40 ppm A4, automatic duplex, Wi-Fi, Gigabit Ethernet and USB.",
+      "fr": "Laser monochrome, jusqu’à 40 ppm A4, recto verso automatique, Wi-Fi, Ethernet Gigabit et USB."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 220000
+      }
+    ],
+    "photos": [],
+    "slug": "hp-laserjet-pro-4003dw",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      100,
+      103
+    ],
+    "page": 24,
+    "brand": "HP",
+    "model": "OfficeJet Pro 9120",
+    "category": "printers",
+    "name": {
+      "en": "HP OfficeJet Pro 9120",
+      "fr": "HP OfficeJet Pro 9120"
+    },
+    "short_description": {
+      "en": "Colour inkjet all-in-one: print, copy, scan and fax.",
+      "fr": "Multifonction jet d’encre couleur : impression, copie, numérisation et fax."
+    },
+    "description": {
+      "en": "Up to 22 ppm black / 18 ppm colour (ISO A4); automatic duplex; dual-band Wi-Fi and Ethernet; automatic document feeder.",
+      "fr": "Jusqu’à 22 ppm noir / 18 ppm couleur (ISO A4) ; recto verso automatique ; Wi-Fi double bande et Ethernet ; chargeur automatique de documents."
+    },
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": false,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page024_Photo03.jpg"
+    ],
+    "slug": "hp-officejet-pro-9120",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      100,
+      103
+    ],
+    "page": 24,
+    "brand": "Canon",
+    "model": "MF752Cdw",
+    "category": "printers",
+    "name": {
+      "en": "Canon i-SENSYS MF752Cdw",
+      "fr": "Canon i-SENSYS MF752Cdw"
+    },
+    "short_description": {
+      "en": "A4 colour laser all-in-one: print, copy, scan and fax.",
+      "fr": "Multifonction laser couleur A4 : impression, copie, numérisation et fax."
+    },
+    "description": {
+      "en": "Duplex printing and wired/wireless networking.",
+      "fr": "Impression recto verso et connectivité réseau filaire et sans fil."
+    },
+    "compatibility": null,
+    "price_on_request": true,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": null
+      }
+    ],
+    "photos": [
+      "GGTECH_Page024_Photo04.jpg"
+    ],
+    "slug": "canon-i-sensys-mf752cdw",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      98,
+      103
+    ],
+    "page": 22,
+    "brand": "PREMAX",
+    "model": "UPS3000",
+    "category": "power",
+    "name": {
+      "en": "PREMAX UPS3000 Battery Backup",
+      "fr": "Onduleur PREMAX UPS3000"
+    },
+    "short_description": {
+      "en": "UPS battery backup for office equipment.",
+      "fr": "Onduleur et alimentation de secours pour équipements de bureau."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 180000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page022_Photo01.jpg"
+    ],
+    "slug": "premax-ups3000-battery-backup",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      98,
+      102,
+      103
+    ],
+    "page": 22,
+    "brand": "APC",
+    "model": "Back-UPS 650VA",
+    "category": "power",
+    "name": {
+      "en": "APC Back-UPS 650 VA",
+      "fr": "Onduleur APC Back-UPS 650 VA"
+    },
+    "short_description": {
+      "en": "650 VA battery backup.",
+      "fr": "Onduleur 650 VA."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 60000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page022_Photo01.jpg"
+    ],
+    "slug": "apc-back-ups-650-va",
+    "featured": false,
+    "toner_type": null,
+    "draft": true,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      96,
+      103
+    ],
+    "page": 20,
+    "brand": "Canon",
+    "model": "C-EXV 11",
+    "category": "original-toners",
+    "name": {
+      "en": "Canon C-EXV 11 Black Toner Cartridge — Original",
+      "fr": "Cartouche de toner Canon C-EXV 11 noir — Original"
+    },
+    "short_description": {
+      "en": "Black toner for compatible Canon imageRUNNER copiers.",
+      "fr": "Toner noir pour copieurs Canon imageRUNNER compatibles."
+    },
+    "description": null,
+    "compatibility": "Canon imageRUNNER models (exact copier to confirm).",
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 15000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page020_Photo02.jpg"
+    ],
+    "slug": "canon-c-exv-11-black-toner-cartridge-original",
+    "featured": false,
+    "toner_type": "original",
+    "draft": true,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      101,
+      103
+    ],
+    "page": 25,
+    "brand": "Shirley Ya",
+    "model": "2188",
+    "category": "printers",
+    "name": {
+      "en": "Shirley Ya 2188 Comb Binding Machine",
+      "fr": "Relieuse à peignes Shirley Ya 2188"
+    },
+    "short_description": {
+      "en": "Comb-binding machine for documents, reports and presentations.",
+      "fr": "Relieuse à peignes pour documents, rapports et présentations."
+    },
+    "description": {
+      "en": "Pages can be added or removed after binding.",
+      "fr": "Permet d’ajouter ou de retirer des pages après reliure."
+    },
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 35000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page025_Photo01.jpg"
+    ],
+    "slug": "shirley-ya-2188-comb-binding-machine",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
+  },
+  {
+    "refs": [
+      101,
+      103
+    ],
+    "page": 25,
+    "brand": "Hippoint",
+    "model": null,
+    "category": "printers",
+    "name": {
+      "en": "Hippoint 2D Omnidirectional Barcode Scanner",
+      "fr": "Lecteur de codes-barres 2D omnidirectionnel Hippoint"
+    },
+    "short_description": {
+      "en": "Hands-free 2D barcode scanner with omnidirectional scanning, plug and play.",
+      "fr": "Lecteur de codes-barres 2D mains libres à lecture omnidirectionnelle, prêt à l’emploi."
+    },
+    "description": null,
+    "compatibility": null,
+    "price_on_request": false,
+    "needs_review": true,
+    "variants": [
+      {
+        "label": null,
+        "price_xof": 45000
+      }
+    ],
+    "photos": [
+      "GGTECH_Page025_Photo02.jpg"
+    ],
+    "slug": "hippoint-2d-omnidirectional-barcode-scanner",
+    "featured": false,
+    "toner_type": null,
+    "added": "2026-11"
   }
 ]

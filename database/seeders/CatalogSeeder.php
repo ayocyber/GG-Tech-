@@ -20,13 +20,28 @@ class CatalogSeeder extends Seeder
 {
     public function run(): void
     {
-        $catalog = json_decode(file_get_contents(database_path('data/catalog.json')), true, flags: JSON_THROW_ON_ERROR);
+        $this->import(self::entries());
+    }
+
+    /**
+     * @return list<array<string, mixed>>
+     */
+    public static function entries(): array
+    {
+        return json_decode(file_get_contents(database_path('data/catalog.json')), true, flags: JSON_THROW_ON_ERROR);
+    }
+
+    /**
+     * @param  list<array<string, mixed>>  $entries
+     */
+    public function import(array $entries): void
+    {
         $categories = Category::query()->pluck('id', 'slug');
         $photoDirectory = 'catalog-import/photos';
 
-        $this->command?->getOutput()->progressStart(count($catalog));
+        $this->command?->getOutput()->progressStart(count($entries));
 
-        foreach ($catalog as $entry) {
+        foreach ($entries as $entry) {
             $brand = $entry['brand']
                 ? Brand::query()->firstOrCreate(['slug' => Str::slug($entry['brand'])], ['name' => $entry['brand']])
                 : null;
@@ -44,7 +59,7 @@ class CatalogSeeder extends Seeder
                 'is_heavy' => (bool) preg_match('/copier|imagerunner|rack|\bups\b/i', $entry['name']['en']),
                 'is_featured' => $entry['featured'],
                 'needs_review' => $entry['needs_review'],
-                'status' => str_contains($entry['name']['en'], 'to confirm') ? ProductStatus::Draft : ProductStatus::Published,
+                'status' => ($entry['draft'] ?? false) || str_contains($entry['name']['en'], 'to confirm') ? ProductStatus::Draft : ProductStatus::Published,
                 'catalog_page' => $entry['page'],
             ]);
 
