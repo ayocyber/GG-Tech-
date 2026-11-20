@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\ProductAvailability;
 use App\Enums\ProductStatus;
 use App\Enums\TonerType;
 use App\Models\Category;
@@ -62,6 +63,14 @@ class ProductFactory extends Factory
     public function tonerType(TonerType $type): static
     {
         return $this->state(['toner_type' => $type]);
+    }
+
+    /**
+     * May also be delivered to the international destinations GG-TECH serves.
+     */
+    public function international(): static
+    {
+        return $this->state(['availability' => ProductAvailability::International]);
     }
 
     public function heavy(): static

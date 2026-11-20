@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Products\Schemas;
 
+use App\Enums\ProductAvailability;
 use App\Enums\ProductStatus;
 use App\Enums\TonerType;
 use App\Models\Brand;
@@ -172,6 +173,13 @@ class ProductForm
                             Toggle::make('is_heavy')
                                 ->label(__('Heavy item'))
                                 ->helperText(__('Delivery fee confirmed by the team.')),
+                            Select::make('availability')
+                                ->label(__('Availability'))
+                                ->options(ProductAvailability::class)
+                                ->default(ProductAvailability::TogoOnly)
+                                ->required()
+                                ->selectablePlaceholder(false)
+                                ->helperText(__('International products can also be delivered to the countries enabled under International delivery.')),
                         ]),
                     ]),
             ]);

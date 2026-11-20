@@ -1,12 +1,14 @@
 <?php
 
 use App\Enums\OrderStatus;
+use App\Enums\ProductAvailability;
 use App\Enums\Shop;
 use App\Enums\TonerType;
 use App\Filament\Pages\StoreSettings;
 use App\Filament\Resources\Categories\Pages\ManageCategories;
 use App\Filament\Resources\Orders\Pages\EditOrder;
 use App\Filament\Resources\Products\Pages\EditProduct;
+use App\Filament\Resources\Products\Pages\ListProducts;
 use App\Filament\Widgets\StoreStatsOverview;
 use App\Models\Category;
 use App\Models\DeliveryZone;
@@ -137,6 +139,34 @@ it('saves product prices and translations from the edit form', function () {
         ->translate('name', 'fr')->toBe('Baie réseau 12U')
         ->translate('name', 'en')->toBe('12U network rack')
         ->search_text->toContain('baie réseau 12u');
+});
+
+it('keeps new products Togo only until staff open them to international delivery', function () {
+    $this->actingAs(User::factory()->create());
+    $product = Product::factory()->priced()->create();
+
+    expect($product->refresh()->availability)->toBe(ProductAvailability::TogoOnly);
+
+    Livewire::test(EditProduct::class, ['record' => $product->getRouteKey()])
+        ->assertFormSet(['availability' => ProductAvailability::TogoOnly])
+        ->fillForm(['availability' => ProductAvailability::International->value])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($product->refresh())
+        ->availability->toBe(ProductAvailability::International)
+        ->shipsAbroad()->toBeTrue();
+});
+
+it('filters the product list by availability', function () {
+    $this->actingAs(User::factory()->create());
+    $togoOnly = Product::factory()->priced()->create();
+    $international = Product::factory()->priced()->international()->create();
+
+    Livewire::test(ListProducts::class)
+        ->filterTable('availability', ProductAvailability::International->value)
+        ->assertCanSeeTableRecords([$international])
+        ->assertCanNotSeeTableRecords([$togoOnly]);
 });
 
 it('moves a toner to the matching category when staff choose its toner type', function () {

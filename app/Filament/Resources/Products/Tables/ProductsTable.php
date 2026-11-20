@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Products\Tables;
 
 use App\Enums\Market;
+use App\Enums\ProductAvailability;
 use App\Enums\ProductStatus;
 use App\Enums\TonerType;
 use App\Models\Category;
@@ -60,6 +61,7 @@ class ProductsTable
                     ->state(fn (Product $record) => $record->isInStock())
                     ->boolean(),
                 TextColumn::make('status')->label(__('Status'))->badge(),
+                TextColumn::make('availability')->label(__('Availability'))->badge()->toggleable(),
                 IconColumn::make('needs_review')
                     ->label(__('Needs review'))
                     ->boolean()
@@ -79,6 +81,7 @@ class ProductsTable
                 SelectFilter::make('toner_type')->label(__('Toner type'))->options(TonerType::class),
                 SelectFilter::make('brand_id')->label(__('Brand'))->relationship('brand', 'name')->searchable()->preload(),
                 SelectFilter::make('status')->label(__('Status'))->options(ProductStatus::class),
+                SelectFilter::make('availability')->label(__('Availability'))->options(ProductAvailability::class),
                 TernaryFilter::make('needs_review')->label(__('Needs review')),
                 TernaryFilter::make('photo')
                     ->label(__('Photo'))

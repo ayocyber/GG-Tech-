@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\Market;
+use App\Enums\ProductAvailability;
 use App\Enums\ProductStatus;
 use App\Enums\TonerType;
 use App\Models\Concerns\HasTranslations;
@@ -19,12 +20,19 @@ use Illuminate\Support\Str;
 
 #[Fillable([
     'category_id', 'brand_id', 'toner_type', 'slug', 'name', 'short_description', 'description', 'model', 'compatibility',
-    'price_on_request', 'is_heavy', 'is_featured', 'needs_review', 'status', 'catalog_page',
+    'price_on_request', 'is_heavy', 'is_featured', 'needs_review', 'status', 'availability', 'catalog_page',
 ])]
 class Product extends Model
 {
     /** @use HasFactory<ProductFactory> */
     use HasFactory, HasTranslations;
+
+    /**
+     * @var array<string, mixed>
+     */
+    protected $attributes = [
+        'availability' => 'togo_only',
+    ];
 
     protected static function booted(): void
     {
@@ -138,9 +146,18 @@ class Product extends Model
             && $variant->price_xof !== null;
     }
 
+    /**
+     * Whether the product may be shipped to an international destination (Togo-only products may not).
+     */
+    public function shipsAbroad(): bool
+    {
+        return $this->availability->shipsAbroad();
+    }
+
     protected function casts(): array
     {
         return [
+            'availability' => ProductAvailability::class,
             'name' => 'array',
             'short_description' => 'array',
             'description' => 'array',
