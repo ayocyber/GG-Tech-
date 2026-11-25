@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminLocaleController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\DemoPaymentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderConfirmationController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\QuoteConfirmationController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StoreLocationController;
+use App\Http\Middleware\SetDisplayCurrency;
 use App\Http\Middleware\SetLocale;
 use App\Support\LegacyLinks;
 use Illuminate\Http\Request;
@@ -25,13 +27,17 @@ Route::get('/', function () {
 
 Route::get('/admin-language/{locale}', AdminLocaleController::class)->name('admin.locale');
 
+Route::post('/currency', CurrencyController::class)
+    ->middleware('throttle:30,1')
+    ->name('currency.switch');
+
 Route::post('/paygate/callback', PayGateCallbackController::class)
     ->middleware('throttle:60,1')
     ->name('payments.callback');
 
 Route::prefix('{locale}')
     ->whereIn('locale', SetLocale::SUPPORTED)
-    ->middleware(SetLocale::class)
+    ->middleware([SetLocale::class, SetDisplayCurrency::class])
     ->group(function () {
         Route::get('/', HomeController::class)->name('home');
         Route::get('/shop/{category:slug?}', ShopController::class)

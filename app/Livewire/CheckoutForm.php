@@ -9,6 +9,7 @@ use App\Http\Controllers\PaymentReturnController;
 use App\Models\DeliveryCountry;
 use App\Models\DeliveryZone;
 use App\Services\Baskets\Cart;
+use App\Services\Currency\DisplayCurrency;
 use App\Services\Delivery\InternationalDeliveryPricing;
 use App\Services\Payments\PaymentGateway;
 use App\Support\ShopLocation;
@@ -291,6 +292,7 @@ class CheckoutForm extends Component
 
         return view('livewire.checkout-form', [
             'market' => $market,
+            'displayCurrency' => app(DisplayCurrency::class),
             'lines' => $lines,
             'subtotal' => $subtotal,
             'deliveryFee' => $deliveryFee,

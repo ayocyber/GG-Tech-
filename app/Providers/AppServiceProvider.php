@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Enums\Market;
 use App\Http\Middleware\SetLocale;
 use App\Models\Category;
+use App\Services\Currency\DisplayCurrency;
+use App\Services\Currency\ExchangeRates;
 use App\Services\Delivery\FixedFeePerCountry;
 use App\Services\Delivery\InternationalDeliveryPricing;
 use App\Services\Payments\DemoPaymentGateway;
@@ -29,6 +31,13 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(ImageManager::class, fn () => ImageManager::gd());
 
         $this->app->bind(InternationalDeliveryPricing::class, FixedFeePerCountry::class);
+
+        $this->app->bind(ExchangeRates::class, fn () => new ExchangeRates(
+            providerUrl: config('services.exchange_rates.url'),
+            staleAfterHours: config('services.exchange_rates.stale_after_hours'),
+        ));
+
+        $this->app->scoped(DisplayCurrency::class);
 
         $this->app->bind(PaymentGateway::class, fn () => match (config('services.paygate.mode')) {
             'live' => new PayGateGateway(

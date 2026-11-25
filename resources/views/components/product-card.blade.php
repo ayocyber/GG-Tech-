@@ -57,7 +57,7 @@
                     @if ($product->hasVariantChoice())
                         <span class="block text-[11px] font-medium text-muted">{{ __('From') }}</span>
                     @endif
-                    <span class="font-display text-lg font-bold text-navy">{{ $market->format($price) }}</span>
+                    <span class="font-display text-lg font-bold text-navy"><x-money :amount="$price" /></span>
                 </div>
             @endif
         </div>

@@ -29,6 +29,16 @@ return [
         'base_url' => env('PAYGATE_BASE_URL', 'https://paygateglobal.com'),
     ],
 
+    /*
+    | Automatic exchange rates for the display currencies: European Central Bank
+    | rates through Frankfurter (free, no key). Rates older than the limit are
+    | refreshed in the background; staff can override any rate in the admin.
+    */
+    'exchange_rates' => [
+        'url' => env('EXCHANGE_RATES_URL', 'https://api.frankfurter.dev/v1'),
+        'stale_after_hours' => (int) env('EXCHANGE_RATES_STALE_AFTER_HOURS', 12),
+    ],
+
     'resend' => [
         'key' => env('RESEND_API_KEY'),
     ],

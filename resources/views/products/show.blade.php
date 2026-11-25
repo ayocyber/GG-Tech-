@@ -41,7 +41,7 @@
                             <a href="{{ route('products.show', $tonerCounterpart) }}" class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:underline">
                                 {{ __('Also available as :type', ['type' => $tonerCounterpart->toner_type->getLabel()]) }}
                                 @if (! $tonerCounterpart->price_on_request && $tonerCounterpart->startingPrice($market))
-                                    — {{ $market->format($tonerCounterpart->startingPrice($market)) }}
+                                    — <x-money :amount="$tonerCounterpart->startingPrice($market)" />
                                 @endif
                                 <x-glyph name="arrow-right" class="size-4" />
                             </a>
@@ -101,7 +101,7 @@
                                     @foreach ($product->variants as $option)
                                         <tr>
                                             <td class="py-2.5 font-medium">{{ $option->displayLabel() ?? __('Option :number', ['number' => $loop->iteration]) }}</td>
-                                            <td class="py-2.5 text-right">{{ $option->priceFor($market) ? $market->format($option->priceFor($market)) : __('Price on request') }}</td>
+                                            <td class="py-2.5 text-right">@if ($option->priceFor($market)) <x-money :amount="$option->priceFor($market)" /> @else {{ __('Price on request') }} @endif</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

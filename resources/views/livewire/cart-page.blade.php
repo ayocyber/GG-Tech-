@@ -21,7 +21,7 @@
                                 @if ($line->variant->displayLabel())
                                     <p class="mt-1 text-sm text-muted">{{ $line->variant->displayLabel() }}</p>
                                 @endif
-                                <p class="mt-1 text-sm text-muted">{{ $market->format($line->unitPrice ?? 0) }} / {{ __('unit') }}</p>
+                                <p class="mt-1 text-sm text-muted"><x-money :amount="$line->unitPrice ?? 0" /> / {{ __('unit') }}</p>
                             </div>
                             <div class="flex items-center justify-between gap-4 sm:flex-col sm:items-end">
                                 <div class="flex items-center gap-2">
@@ -33,7 +33,7 @@
                                         <x-glyph name="trash" class="size-5" />
                                     </button>
                                 </div>
-                                <p class="font-display text-lg font-bold text-navy">{{ $market->format($line->lineTotal() ?? 0) }}</p>
+                                <p class="font-display text-lg font-bold text-navy"><x-money :amount="$line->lineTotal() ?? 0" /></p>
                             </div>
                         </div>
                     </li>
@@ -44,12 +44,12 @@
                 <div class="sticky top-28 space-y-5 rounded-card bg-pearl p-6">
                     <h2 class="text-lg font-semibold">{{ __('Order summary') }}</h2>
                     <dl class="space-y-3 text-sm">
-                        <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd class="font-semibold">{{ $market->format($subtotal) }}</dd></div>
+                        <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd class="font-semibold"><x-money :amount="$subtotal" /></dd></div>
                         <div class="flex justify-between"><dt class="text-muted">{{ __('Delivery') }}</dt><dd class="text-right text-muted">{{ __('calculated at the next step') }}</dd></div>
                     </dl>
                     <div class="flex items-baseline justify-between border-t border-silver/60 pt-4">
                         <span class="font-semibold">{{ __('Total') }}</span>
-                        <span class="font-display text-2xl font-bold text-navy">{{ $market->format($subtotal) }}</span>
+                        <span class="font-display text-2xl font-bold text-navy"><x-money :amount="$subtotal" /></span>
                     </div>
 
                     @if ($needsDeliveryQuote)

@@ -37,7 +37,7 @@
                                 @if ($line->variant->displayLabel())
                                     <p class="mt-0.5 text-xs text-muted">{{ $line->variant->displayLabel() }}</p>
                                 @endif
-                                <p class="mt-0.5 text-xs text-muted">{{ $market->format($line->unitPrice ?? 0) }} / {{ __('unit') }}</p>
+                                <p class="mt-0.5 text-xs text-muted"><x-money :amount="$line->unitPrice ?? 0" /> / {{ __('unit') }}</p>
 
                                 <div class="mt-2 flex items-center justify-between gap-2">
                                     <div class="flex items-center rounded-full border border-silver">
@@ -49,7 +49,7 @@
                                             <x-glyph name="plus" class="size-3.5" />
                                         </button>
                                     </div>
-                                    <p class="whitespace-nowrap font-display text-sm font-bold text-navy sm:text-base">{{ $market->format($line->lineTotal() ?? 0) }}</p>
+                                    <p class="whitespace-nowrap font-display text-sm font-bold text-navy sm:text-base"><x-money :amount="$line->lineTotal() ?? 0" /></p>
                                 </div>
                             </div>
                         </li>
@@ -59,7 +59,7 @@
                 <div class="shrink-0 space-y-3 border-t border-silver/50 bg-pearl/60 p-4 sm:px-6">
                     <div class="flex items-baseline justify-between gap-4">
                         <span class="text-sm font-semibold text-ink">{{ __('Subtotal') }}</span>
-                        <span class="font-display text-xl font-bold text-navy">{{ $market->format($subtotal) }}</span>
+                        <span class="font-display text-xl font-bold text-navy"><x-money :amount="$subtotal" /></span>
                     </div>
                     <p class="text-xs text-muted">{{ __('Delivery') }} : {{ __('calculated at the next step') }}</p>
                     <div class="grid grid-cols-2 gap-2">

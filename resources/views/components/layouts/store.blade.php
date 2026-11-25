@@ -3,12 +3,15 @@
 @php
     use App\Enums\TonerType;
     use App\Models\Setting;
+    use App\Services\Currency\DisplayCurrency;
     use App\Support\LocaleSwitcher;
     use App\Support\WhatsApp;
 
     $pageTitle = $title ? $title.' · GG-TECH' : 'GG-TECH · '.__('IT equipment in Lomé, Togo');
     $pageDescription = $description ?? __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo, free in-store pickup in Lomé.');
     $otherLocale = app()->getLocale() === 'fr' ? 'en' : 'fr';
+    $displayCurrency = app(DisplayCurrency::class);
+    $currencyCodes = $displayCurrency->codes();
 @endphp
 
 <!DOCTYPE html>
@@ -46,6 +49,31 @@
                         {{ Setting::value('phone') }}
                     </a>
 
+                    @if (count($currencyCodes) > 1)
+                        <div class="relative" x-data="{ open: false }" x-on:keydown.escape="open = false" x-on:click.outside="open = false">
+                            <button type="button" x-on:click="open = ! open" x-bind:aria-expanded="open" aria-haspopup="true"
+                                    class="flex items-center gap-1 rounded-full border border-white/20 px-2.5 py-1 text-[11px] font-semibold hover:bg-white/10">
+                                <span class="sr-only">{{ __('Currency') }}:</span>{{ $displayCurrency->label($displayCurrency->code()) }}
+                                <x-glyph name="chevron-down" class="size-3" />
+                            </button>
+                            <div x-cloak x-show="open" x-transition.opacity.duration.150ms class="absolute right-0 top-full z-50 mt-2 w-56 rounded-2xl border border-silver/60 bg-white p-2 text-ink shadow-[0_24px_60px_-30px_rgba(10,16,51,0.45)]">
+                                <p class="px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wide text-muted">{{ __('Show prices in') }}</p>
+                                @foreach ($currencyCodes as $code)
+                                    <form method="POST" action="{{ route('currency.switch') }}">
+                                        @csrf
+                                        <input type="hidden" name="currency" value="{{ $code }}">
+                                        <button type="submit" @class(['flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-left text-sm transition hover:bg-pearl', 'bg-royal-50 font-semibold text-royal' => $displayCurrency->code() === $code])
+                                                @if ($displayCurrency->code() === $code) aria-current="true" @endif>
+                                            <span>{{ $displayCurrency->name($code) }}</span>
+                                            <span class="text-xs text-muted">{{ $displayCurrency->label($code) }}</span>
+                                        </button>
+                                    </form>
+                                @endforeach
+                                <p class="px-3 pb-2 pt-1 text-[11px] text-muted">{{ __('You always pay in FCFA.') }}</p>
+                            </div>
+                        </div>
+                    @endif
+
                     <nav class="flex items-center overflow-hidden rounded-full border border-white/20 text-[11px] font-semibold" aria-label="{{ __('Language') }}">
                         @foreach (['fr' => 'FR', 'en' => 'EN'] as $code => $short)
                             <a href="{{ LocaleSwitcher::urlFor($code) }}" hreflang="{{ $code }}" lang="{{ $code }}"
@@ -56,6 +84,59 @@
                 </div>
             </div>
         </div>
+
+        @if (! $displayCurrency->hasChosen() && count($currencyCodes) > 1)
+            <script>
+                window.ggSuggestCurrency = function () {
+                    const byZone = {
+                        'Africa/Lome': 'XOF', 'Africa/Cotonou': 'XOF', 'Africa/Abidjan': 'XOF', 'Africa/Dakar': 'XOF', 'Africa/Ouagadougou': 'XOF',
+                        'Africa/Bamako': 'XOF', 'Africa/Niamey': 'XOF', 'Africa/Bissau': 'XOF', 'Africa/Lagos': 'NGN', 'Africa/Accra': 'GHS',
+                        'Africa/Douala': 'XAF', 'Africa/Libreville': 'XAF', 'Africa/Brazzaville': 'XAF', 'Africa/Ndjamena': 'XAF', 'Africa/Bangui': 'XAF',
+                        'Africa/Malabo': 'XAF', 'Africa/Casablanca': 'MAD', 'Africa/Johannesburg': 'ZAR', 'Europe/London': 'GBP', 'Europe/Zurich': 'CHF',
+                        'Europe/Warsaw': 'PLN', 'Europe/Stockholm': 'SEK', 'Europe/Oslo': 'NOK', 'Europe/Copenhagen': 'DKK', 'Europe/Prague': 'CZK',
+                        'Europe/Budapest': 'HUF', 'Europe/Bucharest': 'RON', 'Europe/Istanbul': 'TRY', 'America/Toronto': 'CAD', 'America/Vancouver': 'CAD',
+                        'America/Montreal': 'CAD', 'America/Mexico_City': 'MXN', 'America/Sao_Paulo': 'BRL', 'Asia/Tokyo': 'JPY', 'Asia/Shanghai': 'CNY',
+                        'Asia/Kolkata': 'INR', 'Australia/Sydney': 'AUD',
+                    };
+                    const byRegion = {
+                        US: 'USD', GB: 'GBP', CA: 'CAD', CH: 'CHF', NG: 'NGN', GH: 'GHS', MA: 'MAD', ZA: 'ZAR', JP: 'JPY', CN: 'CNY', IN: 'INR', AU: 'AUD',
+                        TG: 'XOF', BJ: 'XOF', CI: 'XOF', SN: 'XOF', BF: 'XOF', ML: 'XOF', NE: 'XOF', GW: 'XOF',
+                        CM: 'XAF', GA: 'XAF', CG: 'XAF', TD: 'XAF', CF: 'XAF', GQ: 'XAF',
+                        FR: 'EUR', BE: 'EUR', DE: 'EUR', ES: 'EUR', IT: 'EUR', PT: 'EUR', NL: 'EUR', LU: 'EUR', AT: 'EUR', IE: 'EUR', FI: 'EUR', GR: 'EUR',
+                    };
+                    let zone = '';
+                    try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+                    if (byZone[zone]) return byZone[zone];
+                    if (zone.startsWith('Europe/')) return 'EUR';
+                    if (zone.startsWith('America/')) return 'USD';
+                    if (zone.startsWith('Africa/')) return null;
+                    for (const language of navigator.languages || [navigator.language]) {
+                        const region = (language || '').split('-')[1];
+                        if (region && byRegion[region.toUpperCase()]) return byRegion[region.toUpperCase()];
+                    }
+                    return null;
+                };
+            </script>
+            <div x-data="{ names: @js(collect($currencyCodes)->mapWithKeys(fn ($code) => [$code => $displayCurrency->name($code)])), suggested: null }"
+                 x-init="const code = window.ggSuggestCurrency(); if (code && code !== @js($displayCurrency->code()) && names[code]) suggested = code"
+                 x-cloak x-show="suggested" class="border-b border-royal/20 bg-royal-50 text-sm text-navy">
+                <div class="container-page flex flex-wrap items-center justify-between gap-3 py-2.5">
+                    <p>{{ __('Would you like to see prices in') }} <strong x-text="suggested ? names[suggested] + ' (' + suggested + ')' : ''"></strong>?</p>
+                    <div class="flex items-center gap-2">
+                        <form method="POST" action="{{ route('currency.switch') }}">
+                            @csrf
+                            <input type="hidden" name="currency" x-bind:value="suggested">
+                            <button type="submit" class="rounded-full bg-royal px-4 py-1.5 text-xs font-semibold text-white hover:bg-royal-700">{{ __('Yes, switch') }}</button>
+                        </form>
+                        <form method="POST" action="{{ route('currency.switch') }}">
+                            @csrf
+                            <input type="hidden" name="currency" value="{{ $displayCurrency->code() }}">
+                            <button type="submit" class="rounded-full px-4 py-1.5 text-xs font-semibold text-royal hover:bg-white">{{ __('Keep :currency', ['currency' => $displayCurrency->label($displayCurrency->code())]) }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        @endif
 
         {{-- Header --}}
         <header x-data="{ menuOpen: false, searchOpen: false }" class="sticky top-0 z-40 border-b border-silver/50 bg-white/90 backdrop-blur-lg">
@@ -231,7 +312,7 @@
             <div class="border-t border-white/10">
                 <div class="container-page flex flex-col gap-2 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
                     <p>© {{ now()->year }} Great God Technology (GG-TECH). {{ __('All rights reserved.') }}</p>
-                    <p>{{ __('Prices in FCFA. Online payment coming soon.') }}</p>
+                    <p>{{ $displayCurrency->isFcfa() ? __('Prices in FCFA. Online payment coming soon.') : __('Prices converted from FCFA at today’s rate. You pay in FCFA.') }}</p>
                 </div>
             </div>
         </footer>

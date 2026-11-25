@@ -104,7 +104,7 @@
                             <select id="delivery_country" wire:model.live="delivery_country" autocomplete="country" class="field-input">
                                 <option value="">{{ __('Choose a country') }}</option>
                                 @foreach ($this->countries as $country)
-                                    <option wire:key="country-{{ $country->country_code }}" value="{{ $country->country_code }}">{{ $country->name() }} — {{ $market->format($country->fee) }}</option>
+                                    <option wire:key="country-{{ $country->country_code }}" value="{{ $country->country_code }}">{{ $country->name() }} — <x-money :amount="$country->fee" /></option>
                                 @endforeach
                             </select>
                             <p class="mt-2 text-xs text-muted">{{ __('We only deliver abroad to the countries in this list.') }}</p>
@@ -161,7 +161,7 @@
                                         </span>
                                     </span>
                                     <span class="text-right">
-                                        <span class="block text-sm font-semibold text-navy">{{ $zone->isQuoted() ? __('On quote') : $market->format($zone->fee) }}</span>
+                                        <span class="block text-sm font-semibold text-navy">@if ($zone->isQuoted()) {{ __('On quote') }} @else <x-money :amount="$zone->fee" /> @endif</span>
                                         <span class="block text-xs text-muted">{{ $zone->translate('delivery_time') }}</span>
                                     </span>
                                 </label>
@@ -264,13 +264,13 @@
                                 <p class="text-xs text-muted">{{ $line->variant->displayLabel() }}</p>
                             @endif
                         </div>
-                        <p class="text-sm font-semibold">{{ $market->format($line->lineTotal() ?? 0) }}</p>
+                        <p class="text-sm font-semibold"><x-money :amount="$line->lineTotal() ?? 0" /></p>
                     </li>
                 @endforeach
             </ul>
 
             <dl class="mt-4 space-y-3 border-t border-silver/60 pt-4 text-sm">
-                <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd class="font-semibold">{{ $market->format($subtotal) }}</dd></div>
+                <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd class="font-semibold"><x-money :amount="$subtotal" /></dd></div>
                 <div class="flex justify-between gap-4">
                     <dt class="text-muted">
                         {{ $isPickup ? __('In-store pickup') : __('Delivery') }}
@@ -286,15 +286,24 @@
                         @elseif ($deliveryFee === null)
                             <span class="text-muted">{{ $isInternational ? __('Choose a country') : __('Choose a zone') }}</span>
                         @else
-                            {{ $market->format($deliveryFee) }}
+                            <x-money :amount="$deliveryFee" />
                         @endif
                     </dd>
                 </div>
             </dl>
             <div class="mt-4 flex items-baseline justify-between border-t border-silver/60 pt-4">
                 <span class="font-semibold">{{ __('Total') }}</span>
-                <span class="font-display text-2xl font-bold text-navy">{{ $market->format($total) }}</span>
+                <span class="font-display text-2xl font-bold text-navy"><x-money :amount="$total" /></span>
             </div>
+            @unless ($displayCurrency->isFcfa())
+                <div class="mt-3 rounded-xl border border-royal/20 bg-royal-50 p-3 text-xs text-navy">
+                    <p class="flex justify-between gap-3 font-semibold">
+                        <span>{{ __('Amount charged') }}</span>
+                        <span>{{ $market->format($total) }}</span>
+                    </p>
+                    <p class="mt-1 text-muted">{{ __('Payment is made in FCFA. Amounts in :currency are converted at today’s rate and are for information only.', ['currency' => $displayCurrency->code()]) }}</p>
+                </div>
+            @endunless
 
             <button type="submit" class="btn-red mt-6 w-full" wire:loading.attr="disabled" wire:target="placeOrder">
                 <span wire:loading.remove wire:target="placeOrder">{{ $paysOnline && $canPayOnline ? __('Pay :amount', ['amount' => $market->format($total)]) : __('Place my order') }}</span>

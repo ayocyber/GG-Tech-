@@ -8,7 +8,7 @@
         @if ($product->price_on_request || $price === null)
             <p class="font-display text-3xl font-bold text-navy">{{ __('Price on request') }}</p>
         @else
-            <p class="font-display text-3xl font-bold text-navy" wire:key="price-{{ $variantId }}">{{ $market->format($price) }}</p>
+            <p class="font-display text-3xl font-bold text-navy" wire:key="price-{{ $variantId }}"><x-money :amount="$price" /></p>
         @endif
         @if ($this->variant)
             <x-stock-badge :in-stock="$this->variant->in_stock" class="mb-1.5" />
