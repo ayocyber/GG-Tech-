@@ -457,5 +457,17 @@
     "Togo only": "Togo uniquement",
     "International": "International",
     "Availability": "Disponibilité",
-    "International products can also be delivered to the countries enabled under International delivery.": "Les produits internationaux peuvent aussi être livrés dans les pays activés sous Livraison internationale."
+    "International products can also be delivered to the countries enabled under International delivery.": "Les produits internationaux peuvent aussi être livrés dans les pays activés sous Livraison internationale.",
+    "International delivery": "Livraison internationale",
+    "delivery country": "pays de livraison",
+    "delivery countries": "pays de livraison",
+    "Country": "Pays",
+    "Fixed fee charged for any order delivered to this country.": "Frais fixes facturés pour toute commande livrée dans ce pays.",
+    "Conditions (French)": "Conditions (français)",
+    "Conditions (English)": "Conditions (anglais)",
+    "Shown to customers at checkout, e.g. customs duties paid on arrival.": "Affiché aux clients lors de la commande, par ex. droits de douane payés à l’arrivée.",
+    "Delivery enabled": "Livraison activée",
+    "Customers can only choose enabled countries at checkout.": "Les clients ne peuvent choisir que les pays activés lors de la commande.",
+    "No international destinations yet": "Aucune destination internationale pour le moment",
+    "Add the countries GG-TECH delivers to outside Togo. Until then, checkout offers delivery within Togo only.": "Ajoutez les pays hors du Togo où GG-TECH livre. En attendant, la commande ne propose que la livraison au Togo."
 }

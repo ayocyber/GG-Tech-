@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Enums\Market;
 use App\Http\Middleware\SetLocale;
 use App\Models\Category;
+use App\Services\Delivery\FixedFeePerCountry;
+use App\Services\Delivery\InternationalDeliveryPricing;
 use App\Services\Payments\DemoPaymentGateway;
 use App\Services\Payments\PayGateGateway;
 use App\Services\Payments\PaymentGateway;
@@ -25,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(ImageManager::class, fn () => ImageManager::gd());
+
+        $this->app->bind(InternationalDeliveryPricing::class, FixedFeePerCountry::class);
 
         $this->app->bind(PaymentGateway::class, fn () => match (config('services.paygate.mode')) {
             'live' => new PayGateGateway(
