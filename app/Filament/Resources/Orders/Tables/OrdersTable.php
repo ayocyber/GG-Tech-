@@ -31,13 +31,13 @@ class OrdersTable
                 TextColumn::make('total')
                     ->label(__('Total'))
                     ->formatStateUsing(fn (Order $record) => $record->formatMoney($record->total))
-                    ->description(fn (Order $record) => $record->delivery_fee === null && $record->fulfilment === FulfilmentMethod::Delivery ? '+ '.__('delivery to be confirmed') : null)
+                    ->description(fn (Order $record) => $record->delivery_fee === null && $record->fulfilment->isDelivery() ? '+ '.__('delivery to be confirmed') : null)
                     ->sortable(),
                 TextColumn::make('fulfilment')
                     ->label(__('Method'))
                     ->badge()
                     ->color('gray')
-                    ->description(fn (Order $record) => $record->pickupLocation()?->title()),
+                    ->description(fn (Order $record) => $record->pickupLocation()?->title() ?? $record->destination()),
                 TextColumn::make('status')->label(__('Status'))->badge(),
                 TextColumn::make('payment_status')
                     ->label(__('Payment'))

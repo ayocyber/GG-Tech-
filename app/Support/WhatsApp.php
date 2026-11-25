@@ -2,7 +2,6 @@
 
 namespace App\Support;
 
-use App\Enums\FulfilmentMethod;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
@@ -47,7 +46,7 @@ class WhatsApp
             ->implode("\n");
 
         $fulfilment = $order->fulfilment->getLabel()
-            .($order->deliveryZone ? ' — '.$order->deliveryZone->translate('name') : '');
+            .($order->destination() ? ' — '.$order->destination() : '');
 
         return static::url(implode("\n", [
             __('Hello GG-TECH, I would like to confirm my order :number.', ['number' => $order->number]),
@@ -55,7 +54,7 @@ class WhatsApp
             $lines,
             '',
             __('Total: :total', ['total' => $order->formatMoney($order->total)])
-                .($order->delivery_fee === null && $order->fulfilment === FulfilmentMethod::Delivery ? ' + '.__('delivery to be confirmed') : ''),
+                .($order->delivery_fee === null && $order->fulfilment->isDelivery() ? ' + '.__('delivery to be confirmed') : ''),
             __('Fulfilment: :method', ['method' => $fulfilment]),
             __('Name: :name', ['name' => $order->customer_name]),
         ]));

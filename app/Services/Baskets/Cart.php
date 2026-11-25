@@ -28,4 +28,15 @@ class Cart extends SessionBasket
     {
         return $lines->contains(fn (BasketLine $line) => $line->product()->is_heavy);
     }
+
+    /**
+     * The lines that cannot leave Togo because their product is sold for Togo only.
+     *
+     * @param  Collection<int, BasketLine>  $lines
+     * @return Collection<int, BasketLine>
+     */
+    public function linesSoldInTogoOnly(Collection $lines): Collection
+    {
+        return $lines->reject(fn (BasketLine $line) => $line->product()->shipsAbroad())->values();
+    }
 }

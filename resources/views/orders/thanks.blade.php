@@ -61,7 +61,7 @@
             <dl class="mt-4 space-y-2 border-t border-silver/50 pt-4 text-sm">
                 <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd>{{ $order->formatMoney($order->subtotal) }}</dd></div>
                 <div class="flex justify-between">
-                    <dt class="text-muted">{{ $order->fulfilment->getLabel() }}{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name') : '' }}</dt>
+                    <dt class="text-muted">{{ $order->fulfilment->getLabel() }}{{ $order->destination() ? ' — '.$order->destination() : '' }}</dt>
                     <dd>{{ $order->delivery_fee === null ? __('Confirmed by our team') : ($order->delivery_fee === 0 ? __('Free') : $order->formatMoney($order->delivery_fee)) }}</dd>
                 </div>
                 <div class="flex justify-between border-t border-silver/50 pt-3 text-base font-semibold"><dt>{{ __('Total') }}</dt><dd class="font-display text-navy">{{ $order->formatMoney($order->total) }}</dd></div>
@@ -78,7 +78,11 @@
                     @else
                         <li>{{ __('We confirm availability on WhatsApp.') }}</li>
                         <li>{{ $order->fulfilment === FulfilmentMethod::Pickup ? __('We tell you when your order is ready for pickup.') : __('We agree on the delivery time with you.') }}</li>
-                        <li>{{ $order->paysOnline() ? __('You pay online, or on delivery or at pickup.') : __('You pay on delivery or at pickup.') }}</li>
+                        <li>{{ match (true) {
+                            $order->isInternational() => __('We send you the payment details on WhatsApp before shipping.'),
+                            $order->paysOnline() => __('You pay online, or on delivery or at pickup.'),
+                            default => __('You pay on delivery or at pickup.'),
+                        } }}</li>
                     @endif
                 </ol>
             </div>
@@ -90,7 +94,7 @@
                         {{ $order->pickupLocation()->address }}
                         <a href="{{ $order->pickupLocation()->directionsUrl() }}" target="_blank" rel="noopener" class="mt-2 block font-semibold text-royal hover:underline">{{ __('Get directions') }} →</a>
                     @else
-                        {{ $order->address }}, {{ $order->city }}@if ($order->landmark)<br>{{ __('Landmark') }} : {{ $order->landmark }}@endif
+                        {{ $order->deliveryAddress() }}@if ($order->landmark)<br>{{ __('Landmark') }} : {{ $order->landmark }}@endif
                     @endif
                 </p>
             </div>

@@ -54,10 +54,28 @@ class OrderInfolist
                         TextEntry::make('deliveryZone.name')
                             ->label(__('Zone'))
                             ->formatStateUsing(fn (Order $record) => $record->deliveryZone?->translate('name'))
+                            ->hidden(fn (Order $record) => $record->isInternational())
                             ->placeholder('—'),
+                        TextEntry::make('delivery_country')
+                            ->label(__('Destination country'))
+                            ->formatStateUsing(fn (Order $record) => $record->deliveryCountryName())
+                            ->badge()
+                            ->color('info')
+                            ->visible(fn (Order $record) => $record->isInternational()),
                         TextEntry::make('address')->label(__('Address'))->placeholder('—'),
                         TextEntry::make('city')->label(__('City / neighbourhood'))->placeholder('—'),
-                        TextEntry::make('landmark')->label(__('Landmark'))->placeholder('—'),
+                        TextEntry::make('region')
+                            ->label(__('Region / state'))
+                            ->visible(fn (Order $record) => $record->isInternational())
+                            ->placeholder('—'),
+                        TextEntry::make('postal_code')
+                            ->label(__('Postal code'))
+                            ->visible(fn (Order $record) => $record->isInternational())
+                            ->placeholder('—'),
+                        TextEntry::make('landmark')
+                            ->label(__('Landmark'))
+                            ->hidden(fn (Order $record) => $record->isInternational())
+                            ->placeholder('—'),
                         TextEntry::make('notes')->label(__('Customer instructions'))->placeholder('—')->columnSpanFull(),
                     ]),
                 ]),

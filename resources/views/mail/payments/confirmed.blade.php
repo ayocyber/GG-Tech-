@@ -23,9 +23,9 @@
 | **{{ __('Total paid') }}** | | **{{ $order->formatMoney($order->total) }}** |
 </x-mail::table>
 
-**{{ $order->fulfilment->getLabel() }}**{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name') : '' }}<br>
+**{{ $order->fulfilment->getLabel() }}**{{ $order->destination() ? ' — '.$order->destination() : '' }}<br>
 @if ($order->address)
-{{ $order->address }}, {{ $order->city }}
+{{ $order->deliveryAddress() }}
 @elseif ($order->pickupLocation())
 {{ $order->pickupLocation()->title() }} ({{ $order->pickupLocation()->shop->getLabel() }}) — {{ $order->pickupLocation()->address }}<br>
 [{{ __('Get directions') }}]({{ $order->pickupLocation()->directionsUrl() }})

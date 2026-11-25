@@ -11,13 +11,13 @@
 
 **Client :** {{ $order->customer_name }} · {{ $order->phone }} · {{ $order->email }}<br>
 **Langue :** {{ strtoupper($order->locale) }}<br>
-**Mode :** {{ $order->fulfilment->getLabel() }}{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name', 'fr') : '' }}
+**Mode :** {{ $order->fulfilment->getLabel() }}{{ $order->destination('fr') ? ' — '.$order->destination('fr') : '' }}
 @if ($order->pickupLocation())
 <br>**Boutique de retrait :** {{ $order->pickupLocation()->title() }} ({{ $order->pickupLocation()->shop->getLabel() }})
 @endif
 
 @if ($order->address)
-**Adresse :** {{ $order->address }}, {{ $order->city }}{{ $order->landmark ? ' (repère : '.$order->landmark.')' : '' }}
+**Adresse :** {{ $order->deliveryAddress('fr') }}{{ $order->landmark ? ' (repère : '.$order->landmark.')' : '' }}
 @endif
 
 <x-mail::table>

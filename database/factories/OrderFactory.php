@@ -39,6 +39,23 @@ class OrderFactory extends Factory
     }
 
     /**
+     * An order sent to a country outside Togo.
+     */
+    public function international(string $countryCode = 'FR', int $fee = 25000): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'fulfilment' => FulfilmentMethod::International,
+            'delivery_country' => $countryCode,
+            'address' => '12 rue de la Paix',
+            'city' => 'Paris',
+            'region' => 'Île-de-France',
+            'postal_code' => '75002',
+            'delivery_fee' => $fee,
+            'total' => $attributes['subtotal'] + $fee,
+        ]);
+    }
+
+    /**
      * An order the customer chose to pay online, with a payment attempt under way.
      */
     public function payingOnline(): static

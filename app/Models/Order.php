@@ -7,6 +7,7 @@ use App\Enums\Market;
 use App\Enums\OrderStatus;
 use App\Enums\PaymentStatus;
 use App\Enums\Shop;
+use App\Support\Countries;
 use App\Support\ShopLocation;
 use Database\Factories\OrderFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
@@ -18,7 +19,7 @@ use Illuminate\Support\Str;
 
 #[Fillable([
     'number', 'locale', 'market', 'currency', 'customer_name', 'email', 'phone', 'fulfilment', 'pickup_shop', 'delivery_zone_id',
-    'address', 'city', 'landmark', 'notes', 'subtotal', 'delivery_fee', 'total', 'status', 'payment_method',
+    'delivery_country', 'address', 'city', 'region', 'postal_code', 'landmark', 'notes', 'subtotal', 'delivery_fee', 'total', 'status', 'payment_method',
     'payment_status', 'payment_identifier', 'payment_reference', 'payment_provider_reference', 'payment_network', 'paid_at',
 ])]
 class Order extends Model
@@ -51,6 +52,43 @@ class Order extends Model
         }
 
         return ShopLocation::for($this->pickup_shop ?? Shop::HeadOffice);
+    }
+
+    public function isInternational(): bool
+    {
+        return $this->fulfilment === FulfilmentMethod::International;
+    }
+
+    public function deliveryCountryName(?string $locale = null): ?string
+    {
+        return $this->delivery_country ? Countries::name($this->delivery_country, $locale) : null;
+    }
+
+    /**
+     * Where the order goes: the Togo delivery zone or the destination country.
+     */
+    public function destination(?string $locale = null): ?string
+    {
+        return $this->isInternational()
+            ? $this->deliveryCountryName($locale)
+            : $this->deliveryZone?->translate('name', $locale);
+    }
+
+    /**
+     * The delivery address on one line, ending with the country for orders sent abroad.
+     */
+    public function deliveryAddress(?string $locale = null): ?string
+    {
+        if (! $this->fulfilment?->isDelivery() || blank($this->address)) {
+            return null;
+        }
+
+        return collect([
+            $this->address,
+            trim($this->postal_code.' '.$this->city),
+            $this->region,
+            $this->isInternational() ? $this->deliveryCountryName($locale) : null,
+        ])->filter(fn (?string $part) => filled($part))->implode(', ');
     }
 
     /**

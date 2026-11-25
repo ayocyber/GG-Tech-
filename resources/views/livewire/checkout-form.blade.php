@@ -32,7 +32,7 @@
                 <h2 class="text-xl font-semibold">{{ __('Delivery') }}</h2>
             </div>
 
-            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div @class(['mt-6 grid gap-3', 'sm:grid-cols-3' => $this->countries->isNotEmpty(), 'sm:grid-cols-2' => $this->countries->isEmpty()])>
                 <label @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 transition', 'border-royal bg-royal-50 ring-1 ring-royal' => $isPickup, 'border-silver hover:border-royal/40' => ! $isPickup])>
                     <input type="radio" wire:model.live="fulfilment" value="pickup" class="mt-1 text-royal focus:ring-royal">
                     <span>
@@ -40,13 +40,22 @@
                         <span class="mt-1 block text-sm text-muted">{{ __('Free · ready once confirmed') }}</span>
                     </span>
                 </label>
-                <label @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 transition', 'border-royal bg-royal-50 ring-1 ring-royal' => ! $isPickup, 'border-silver hover:border-royal/40' => $isPickup])>
+                <label @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 transition', 'border-royal bg-royal-50 ring-1 ring-royal' => $fulfilment === 'delivery', 'border-silver hover:border-royal/40' => $fulfilment !== 'delivery'])>
                     <input type="radio" wire:model.live="fulfilment" value="delivery" class="mt-1 text-royal focus:ring-royal">
                     <span>
-                        <span class="flex items-center gap-2 font-semibold text-navy"><x-glyph name="truck" class="size-4" /> {{ __('Delivery') }}</span>
+                        <span class="flex items-center gap-2 font-semibold text-navy"><x-glyph name="truck" class="size-4" /> {{ __('Delivery in Togo') }}</span>
                         <span class="mt-1 block text-sm text-muted">{{ __('Anywhere in Togo') }}</span>
                     </span>
                 </label>
+                @if ($this->countries->isNotEmpty())
+                    <label @class(['flex cursor-pointer gap-3 rounded-2xl border p-4 transition', 'border-royal bg-royal-50 ring-1 ring-royal' => $isInternational, 'border-silver hover:border-royal/40' => ! $isInternational])>
+                        <input type="radio" wire:model.live="fulfilment" value="international" class="mt-1 text-royal focus:ring-royal">
+                        <span>
+                            <span class="flex items-center gap-2 font-semibold text-navy"><x-glyph name="globe" class="size-4" /> {{ __('International delivery') }}</span>
+                            <span class="mt-1 block text-sm text-muted">{{ __('To selected countries') }}</span>
+                        </span>
+                    </label>
+                @endif
             </div>
             @error('fulfilment') <p class="field-error">{{ $message }}</p> @enderror
 
@@ -73,6 +82,70 @@
                     </div>
                     @error('pickup_shop') <p class="field-error">{{ $message }}</p> @enderror
                 </fieldset>
+            @elseif ($isInternational)
+                <div class="mt-6 space-y-5">
+                    @if ($restrictedLines->isNotEmpty())
+                        <div class="rounded-2xl border border-signal/30 bg-signal/5 p-4 text-sm" role="alert">
+                            <p class="font-semibold text-signal-dark">{{ __('These products can only be delivered in Togo') }}</p>
+                            <p class="mt-1 text-signal">{{ __('Remove them to send the rest of your order abroad, or choose a delivery in Togo.') }}</p>
+                            <ul class="mt-3 space-y-2" role="list">
+                                @foreach ($restrictedLines as $line)
+                                    <li wire:key="restricted-{{ $line->variant->id }}" class="flex items-center justify-between gap-3 rounded-xl bg-white px-3 py-2">
+                                        <span class="min-w-0 font-medium text-ink">{{ $line->product()->translate('name') }}</span>
+                                        <button type="button" wire:click="removeFromCart({{ $line->variant->id }})" class="shrink-0 text-sm font-semibold text-signal hover:underline">{{ __('Remove') }}</button>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <button type="button" wire:click="deliverInTogo" class="mt-3 font-semibold text-royal hover:underline">{{ __('Deliver in Togo instead') }} →</button>
+                        </div>
+                    @else
+                        <div>
+                            <label for="delivery_country" class="field-label">{{ __('Delivery country') }}</label>
+                            <select id="delivery_country" wire:model.live="delivery_country" autocomplete="country" class="field-input">
+                                <option value="">{{ __('Choose a country') }}</option>
+                                @foreach ($this->countries as $country)
+                                    <option wire:key="country-{{ $country->country_code }}" value="{{ $country->country_code }}">{{ $country->name() }} — {{ $market->format($country->fee) }}</option>
+                                @endforeach
+                            </select>
+                            <p class="mt-2 text-xs text-muted">{{ __('We only deliver abroad to the countries in this list.') }}</p>
+                            @error('delivery_country') <p class="field-error">{{ $message }}</p> @enderror
+                        </div>
+
+                        @if ($this->selectedCountry && ($this->selectedCountry->translate('delivery_time') || $this->selectedCountry->translate('conditions')))
+                            <div class="rounded-2xl border border-royal/20 bg-royal-50 p-4 text-sm">
+                                @if ($this->selectedCountry->translate('delivery_time'))
+                                    <p class="font-semibold text-navy">{{ __('Delivery time: :time', ['time' => $this->selectedCountry->translate('delivery_time')]) }}</p>
+                                @endif
+                                @if ($this->selectedCountry->translate('conditions'))
+                                    <p class="mt-1 text-muted">{{ $this->selectedCountry->translate('conditions') }}</p>
+                                @endif
+                            </div>
+                        @endif
+
+                        <div class="grid gap-5 sm:grid-cols-2">
+                            <div class="sm:col-span-2">
+                                <label for="intl_address" class="field-label">{{ __('Street address') }}</label>
+                                <input id="intl_address" type="text" wire:model.blur="address" autocomplete="street-address" class="field-input">
+                                @error('address') <p class="field-error">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label for="intl_city" class="field-label">{{ __('City') }}</label>
+                                <input id="intl_city" type="text" wire:model.blur="city" autocomplete="address-level2" class="field-input">
+                                @error('city') <p class="field-error">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label for="region" class="field-label">{{ __('Region / state') }} <span class="font-normal text-muted">({{ __('if any') }})</span></label>
+                                <input id="region" type="text" wire:model.blur="region" autocomplete="address-level1" class="field-input">
+                                @error('region') <p class="field-error">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label for="postal_code" class="field-label">{{ __('Postal code') }} <span class="font-normal text-muted">({{ __('if any') }})</span></label>
+                                <input id="postal_code" type="text" wire:model.blur="postal_code" autocomplete="postal-code" class="field-input">
+                                @error('postal_code') <p class="field-error">{{ $message }}</p> @enderror
+                            </div>
+                        </div>
+                    @endif
+                </div>
             @else
                 <div class="mt-6 space-y-5">
                     <fieldset>
@@ -145,7 +218,7 @@
                             <span class="mt-1 block text-muted">
                                 {{ $canPayOnline
                                     ? __('Secure mobile money payment through PayGate Global. You confirm the payment on your phone.')
-                                    : __('Available once the delivery fee is known: choose a zone with a fixed fee, or pick up in store.') }}
+                                    : ($isInternational ? __('Available once you choose a delivery country.') : __('Available once the delivery fee is known: choose a zone with a fixed fee, or pick up in store.')) }}
                             </span>
                         </span>
                     </label>
@@ -156,8 +229,8 @@
                     ])>
                         <input type="radio" wire:model.live="payment_option" value="later" class="mt-1 accent-royal">
                         <span class="text-sm">
-                            <span class="block font-semibold text-navy">{{ $isPickup ? __('Pay at pickup') : __('Pay on delivery') }}</span>
-                            <span class="mt-1 block text-muted">{{ __('We confirm your order on WhatsApp during opening hours.') }}</span>
+                            <span class="block font-semibold text-navy">{{ $isInternational ? __('Pay after confirmation') : ($isPickup ? __('Pay at pickup') : __('Pay on delivery')) }}</span>
+                            <span class="mt-1 block text-muted">{{ $isInternational ? __('We confirm your order on WhatsApp and send you the payment details before shipping.') : __('We confirm your order on WhatsApp during opening hours.') }}</span>
                         </span>
                     </label>
                 </fieldset>
@@ -199,14 +272,19 @@
             <dl class="mt-4 space-y-3 border-t border-silver/60 pt-4 text-sm">
                 <div class="flex justify-between"><dt class="text-muted">{{ __('Subtotal') }}</dt><dd class="font-semibold">{{ $market->format($subtotal) }}</dd></div>
                 <div class="flex justify-between gap-4">
-                    <dt class="text-muted">{{ $isPickup ? __('In-store pickup') : __('Delivery') }}</dt>
+                    <dt class="text-muted">
+                        {{ $isPickup ? __('In-store pickup') : __('Delivery') }}
+                        @if ($isInternational && $this->selectedCountry)
+                            <span class="block text-xs">{{ $this->selectedCountry->name() }}</span>
+                        @endif
+                    </dt>
                     <dd class="text-right font-semibold">
                         @if ($isPickup || $deliveryFee === 0)
                             <span class="text-instock">{{ __('Free') }}</span>
                         @elseif ($deliveryPending)
                             <span class="text-muted">{{ __('Confirmed by our team') }}</span>
                         @elseif ($deliveryFee === null)
-                            <span class="text-muted">{{ __('Choose a zone') }}</span>
+                            <span class="text-muted">{{ $isInternational ? __('Choose a country') : __('Choose a zone') }}</span>
                         @else
                             {{ $market->format($deliveryFee) }}
                         @endif

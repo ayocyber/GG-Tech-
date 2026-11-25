@@ -14,9 +14,9 @@
 | **{{ __('Total') }}** | | **{{ $order->formatMoney($order->total) }}** |
 </x-mail::table>
 
-**{{ $order->fulfilment->getLabel() }}**{{ $order->deliveryZone ? ' — '.$order->deliveryZone->translate('name') : '' }}<br>
+**{{ $order->fulfilment->getLabel() }}**{{ $order->destination() ? ' — '.$order->destination() : '' }}<br>
 @if ($order->address)
-{{ $order->address }}, {{ $order->city }}
+{{ $order->deliveryAddress() }}
 @elseif ($order->pickupLocation())
 {{ $order->pickupLocation()->title() }} ({{ $order->pickupLocation()->shop->getLabel() }}) — {{ $order->pickupLocation()->address }}<br>
 [{{ __('Get directions') }}]({{ $order->pickupLocation()->directionsUrl() }})
@@ -26,7 +26,7 @@
 {{ __('Confirm on WhatsApp') }}
 </x-mail::button>
 
-{{ __('You pay on delivery or at pickup.') }}
+{{ $order->isInternational() ? __('We send you the payment details on WhatsApp before shipping.') : __('You pay on delivery or at pickup.') }}
 
 {{ config('app.name') }} — {{ __('Technology · Solutions · Trust') }}
 </x-mail::message>
