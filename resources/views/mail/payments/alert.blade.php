@@ -3,9 +3,10 @@
 
 **Montant :** {{ $order->formatMoney($order->total) }}<br>
 **Moyen :** {{ $order->payment_network }}<br>
-**Référence PayGate :** {{ $order->payment_reference }}<br>
+**Passerelle :** {{ $order->payment_gateway?->getLabel() }}<br>
+**Référence de paiement :** {{ $order->payment_reference }}<br>
 @if ($order->payment_provider_reference)
-**Référence Flooz / T-Money :** {{ $order->payment_provider_reference }}<br>
+**Référence opérateur :** {{ $order->payment_provider_reference }}<br>
 @endif
 **Payé le :** {{ $order->paid_at->format('d/m/Y H:i') }}
 

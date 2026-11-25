@@ -9,9 +9,8 @@ use App\Services\Currency\DisplayCurrency;
 use App\Services\Currency\ExchangeRates;
 use App\Services\Delivery\FixedFeePerCountry;
 use App\Services\Delivery\InternationalDeliveryPricing;
-use App\Services\Payments\DemoPaymentGateway;
-use App\Services\Payments\PayGateGateway;
 use App\Services\Payments\PaymentGateway;
+use App\Services\Payments\PaymentGateways;
 use App\Support\ShopLocation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
@@ -19,7 +18,6 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View as ViewInstance;
 use Intervention\Image\ImageManager;
 use Livewire\Livewire;
-use RuntimeException;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -39,13 +37,8 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->scoped(DisplayCurrency::class);
 
-        $this->app->bind(PaymentGateway::class, fn () => match (config('services.paygate.mode')) {
-            'live' => new PayGateGateway(
-                apiKey: config('services.paygate.api_key') ?: throw new RuntimeException('PAYGATE_API_KEY is not set.'),
-                baseUrl: config('services.paygate.base_url'),
-            ),
-            default => new DemoPaymentGateway,
-        });
+        // New payments use the gateway chosen in the admin; existing ones go through PaymentGateways::forOrder().
+        $this->app->bind(PaymentGateway::class, fn ($app) => $app->make(PaymentGateways::class)->active());
     }
 
     /**

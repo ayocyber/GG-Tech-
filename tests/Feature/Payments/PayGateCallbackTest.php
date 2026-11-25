@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\PaymentProvider;
 use App\Enums\PaymentStatus;
 use App\Mail\PaymentConfirmed;
 use App\Mail\PaymentReceivedAlert;
@@ -16,7 +17,7 @@ beforeEach(function () {
 
 function liveOrder(): Order
 {
-    return Order::factory()->payingOnline()->has(OrderItem::factory(), 'items')->create(['total' => 50000]);
+    return Order::factory()->payingOnline(PaymentProvider::PayGate)->has(OrderItem::factory(), 'items')->create(['total' => 50000]);
 }
 
 /**

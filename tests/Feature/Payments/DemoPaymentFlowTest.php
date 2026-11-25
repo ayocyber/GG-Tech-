@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 
 beforeEach(function () {
-    config(['services.paygate.mode' => 'demo']);
+    config(['services.paygate.mode' => 'demo', 'store.online_payments_enabled' => true]);
     Mail::fake();
 });
 

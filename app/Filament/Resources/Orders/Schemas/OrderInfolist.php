@@ -92,8 +92,9 @@ class OrderInfolist
                         ->schema([
                             TextEntry::make('payment_status')->label(__('Status'))->badge(),
                             TextEntry::make('payment_network')->label(__('Network'))->placeholder('—'),
-                            TextEntry::make('payment_reference')->label(__('PayGate reference'))->copyable()->placeholder('—'),
-                            TextEntry::make('payment_provider_reference')->label(__('Flooz / T-Money reference'))->copyable()->placeholder('—'),
+                            TextEntry::make('payment_gateway')->label(__('Gateway'))->placeholder('—'),
+                            TextEntry::make('payment_reference')->label(__('Payment reference'))->copyable()->placeholder('—'),
+                            TextEntry::make('payment_provider_reference')->label(__('Operator reference'))->copyable()->placeholder('—'),
                             TextEntry::make('paid_at')->label(__('Paid on'))->dateTime('d/m/Y H:i')->placeholder('—'),
                         ]),
                     Section::make(__('Customer'))->schema([

@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\DemoPaymentController;
+use App\Http\Controllers\FedaPayWebhookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderConfirmationController;
 use App\Http\Controllers\PayGateCallbackController;
@@ -34,6 +35,10 @@ Route::post('/currency', CurrencyController::class)
 Route::post('/paygate/callback', PayGateCallbackController::class)
     ->middleware('throttle:60,1')
     ->name('payments.callback');
+
+Route::post('/fedapay/webhook', FedaPayWebhookController::class)
+    ->middleware('throttle:60,1')
+    ->name('payments.fedapay.webhook');
 
 Route::prefix('{locale}')
     ->whereIn('locale', SetLocale::SUPPORTED)

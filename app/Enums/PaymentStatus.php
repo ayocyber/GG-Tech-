@@ -6,7 +6,7 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 
 /**
- * State of an online (PayGate Global) payment. Orders paid at pickup or on delivery have no payment status.
+ * State of an online payment (any gateway). Orders paid at pickup or on delivery have no payment status.
  */
 enum PaymentStatus: string implements HasColor, HasLabel
 {

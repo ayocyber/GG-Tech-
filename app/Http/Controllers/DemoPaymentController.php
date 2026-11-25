@@ -2,44 +2,56 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\PaymentProvider;
 use App\Enums\PaymentStatus;
 use App\Models\Order;
 use App\Services\Payments\DemoPaymentGateway;
-use App\Services\Payments\PaymentGateway;
+use App\Services\Payments\PaymentSettings;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
 /**
- * The fake PayGate page used while PAYGATE_MODE=demo. It does not exist in live mode.
+ * The fake payment page used by the demo gateway. Orders paid through a real gateway never reach it.
  */
 class DemoPaymentController extends Controller
 {
-    public function show(Order $order, string $key, PaymentGateway $gateway): View
+    public function __construct(private PaymentSettings $settings) {}
+
+    public function show(Order $order, string $key): View
     {
-        $this->ensureDemo($order, $key, $gateway);
+        $this->ensureDemo($order, $key);
 
         return view('payments.demo', ['order' => $order, 'key' => $key]);
     }
 
-    public function complete(Request $request, Order $order, string $key, PaymentGateway $gateway): RedirectResponse
+    public function complete(Request $request, Order $order, string $key, DemoPaymentGateway $gateway): RedirectResponse
     {
-        $this->ensureDemo($order, $key, $gateway);
+        $this->ensureDemo($order, $key);
 
         $validated = $request->validate([
             'outcome' => ['required', Rule::in([PaymentStatus::Paid->value, PaymentStatus::Cancelled->value, PaymentStatus::Expired->value])],
             'network' => ['required', Rule::in(['FLOOZ', 'TMONEY'])],
         ]);
 
-        /** @var DemoPaymentGateway $gateway */
         $gateway->simulate($order, PaymentStatus::from($validated['outcome']), $validated['network']);
 
         return redirect()->to(PaymentReturnController::urlFor($order));
     }
 
-    private function ensureDemo(Order $order, string $key, PaymentGateway $gateway): void
+    /**
+     * Only demo orders can be "paid" here, and only while the demo is the active gateway:
+     * once a real gateway is chosen, the fake page disappears.
+     */
+    private function ensureDemo(Order $order, string $key): void
     {
-        abort_unless($gateway instanceof DemoPaymentGateway && $order->hasPaymentKey($key) && $order->paysOnline(), 404);
+        abort_unless(
+            $this->settings->activeProvider() === PaymentProvider::Demo
+                && $order->payment_gateway === PaymentProvider::Demo
+                && $order->hasPaymentKey($key)
+                && $order->paysOnline(),
+            404,
+        );
     }
 }

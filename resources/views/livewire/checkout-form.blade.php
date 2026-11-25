@@ -214,10 +214,10 @@
                     ])>
                         <input type="radio" wire:model.live="payment_option" value="online" class="mt-1 accent-royal" @disabled(! $canPayOnline)>
                         <span class="text-sm">
-                            <span class="block font-semibold text-navy">{{ __('Pay now with Flooz or T-Money') }}</span>
+                            <span class="block font-semibold text-navy">{{ $this->paymentProvider->checkoutTitle() }}</span>
                             <span class="mt-1 block text-muted">
                                 {{ $canPayOnline
-                                    ? __('Secure mobile money payment through PayGate Global. You confirm the payment on your phone.')
+                                    ? $this->paymentProvider->checkoutDescription()
                                     : ($isInternational ? __('Available once you choose a delivery country.') : __('Available once the delivery fee is known: choose a zone with a fixed fee, or pick up in store.')) }}
                             </span>
                         </span>

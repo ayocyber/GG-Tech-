@@ -15,8 +15,8 @@ return Application::configure(basePath: dirname(__DIR__))
         // Render terminates HTTPS at its load balancer and forwards plain HTTP.
         $middleware->trustProxies(at: '*');
 
-        // PayGate posts its payment confirmation from its own servers.
-        $middleware->validateCsrfTokens(except: ['paygate/callback']);
+        // PayGate and FedaPay post payment notifications from their own servers.
+        $middleware->validateCsrfTokens(except: ['paygate/callback', 'fedapay/webhook']);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

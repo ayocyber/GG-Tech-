@@ -39,6 +39,16 @@ return [
         'stale_after_hours' => (int) env('EXCHANGE_RATES_STALE_AFTER_HOURS', 12),
     ],
 
+    /*
+    | FedaPay (mobile money and cards). These apply until staff save keys under
+    | Settings > Payments in the admin. "sandbox" uses FedaPay's test API.
+    */
+    'fedapay' => [
+        'mode' => env('FEDAPAY_MODE', 'sandbox'),
+        'secret_key' => env('FEDAPAY_SECRET_KEY'),
+        'webhook_secret' => env('FEDAPAY_WEBHOOK_SECRET'),
+    ],
+
     'resend' => [
         'key' => env('RESEND_API_KEY'),
     ],

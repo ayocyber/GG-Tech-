@@ -14,6 +14,7 @@ use App\Models\Setting;
 use App\Services\Baskets\BasketLine;
 use App\Services\Baskets\Cart;
 use App\Services\Delivery\InternationalDeliveryPricing;
+use App\Services\Payments\PaymentSettings;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -22,7 +23,11 @@ use InvalidArgumentException;
 
 class PlaceOrder
 {
-    public function __construct(private Cart $cart, private InternationalDeliveryPricing $internationalPricing) {}
+    public function __construct(
+        private Cart $cart,
+        private InternationalDeliveryPricing $internationalPricing,
+        private PaymentSettings $paymentSettings,
+    ) {}
 
     /**
      * @param  array{customer_name: string, email: string, phone: string, fulfilment: string, pickup_shop?: string|null, delivery_zone_id?: int|null, delivery_country?: string|null, address?: string|null, city?: string|null, region?: string|null, postal_code?: string|null, landmark?: string|null, notes?: string|null, pay_online?: bool}  $details
@@ -59,6 +64,10 @@ class PlaceOrder
             throw new InvalidArgumentException('An order cannot be paid online before its delivery fee is known.');
         }
 
+        if ($paysOnline && ! $this->paymentSettings->canTakeOnlinePayments()) {
+            throw new InvalidArgumentException('Online payment is switched off.');
+        }
+
         $order = DB::transaction(function () use ($details, $market, $fulfilment, $zone, $country, $lines, $subtotal, $deliveryFee, $paysOnline) {
             $order = Order::create([
                 'locale' => app()->getLocale(),
@@ -86,7 +95,7 @@ class PlaceOrder
             $order->update(['number' => 'GG-'.($order->id + 1000)]);
 
             if ($paysOnline) {
-                $order->startPaymentAttempt();
+                $order->startPaymentAttempt($this->paymentSettings->activeProvider());
             }
 
             $order->items()->createMany($lines->map(fn (BasketLine $line) => [

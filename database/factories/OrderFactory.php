@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Enums\FulfilmentMethod;
 use App\Enums\Market;
 use App\Enums\OrderStatus;
+use App\Enums\PaymentProvider;
 use App\Enums\PaymentStatus;
 use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -58,10 +59,11 @@ class OrderFactory extends Factory
     /**
      * An order the customer chose to pay online, with a payment attempt under way.
      */
-    public function payingOnline(): static
+    public function payingOnline(PaymentProvider $gateway = PaymentProvider::Demo): static
     {
         return $this->state(fn (array $attributes) => [
             'payment_status' => PaymentStatus::Pending,
+            'payment_gateway' => $gateway,
             'payment_identifier' => $attributes['number'].'-TEST01',
         ]);
     }

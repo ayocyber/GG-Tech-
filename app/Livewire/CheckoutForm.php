@@ -5,13 +5,15 @@ namespace App\Livewire;
 use App\Actions\PlaceOrder;
 use App\Enums\FulfilmentMethod;
 use App\Enums\Market;
-use App\Http\Controllers\PaymentReturnController;
+use App\Enums\PaymentProvider;
+use App\Http\Controllers\PaymentRetryController;
 use App\Models\DeliveryCountry;
 use App\Models\DeliveryZone;
 use App\Services\Baskets\Cart;
 use App\Services\Currency\DisplayCurrency;
 use App\Services\Delivery\InternationalDeliveryPricing;
-use App\Services\Payments\PaymentGateway;
+use App\Services\Payments\PaymentGateways;
+use App\Services\Payments\PaymentSettings;
 use App\Support\ShopLocation;
 use Closure;
 use Illuminate\Database\Query\Builder;
@@ -79,7 +81,13 @@ class CheckoutForm extends Component
     #[Computed]
     public function onlinePaymentsEnabled(): bool
     {
-        return (bool) config('store.online_payments_enabled');
+        return app(PaymentSettings::class)->canTakeOnlinePayments();
+    }
+
+    #[Computed]
+    public function paymentProvider(): PaymentProvider
+    {
+        return app(PaymentSettings::class)->activeProvider();
     }
 
     #[Computed]
@@ -146,7 +154,7 @@ class CheckoutForm extends Component
         }
     }
 
-    public function placeOrder(PlaceOrder $placeOrder, Cart $cart, PaymentGateway $gateway): void
+    public function placeOrder(PlaceOrder $placeOrder, Cart $cart, PaymentGateways $gateways): void
     {
         if ($cart->isEmpty()) {
             $this->redirectRoute('cart');
@@ -169,7 +177,7 @@ class CheckoutForm extends Component
         }
 
         if ($order->paysOnline()) {
-            $this->redirect($gateway->checkoutUrl($order, PaymentReturnController::urlFor($order)));
+            $this->redirect(PaymentRetryController::paymentPageFor($order, $gateways));
 
             return;
         }

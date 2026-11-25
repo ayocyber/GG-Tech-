@@ -6,19 +6,21 @@ use App\Enums\PaymentStatus;
 use App\Mail\PaymentConfirmed;
 use App\Mail\PaymentReceivedAlert;
 use App\Models\Order;
-use App\Services\Payments\PaymentGateway;
 use App\Services\Payments\PaymentGatewayException;
+use App\Services\Payments\PaymentGateways;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use RuntimeException;
 
 /**
  * Asks the payment provider how an order's payment stands and records it.
- * Runs when the customer comes back from paying and when PayGate calls us,
+ * Runs when the customer comes back from paying and when the gateway calls us,
  * often both at once, so the "paid" update is atomic and mails go out once.
+ * The order is always checked with the gateway it was started with.
  */
 class SyncOrderPayment
 {
-    public function __construct(private PaymentGateway $gateway) {}
+    public function __construct(private PaymentGateways $gateways) {}
 
     public function handle(Order $order): Order
     {
@@ -27,8 +29,8 @@ class SyncOrderPayment
         }
 
         try {
-            $result = $this->gateway->status($order);
-        } catch (PaymentGatewayException $exception) {
+            $result = $this->gateways->forOrder($order)->status($order);
+        } catch (PaymentGatewayException|RuntimeException $exception) {
             Log::warning('Payment status check failed', ['order' => $order->number, 'error' => $exception->getMessage()]);
 
             return $order;
