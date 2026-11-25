@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Enums\Market;
 use App\Http\Middleware\SetLocale;
 use App\Models\Category;
+use App\Models\DeliveryCountry;
 use App\Services\Currency\DisplayCurrency;
 use App\Services\Currency\ExchangeRates;
 use App\Services\Delivery\FixedFeePerCountry;
@@ -58,7 +59,11 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer(['components.layouts.store', 'home', 'store', 'products.show'], function (ViewInstance $view) {
-            $view->with('shopLocations', ShopLocation::listed());
+            $view->with([
+                'shopLocations' => ShopLocation::listed(),
+                // International delivery is only mentioned once staff have enabled a destination.
+                'deliveryCountries' => DeliveryCountry::query()->active()->get(),
+            ]);
         });
     }
 }

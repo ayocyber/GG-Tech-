@@ -62,6 +62,12 @@
                         <x-glyph name="truck" class="mt-0.5 text-royal" />
                         <span>{{ $product->is_heavy ? __('Heavy item: delivery fee confirmed by our team.') : __('Estimated delivery: 1–2 days in Lomé, longer for other regions.') }}</span>
                     </li>
+                    @if ($deliveryCountries->isNotEmpty())
+                        <li class="flex gap-3">
+                            <x-glyph name="globe" class="mt-0.5 text-royal" />
+                            <span>{{ $product->shipsAbroad() ? __('Also delivered abroad to selected countries.') : __('Sold for delivery in Togo only.') }}</span>
+                        </li>
+                    @endif
                     <li class="flex gap-3">
                         <x-glyph name="shield" class="mt-0.5 text-royal" />
                         <span>{{ $product->toner_type === TonerType::PremiumCompatible ? __('Premium compatible product, tested by our team before delivery.') : __('Genuine product, checked by our team before delivery.') }}</span>
@@ -120,6 +126,13 @@
                             <p>{{ __('Free pickup at :shop (:role): :address.', ['shop' => $location->title(), 'role' => $location->shop->getLabel(), 'address' => $location->address]) }}</p>
                         @endforeach
                         <p>{{ __('Delivery anywhere in Togo. The fee depends on your zone and is shown at checkout.') }}</p>
+                        @if ($deliveryCountries->isNotEmpty())
+                            <p>
+                                {{ $product->shipsAbroad()
+                                    ? __('International delivery to :countries, at a fixed fee per country shown at checkout.', ['countries' => $deliveryCountries->map->name()->implode(', ')])
+                                    : __('This product is sold for delivery in Togo only: it cannot be sent abroad.') }}
+                            </p>
+                        @endif
                         <a href="{{ route('store') }}#delivery" class="font-semibold text-royal hover:underline">{{ __('See delivery zones') }} →</a>
                     </div>
                 </div>

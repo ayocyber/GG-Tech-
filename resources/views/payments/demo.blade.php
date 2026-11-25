@@ -5,10 +5,10 @@
                 {{ __('Demo mode: no real money is charged') }}
             </div>
             <div class="p-6 sm:p-8">
-                <p class="text-sm font-semibold uppercase tracking-wide text-muted">PayGate Global · {{ __('test page') }}</p>
+                <p class="text-sm font-semibold uppercase tracking-wide text-muted">{{ __('Test payment page') }}</p>
                 <h1 class="mt-2 text-2xl font-bold">{{ __('Order :number', ['number' => $order->number]) }}</h1>
                 <p class="mt-1 font-display text-3xl font-bold text-navy">{{ $order->formatMoney($order->total) }}</p>
-                <p class="mt-4 text-sm text-muted">{{ __('In live mode, the customer pays here with Flooz or T-Money and confirms on their phone. Choose what should happen for this test.') }}</p>
+                <p class="mt-4 text-sm text-muted">{{ __('With a real gateway, the customer pays on the gateway’s own page (PayGate or FedaPay). Choose what should happen for this test.') }}</p>
 
                 <form method="POST" action="{{ route('payments.demo.complete', ['order' => $order, 'key' => $key]) }}" class="mt-6 space-y-5">
                     @csrf

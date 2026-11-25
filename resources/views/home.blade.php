@@ -84,7 +84,7 @@
         <div class="container-page grid grid-cols-2 gap-6 py-8 lg:grid-cols-4">
             @foreach ([
                 ['shield', __('Genuine products'), __('Original and premium compatible')],
-                ['truck', __('Fast delivery'), __('Anywhere in Togo')],
+                ['truck', __('Fast delivery'), $deliveryCountries->isNotEmpty() ? __('Anywhere in Togo, and to selected countries') : __('Anywhere in Togo')],
                 ['store', __('In-store pickup'), trans_choice('Free, in our shop|Free, in our shops', $shopLocations->count())],
                 ['chat', __('Expert advice'), __('Quick answers on WhatsApp')],
             ] as [$icon, $title, $subtitle])

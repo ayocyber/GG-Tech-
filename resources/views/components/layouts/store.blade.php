@@ -8,7 +8,9 @@
     use App\Support\WhatsApp;
 
     $pageTitle = $title ? $title.' · GG-TECH' : 'GG-TECH · '.__('IT equipment in Lomé, Togo');
-    $pageDescription = $description ?? __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo, free in-store pickup in Lomé.');
+    $pageDescription = $description ?? ($deliveryCountries->isNotEmpty()
+        ? __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo and to selected countries, free in-store pickup in Lomé.')
+        : __('Toners, printers, networking, computers and power equipment. Genuine products, fast delivery across Togo, free in-store pickup in Lomé.'));
     $otherLocale = app()->getLocale() === 'fr' ? 'en' : 'fr';
     $displayCurrency = app(DisplayCurrency::class);
     $currencyCodes = $displayCurrency->codes();
@@ -40,7 +42,7 @@
             <div class="container-page flex h-10 items-center justify-between gap-4 text-xs">
                 <p class="flex min-w-0 items-center gap-2 truncate">
                     <x-glyph name="truck" class="size-4 text-white/60" />
-                    <span class="truncate">{{ __('Delivery across Togo · Free in-store pickup') }}</span>
+                    <span class="truncate">{{ $deliveryCountries->isNotEmpty() ? __('Delivery across Togo and to selected countries · Free in-store pickup') : __('Delivery across Togo · Free in-store pickup') }}</span>
                 </p>
 
                 <div class="flex shrink-0 items-center gap-4">

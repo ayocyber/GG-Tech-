@@ -309,7 +309,7 @@
                 <span wire:loading.remove wire:target="placeOrder">{{ $paysOnline && $canPayOnline ? __('Pay :amount', ['amount' => $market->format($total)]) : __('Place my order') }}</span>
                 <span wire:loading wire:target="placeOrder">{{ __('Sending…') }}</span>
             </button>
-            <p class="mt-3 text-center text-xs text-muted">{{ __('Free in-store pickup · 24–48 h delivery · WhatsApp support') }}</p>
+            <p class="mt-3 text-center text-xs text-muted">{{ __('Free in-store pickup · 24–48 h delivery in Lomé · WhatsApp support') }}</p>
         </div>
     </aside>
 </form>

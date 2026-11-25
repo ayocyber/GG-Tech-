@@ -70,5 +70,36 @@
                 </tbody>
             </table>
         </div>
+
+        @if ($deliveryCountries->isNotEmpty())
+            <h3 class="mt-12 text-2xl font-semibold" id="international">{{ __('International delivery') }}</h3>
+            <p class="mt-3 max-w-2xl text-muted">{{ __('We deliver abroad only to the countries below, at a fixed fee per country. Products marked “Togo only” cannot be sent abroad. Customs duties and taxes in the destination country may apply.') }}</p>
+
+            <div class="card mt-6 max-w-3xl overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-pearl text-left text-xs uppercase tracking-wider text-muted">
+                        <tr>
+                            <th class="px-6 py-3 font-semibold">{{ __('Country') }}</th>
+                            <th class="px-6 py-3 font-semibold">{{ __('Time') }}</th>
+                            <th class="px-6 py-3 text-right font-semibold">{{ __('Fee') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-silver/50">
+                        @foreach ($deliveryCountries as $country)
+                            <tr>
+                                <td class="px-6 py-3.5">
+                                    <span class="font-semibold">{{ $country->name() }}</span>
+                                    @if ($country->translate('conditions'))
+                                        <span class="block text-xs text-muted">{{ $country->translate('conditions') }}</span>
+                                    @endif
+                                </td>
+                                <td class="px-6 py-3.5 text-muted">{{ $country->translate('delivery_time') ?: '—' }}</td>
+                                <td class="px-6 py-3.5 text-right font-semibold"><x-money :amount="$country->fee" /></td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @endif
     </section>
 </x-layouts.store>
